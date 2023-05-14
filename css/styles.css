@@ -1,0 +1,70 @@
+:root {
+
+    /* light mode colors */
+    --lightBackground: #FDFDFD;
+    --lightCard: #FFFFFF;
+    --lightText: #444444;
+    --lightBodyText: #6B6B6B;
+    --lightFooter: #F5F5F5;
+    --lightHover: #F5F5F5;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--lightBackground);
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 76px;
+    color: var(--lightText)
+}
+
+p.paragraph-large {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--lightText);
+}
+
+
+.light-card {
+    background: var(--lightCard);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+
+#container {
+    border: 2px solid red;
+    width: 1040px;
+    margin: 0 auto;
+}
+
+#hero-left {
+    width: 621px;
+}
+
+#hero-card {
+    position: relative;
+    width: 355px;
+    height: 430px;
+}
+
+#hero-image {
+    position: absolute;
+    width: 339px;
+    height: 414px;
+    left: 8px;
+    top: 8px;
+}
