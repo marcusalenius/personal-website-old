@@ -1,16 +1,16 @@
 #hero {
-    border: 2px solid cyan;
+    border: 2px solid green;
     display: flex;
     justify-content: space-between;
 }
 
 #hero-left {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 621px;
 }
 
 #hero-right {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 #hero h1 {
@@ -38,7 +38,7 @@
 #locations-container {
     /* border: 2px solid orange; */
     display: flex;
-    gap: 90px;
+    gap: 87px;
     margin-top: 26px;
 }
 
