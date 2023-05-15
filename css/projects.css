@@ -1,0 +1,39 @@
+#projects {
+    border: 2px solid lightgreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+#kenboard-card {
+    margin-top: 25px;
+    grid-column: span 2;
+}
+
+#kenboard-card p {
+    width: 502px;
+}
+
+#personal-website-card p {
+    width: 393px;
+}
+
+#happy-day-card {
+    position: relative;
+}
+
+#happy-day-home {
+    position: absolute;
+    width: 326px;
+    bottom: 0;
+    right: 0;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+}
+
+#happy-day-menu {
+    position: absolute;
+    width: 348px;
+    left: 48px;
+    top: 220px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+}
