@@ -1,0 +1,50 @@
+#hero {
+    border: 2px solid cyan;
+    display: flex;
+    justify-content: space-between;
+}
+
+#hero-left {
+    border: 2px solid green;
+    width: 621px;
+}
+
+#hero-right {
+    border: 2px solid blue;
+}
+
+#hero h1 {
+    margin-top: 16px;
+}
+
+#hero p {
+    margin-top: 15px;
+}
+
+#hero-card {
+    position: relative;
+    width: 355px;
+    height: 430px;
+}
+
+#hero-image {
+    position: absolute;
+    width: 339px;
+    height: 414px;
+    left: 8px;
+    top: 8px;
+}
+
+#locations-container {
+    /* border: 2px solid orange; */
+    display: flex;
+    gap: 90px;
+    margin-top: 26px;
+}
+
+.location {
+    /* border: 2px solid pink; */
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}

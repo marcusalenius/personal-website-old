@@ -17,11 +17,13 @@
 }
 
 body {
+    /* border: 2px solid yellow; */
     background-color: var(--lightBackground);
     font-family: 'Inter', sans-serif;
 }
 
 h1 {
+    /* border: 2px solid gray; */
     font-style: normal;
     font-weight: 500;
     font-size: 64px;
@@ -30,6 +32,7 @@ h1 {
 }
 
 p.paragraph-large {
+    /* border: 2px solid gray; */
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -37,6 +40,12 @@ p.paragraph-large {
     color: var(--lightText);
 }
 
+.location-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--lightText);
+}
 
 .light-card {
     background: var(--lightCard);
@@ -45,26 +54,11 @@ p.paragraph-large {
 }
 
 
+
+
+
 #container {
     border: 2px solid red;
     width: 1040px;
     margin: 0 auto;
-}
-
-#hero-left {
-    width: 621px;
-}
-
-#hero-card {
-    position: relative;
-    width: 355px;
-    height: 430px;
-}
-
-#hero-image {
-    position: absolute;
-    width: 339px;
-    height: 414px;
-    left: 8px;
-    top: 8px;
 }
