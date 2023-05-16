@@ -1,17 +1,41 @@
-#projects {
-    border: 2px solid lightgreen;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
 #kenboard-card {
-    margin-top: 25px;
     grid-column: span 2;
+    position: relative;
 }
 
 #kenboard-card p {
     width: 502px;
+}
+
+#kenboard-demo-image {
+    position: absolute;
+    width: 324px;
+    left: 28px;
+    bottom: 0;
+    filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.4));
+}
+
+#kenboard-demo-video {
+    position: absolute;
+    width: 262px;
+    left: 57px;
+    bottom: 77px;
+}
+
+#kenboard-splash {
+    position: absolute;
+    width: 180px;
+    left: 576px;
+    bottom: 0;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+}
+
+#kenboard-debug {
+    position: absolute;
+    width: 180px;
+    left: 721px;
+    top: 13px;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
 }
 
 #personal-website-card p {
