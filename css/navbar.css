@@ -1,0 +1,71 @@
+nav {
+    border: 2px solid purple;
+    position: sticky;
+    z-index: 100;
+    top: 40px;
+    width: 1156px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-right {
+    display: flex;
+    gap: 35px;
+}
+
+.navbutton {
+    background-color: var(--lightCard);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#navbutton-projects {
+    width: 139px;
+}
+
+#navbutton-work {
+    width: 113px;
+}
+
+#navbutton-contact {
+    width: 135px;
+}
+
+#navbutton-home {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background: var(--lightCard);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+}
+
+#navbar-headshot {
+    position: absolute;
+    height: 56px;
+    width: 56px;
+    left: 4px;
+    top: 4px;
+}
+
+#navbutton-appearance {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background: var(--lightCard);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+}
+
+#appearance-icon {
+    position: absolute;
+    left: 9px;
+    top: 9px;
+}

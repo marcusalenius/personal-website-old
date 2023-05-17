@@ -23,7 +23,7 @@ body {
 }
 
 #container {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     width: 1040px;
     margin: 0 auto;
 }
