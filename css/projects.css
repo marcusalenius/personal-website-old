@@ -13,6 +13,8 @@
     left: 28px;
     bottom: 0;
     filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.4));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0)
 }
 
 #kenboard-demo-video {
@@ -28,6 +30,8 @@
     left: 576px;
     bottom: 0;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0)
 }
 
 #kenboard-debug {
@@ -36,6 +40,8 @@
     left: 721px;
     top: 13px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0)
 }
 
 #personal-website-card p {

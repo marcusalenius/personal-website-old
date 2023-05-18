@@ -20,6 +20,7 @@ body {
     /* border: 2px solid yellow; */
     background-color: var(--lightBackground);
     font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 #container {
