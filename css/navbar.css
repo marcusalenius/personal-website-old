@@ -1,5 +1,6 @@
 nav {
     border: 2px solid purple;
+    background-color: lightblue;
     position: sticky;
     z-index: 100;
     top: 40px;
