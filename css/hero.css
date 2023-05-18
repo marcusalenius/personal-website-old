@@ -2,8 +2,10 @@
     /* border: 2px solid green; */
     display: flex;
     justify-content: space-between;
-    margin-top: 240px;
-    margin-bottom: 213px;
+    height: 95lvh;
+    min-height: 561px;
+    align-items: center;
+    transform: translateY(-30px);
 }
 
 #hero-left {
