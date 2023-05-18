@@ -58,6 +58,8 @@
     bottom: 0;
     right: 0;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0)
 }
 
 #happy-day-menu {
@@ -66,4 +68,6 @@
     left: 48px;
     top: 220px;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0)
 }
