@@ -52,3 +52,16 @@
     gap: 12px;
     align-items: center;
 }
+
+/* tablet */
+@media (max-width: 1200px) {
+
+    #hero-left {
+        width: 567px;
+    }
+
+    #location-icon {
+        height: 26px;
+    }
+    
+}

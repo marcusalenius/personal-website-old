@@ -27,7 +27,7 @@
 #kenboard-splash {
     position: absolute;
     width: 180px;
-    left: 576px;
+    right: 231px;
     bottom: 0;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
     /* to fix safari filter drop-shadow rendering issue: */
@@ -37,7 +37,7 @@
 #kenboard-debug {
     position: absolute;
     width: 180px;
-    left: 721px;
+    right: 86px;
     top: 13px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
     /* to fix safari filter drop-shadow rendering issue: */
@@ -70,4 +70,13 @@
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
     /* to fix safari filter drop-shadow rendering issue: */
     transform: translateZ(0)
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+
+    #happy-day-home {
+        right: -18px;
+    }
+
 }

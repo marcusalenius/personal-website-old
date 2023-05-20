@@ -1,0 +1,7 @@
+footer {
+    height: 180px;
+    background-color: var(--lightFooter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

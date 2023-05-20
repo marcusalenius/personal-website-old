@@ -69,3 +69,12 @@ nav {
     left: 9px;
     top: 9px;
 }
+
+/* tablet */
+@media (max-width: 1200px) {
+
+    nav {
+        width: 1105px;
+    }
+    
+}
