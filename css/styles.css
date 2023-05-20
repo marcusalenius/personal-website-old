@@ -29,11 +29,20 @@ body {
     margin: 0 auto;
 }
 
-/* tablet */
+/* 11inch iPad Pro Landscape */
 @media (max-width: 1200px) {
 
     #container {
         width: 989px;
+    }
+
+}
+
+/* 12.9inch iPad Pro Portrait */
+@media (max-width: 1120px) {
+
+    #container {
+        width: 862px;
     }
 
 }

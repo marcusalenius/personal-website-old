@@ -53,7 +53,7 @@
     align-items: center;
 }
 
-/* tablet */
+/* 11inch iPad Pro Landscape */
 @media (max-width: 1200px) {
 
     #hero-left {
@@ -64,4 +64,17 @@
         height: 26px;
     }
     
+}
+
+/* 12.9inch iPad Pro Portrait */
+@media (max-width: 1120px) {
+
+    #hero-left {
+        width: 459px;
+    }
+
+    #location-icon {
+        height: 26px;
+    }
+
 }

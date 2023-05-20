@@ -72,11 +72,43 @@
     transform: translateZ(0)
 }
 
-/* tablet */
+/* 11inch iPad Pro Landscape */
 @media (max-width: 1200px) {
 
     #happy-day-home {
         right: -18px;
     }
 
+}
+
+/* 12.9inch iPad Pro Portrait */
+@media (max-width: 1120px) {
+
+    #kenboard-card p {
+        width: 409px;
+    }
+
+    #kenboard-splash {
+        right: 197px;
+    }
+    
+    #kenboard-debug {
+        right: 52px;
+        top: 13px;
+    }
+    
+    #personal-website-card p {
+        width: 341px;
+    }
+
+    #happy-day-home {
+        left: 104px;
+        top: 189px;
+    }
+    
+    #happy-day-menu {
+        left: 40px;
+        top: 224px;
+    }
+    
 }

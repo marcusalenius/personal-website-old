@@ -70,11 +70,20 @@ nav {
     top: 9px;
 }
 
-/* tablet */
+/* 11inch iPad Pro Landscape */
 @media (max-width: 1200px) {
 
     nav {
         width: 1105px;
+    }
+    
+}
+
+/* 12.9inch iPad Pro Portrait */
+@media (max-width: 1120px) {
+
+    nav {
+        width: 935px;
     }
     
 }
