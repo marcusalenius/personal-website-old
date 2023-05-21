@@ -32,12 +32,21 @@
     height: 430px;
 }
 
-#hero-image {
+.hero-image {
     position: absolute;
-    width: 339px;
-    height: 414px;
     left: 8px;
     top: 8px;
+}
+
+#hero-image-desktop {
+    width: 339px;
+    height: 414px;
+}
+
+#hero-image-tablet {
+    width: 329px;
+    height: 414px;
+    display: none;
 }
 
 #locations-container {
@@ -71,11 +80,24 @@
 @media (max-width: 1120px) {
 
     #hero-left {
-        width: 459px;
+        width: 483px;
     }
 
     #location-icon {
         height: 26px;
+    }
+
+    #hero-card {
+        width: 345px;
+    }
+    
+
+    #hero-image-desktop {
+        display: none;
+    }
+    
+    #hero-image-tablet {
+        display: inline;
     }
 
 }
