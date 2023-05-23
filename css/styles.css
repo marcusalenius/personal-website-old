@@ -8,6 +8,15 @@
     --lightFooter: #F5F5F5;
     --lightHover: #F5F5F5;
 
+    /* dark mode colors */
+    --darkBackground: #262626;
+    --darkCard: #323232;
+    --darkCardRim: #929292;
+    --darkText: #FAFAFA;
+    --darkBodyText: #C9C9C9;
+    --darkFooter: #2E2E2E;
+    --darkHover: #4D4D4D;
+
 }
 
 * {
@@ -18,9 +27,16 @@
 
 body {
     /* border: 2px solid yellow; */
-    background-color: var(--lightBackground);
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body.light-mode {
+    background-color: var(--lightBackground);
+}
+
+body.dark-mode {
+    background-color: var(--darkBackground);
 }
 
 #container {

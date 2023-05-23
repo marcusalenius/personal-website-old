@@ -1,5 +1,4 @@
 #hero {
-    /* border: 2px solid green; */
     display: flex;
     justify-content: space-between;
     height: 95lvh;
@@ -10,12 +9,7 @@
 }
 
 #hero-left {
-    /* border: 2px solid green; */
     width: 621px;
-}
-
-#hero-right {
-    /* border: 2px solid blue; */
 }
 
 #hero h1 {
@@ -50,17 +44,23 @@
 }
 
 #locations-container {
-    /* border: 2px solid orange; */
     display: flex;
     gap: 87px;
     margin-top: 26px;
 }
 
 .location {
-    /* border: 2px solid pink; */
     display: flex;
     gap: 12px;
     align-items: center;
+}
+
+.light-mode .location-icon-dark-mode {
+    display: none;
+}
+
+.dark-mode .location-icon-light-mode {
+    display: none;
 }
 
 /* 11inch iPad Pro Landscape */

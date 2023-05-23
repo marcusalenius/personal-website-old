@@ -17,17 +17,24 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
   </head>
-  <body>
+  <body class="light-mode">
     <nav>
       <div id="navbutton-home">
         <img src="images/navbar-headshot.png" alt="small image of Marcus Alenius" draggable="false" id="navbar-headshot">
       </div>
       <div id="nav-right">
-        <div class="navbutton button-text" id="navbutton-projects">Projects</div>
-        <div class="navbutton button-text" id="navbutton-work">Work</div>
-        <div class="navbutton button-text" id="navbutton-contact">Contact</div>
-        <div id="navbutton-appearance">
-          <img src="icons/appearance-icon.svg" alt="moon icon to change appearance" draggable="false" id="appearance-icon">
+        <div class="navbutton" id="navbutton-projects">
+          <div class="button-text">Projects</div>
+        </div>
+        <div class="navbutton" id="navbutton-work">
+          <div class="button-text">Work</div>
+        </div>
+        <div class="navbutton" id="navbutton-contact">
+          <div class="button-text">Contact</div>
+        </div>
+        <div id="navbutton-appearance" onclick="darkModeToggle()">
+          <img src="icons/appearance-icon-light-mode.svg" alt="moon icon to change appearance" draggable="false" id="appearance-icon-light-mode">
+          <img src="icons/appearance-icon-dark-mode.svg" alt="moon icon to change appearance" draggable="false" id="appearance-icon-dark-mode">
         </div>  
       </div>
     </nav>
@@ -38,17 +45,19 @@
           <p class="paragraph-large">I’m a sophomore at Carnegie Mellon studying Information Systems, Computer Science, and Human-Computer Interaction. I am passionate about using technology to make the world a better place. Some more text maybe goes here so that it looks good.</p>
           <div id="locations-container">
             <div class="location">
-              <img src="icons/location-icon.svg" alt="location pin" draggable="false" id="location-icon">
+              <img src="icons/location-icon-light-mode.svg" alt="location pin" draggable="false" class="location-icon-light-mode">
+              <img src="icons/location-icon-dark-mode.svg" alt="location pin" draggable="false" class="location-icon-dark-mode">
               <div class="location-text">Pittsburgh, PA</div>
             </div>
             <div class="location">
-              <img src="icons/location-icon.svg" alt="location pin" draggable="false">
+              <img src="icons/location-icon-light-mode.svg" alt="location pin" draggable="false" class="location-icon-light-mode">
+              <img src="icons/location-icon-dark-mode.svg" alt="location pin" draggable="false" class="location-icon-dark-mode">
               <div class="location-text">Gävle, Sweden</div>
             </div>
           </div>
         </div>
         <div id="hero-right">
-          <div class="card-light" id="hero-card">
+          <div class="card" id="hero-card">
             <img src="images/hero-image-desktop.png" alt="large image of Marcus Alenius" draggable="false" class="hero-image" id="hero-image-desktop">
             <img src="images/hero-image-tablet.png" alt="large image of Marcus Alenius" draggable="false" class="hero-image" id="hero-image-tablet">
           </div>
@@ -111,5 +120,6 @@
     <footer>
       <div class="footer-text">Copyright &copy; 2023 Marcus Alenius. All rights reserved.</div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

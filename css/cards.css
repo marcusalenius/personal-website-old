@@ -9,7 +9,29 @@
 
 .card {
     overflow: hidden;
+    border-radius: 30px;
 }
+
+.light-mode .card {
+    background: var(--lightCard);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .card {
+    background: var(--darkCardRim);
+    box-shadow: 0px 0px 17px #000000;
+}
+
+.dark-mode .card::after {
+    background-color: var(--darkCard);
+    content: '';
+    position: absolute;
+    margin: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 29px;
+}
+
 
 .contact-card-layout {
     border: 2px solid lightgreen;
@@ -27,19 +49,11 @@
     height: 80px;
 }
 
-.card-light {
-    background: var(--lightCard);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
-
 .card-full-width {
-    /* width: 100%; */
     height: 374px;
 }
 
 .card-half-width {
-    /* width: 508px; */
     height: 374px;
 }
 

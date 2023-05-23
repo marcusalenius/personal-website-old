@@ -16,14 +16,37 @@ nav {
 }
 
 .navbutton {
-    background-color: var(--lightCard);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 45px;
     height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+.light-mode .navbutton {
+    background-color: var(--lightCard);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .navbutton {
+    background-color: var(--darkCardRim);
+    box-shadow: 0px 0px 8px #000000;
+    position: relative;
+}
+
+.dark-mode .navbutton::after {
+    background-color: var(--darkCard);
+    content: '';
+    position: absolute;
+    margin: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 44px;
+    z-index: 101;
+}
+
+.navbutton .button-text {
+    z-index: 102;
 }
 
 #navbutton-projects {
@@ -47,6 +70,26 @@ nav {
     border-radius: 45px;
 }
 
+.light-mode #navbutton-home {
+    background: var(--lightCard);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode #navbutton-home {
+    background: var(--darkCardRim);
+    box-shadow: 0px 0px 8px #000000;
+}
+
+.dark-mode #navbutton-home::after {
+    background: var(--darkCard);
+    content: '';
+    display: inline-block;
+    margin: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 45px;
+}
+
 #navbar-headshot {
     position: absolute;
     height: 56px;
@@ -59,15 +102,47 @@ nav {
     position: relative;
     width: 48px;
     height: 48px;
-    background: var(--lightCard);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 45px;
 }
 
-#appearance-icon {
+.light-mode #navbutton-appearance {
+    background: var(--lightCard);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode #navbutton-appearance {
+    background: var(--darkCardRim);
+    box-shadow: 0px 0px 8px #000000;
+}
+
+.dark-mode #navbutton-appearance::after {
+    background: var(--darkCard);
+    content: '';
+    display: inline-block;
+    margin: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 45px;
+}
+
+#appearance-icon-light-mode {
     position: absolute;
     left: 9px;
     top: 9px;
+}
+
+#appearance-icon-dark-mode {
+    position: absolute;
+    left: 11px;
+    top: 10px;
+}
+
+.light-mode #appearance-icon-dark-mode {
+    display: none;
+}
+
+.dark-mode #appearance-icon-light-mode {
+    display: none;
 }
 
 /* 11inch iPad Pro Landscape */
