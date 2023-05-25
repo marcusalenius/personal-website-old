@@ -171,3 +171,12 @@ nav {
     }
 
 }
+
+/* iPad Mini Portrait */
+@media (max-width: 830px) {
+
+    nav {
+        width: 724px;
+    }
+
+}

@@ -71,3 +71,12 @@ body.dark-mode {
     }
 
 }
+
+/* iPad Mini Portrait */
+@media (max-width: 830px) {
+
+    #container {
+        width: 700px;
+    }
+
+}

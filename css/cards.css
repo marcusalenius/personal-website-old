@@ -117,3 +117,18 @@
     }
      
 }
+
+/* iPad Mini Portrait */
+@media (max-width: 830px) {
+
+    .card h3 {
+        padding-left: 22px;
+        padding-top: 28px;
+    }
+    
+    .card p {
+        margin-left: 22px;
+        margin-top: 10px;
+    }
+
+}

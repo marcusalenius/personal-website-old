@@ -157,3 +157,42 @@
     }
 
 }
+
+/* iPad Mini Portrait */
+@media (max-width: 830px) {
+
+    #kenboard-card p {
+        width: 409px;
+    }
+
+    #kenboard-demo-image {
+        left: 17px;
+        top: 164px;
+    }
+    
+    #kenboard-demo-video {
+        left: 46px;
+        top: 257px;
+    }
+    
+
+    #kenboard-splash {
+        top: 122px;
+        left: 369px;
+    }
+
+    #kenboard-debug {
+        left: 502px;
+    }
+
+    #happy-day-home {
+        left: 77px;
+        top: 187px;
+    }
+    
+    #happy-day-menu {
+        left: 22px;
+        top: 222px;
+    }
+
+}
