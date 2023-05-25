@@ -102,3 +102,18 @@
     position: relative;
     z-index: 12;
 }
+
+/* iPad Pro 11" Portrait */
+@media (max-width: 970px) {
+
+    .card h3 {
+        padding-left: 33px;
+        padding-top: 28px;
+    }
+    
+    .card p {
+        margin-left: 33px;
+        margin-top: 10px;
+    }
+     
+}

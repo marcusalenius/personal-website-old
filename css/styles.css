@@ -45,7 +45,7 @@ body.dark-mode {
     margin: 0 auto;
 }
 
-/* 11inch iPad Pro Landscape */
+/* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
     #container {
@@ -54,11 +54,20 @@ body.dark-mode {
 
 }
 
-/* 12.9inch iPad Pro Portrait */
+/* iPad Pro 12.9" Portrait */
 @media (max-width: 1120px) {
 
     #container {
         width: 862px;
+    }
+
+}
+
+/* iPad Pro 11" Portrait */
+@media (max-width: 970px) {
+
+    #container {
+        width: 754px;
     }
 
 }

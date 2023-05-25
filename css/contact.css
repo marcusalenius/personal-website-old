@@ -20,3 +20,28 @@
 .dark-mode .contact-icon-light-mode {
     display: none;
 }
+
+/* iPad Pro 11" Portrait */
+@media (max-width: 970px) {
+
+    #contact .button-text {
+        font-size: 18px;
+    }
+
+    .contact-card {
+        gap: 8px;
+    }
+
+    .email-icon {
+        width: 32px;
+    }
+    
+    .linkedin-icon {
+        width: 32px;
+    }
+
+    .github-icon {
+        width: 34px;
+    }
+
+}

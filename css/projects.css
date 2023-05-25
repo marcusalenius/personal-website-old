@@ -84,7 +84,7 @@
     border-radius: 29px;
 }
 
-/* 11inch iPad Pro Landscape */
+/* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
     #happy-day-home {
@@ -101,7 +101,7 @@
 
 }
 
-/* 12.9inch iPad Pro Portrait */
+/* iPad Pro 12.9" Portrait */
 @media (max-width: 1120px) {
 
     #kenboard-card p {
@@ -129,4 +129,31 @@
         top: 224px;
     }
     
+}
+
+/* iPad Pro 11" Portrait */
+@media (max-width: 970px) {
+
+    #kenboard-card p {
+        width: 409px;
+    }
+
+    #kenboard-splash {
+        top: 122px;
+        left: 399px;
+    }
+
+    #kenboard-debug {
+        left: 544px;
+    }
+
+    #happy-day-home {
+        left: 104px;
+        top: 187px;
+    }
+    
+    #happy-day-menu {
+        top: 222px;
+    }
+
 }

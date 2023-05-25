@@ -43,6 +43,13 @@
     display: none;
 }
 
+#hero-image-medium-skinny {
+    width: 309px;
+    height: 414px;
+    display: none;
+}
+
+
 #locations-container {
     display: flex;
     gap: 87px;
@@ -63,7 +70,7 @@
     display: none;
 }
 
-/* 11inch iPad Pro Landscape */
+/* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
     #hero-left {
@@ -76,13 +83,17 @@
     
 }
 
-/* 12.9inch iPad Pro Portrait */
+/* iPad Pro 12.9" Portrait */
 @media (max-width: 1120px) {
 
     #hero-left {
         width: 483px;
     }
 
+    #hero h1 {
+        margin-top: 10px;
+    }
+    
     #location-icon {
         height: 26px;
     }
@@ -91,7 +102,6 @@
         width: 345px;
     }
     
-
     #hero-image-desktop {
         display: none;
     }
@@ -99,5 +109,47 @@
     #hero-image-tablet {
         display: inline;
     }
+
+    #hero-image-medium-skinny {
+        display: none;
+    }
+
+}
+
+/* iPad Pro 11" Portrait */
+@media (max-width: 970px) {
+
+    #hero-left {
+        width: 409px;
+    }
+
+    #hero h1 {
+        margin-top: 8px;
+    }
+
+    #location-icon {
+        height: 26px;
+    }
+
+    #hero-card {
+        width: 325px;
+    }
+
+    #hero-image-desktop {
+        display: none;
+    }
+
+    #hero-image-tablet {
+        display: none;
+    }
+
+    #hero-image-medium-skinny {
+        display: inline;
+    }
+
+    #locations-container {
+        gap: 60px;
+    }
+    
 
 }
