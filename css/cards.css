@@ -20,9 +20,10 @@
 .dark-mode .card {
     background: var(--darkCardRim);
     box-shadow: 0px 0px 17px #000000;
+    position: relative;
 }
 
-.dark-mode .card::after {
+.dark-mode .card::before {
     background-color: var(--darkCard);
     content: '';
     position: absolute;
@@ -30,23 +31,6 @@
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     border-radius: 29px;
-}
-
-
-.contact-card-layout {
-    border: 2px solid lightgreen;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-    margin-top: 25px;
-    margin-bottom: 131px;
-}
-
-.contact-card {
-    background: var(--lightCard);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    height: 80px;
 }
 
 .card-full-width {
@@ -60,10 +44,61 @@
 .card h3 {
     padding-left: 40px;
     padding-top: 39px;
+    position: relative;
+    z-index: 12;
 }
 
 .card p {
     margin-left: 40px;
     margin-top: 12px;
+    position: relative;
 }
 
+.card-images {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.contact-card-layout {
+    border: 2px solid lightgreen;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+    margin-bottom: 131px;
+}
+
+.contact-card {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    height: 80px;
+}
+
+.light-mode .contact-card {
+    background: var(--lightCard);
+}
+
+.dark-mode .contact-card {
+    background: var(--darkCardRim);
+    box-shadow: 0px 0px 10px #000000;
+    position: relative;
+}
+
+.dark-mode .contact-card::before {
+    background-color: var(--darkCard);
+    content: '';
+    position: absolute;
+    margin: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 19px;
+}
+
+.contact-card .button-text {
+    position: relative;
+    z-index: 12;
+}

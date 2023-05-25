@@ -34,7 +34,7 @@ nav {
     position: relative;
 }
 
-.dark-mode .navbutton::after {
+.dark-mode .navbutton::before {
     background-color: var(--darkCard);
     content: '';
     position: absolute;

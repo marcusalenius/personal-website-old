@@ -4,3 +4,19 @@
     align-items: center;
     justify-content: center;
 }
+
+.contact-icon-light-mode {
+    z-index: 12;
+}
+
+.contact-icon-dark-mode {
+    z-index: 12;
+}
+
+.light-mode .contact-icon-dark-mode {
+    display: none;
+}
+
+.dark-mode .contact-icon-light-mode {
+    display: none;
+}

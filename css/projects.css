@@ -11,37 +11,43 @@
     position: absolute;
     width: 324px;
     left: 28px;
-    bottom: 0;
+    top: 164px;
     filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.4));
     /* to fix safari filter drop-shadow rendering issue: */
-    transform: translateZ(0)
+    transform: translateZ(0);
 }
 
 #kenboard-demo-video {
     position: absolute;
     width: 262px;
     left: 57px;
-    bottom: 77px;
+    top: 257px;
 }
 
 #kenboard-splash {
     position: absolute;
     width: 180px;
-    right: 231px;
-    bottom: 0;
+    left: 596px;
+    top: 90px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
     /* to fix safari filter drop-shadow rendering issue: */
-    transform: translateZ(0)
+    transform: translateZ(0);
 }
 
 #kenboard-debug {
     position: absolute;
     width: 180px;
-    right: 86px;
+    left: 741px;
     top: 13px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
     /* to fix safari filter drop-shadow rendering issue: */
-    transform: translateZ(0)
+    transform: translateZ(0);
+}
+
+.dark-mode #kenboard-card .card-images {
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    border-radius: 29px;
 }
 
 #personal-website-card p {
@@ -55,28 +61,42 @@
 #happy-day-home {
     position: absolute;
     width: 326px;
-    bottom: 0;
-    right: 0;
+    top: 173px;
+    left: 182px;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
     /* to fix safari filter drop-shadow rendering issue: */
-    transform: translateZ(0)
+    transform: translateZ(0);
 }
 
 #happy-day-menu {
     position: absolute;
     width: 348px;
-    left: 48px;
+    left: 40px;
     top: 220px;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
     /* to fix safari filter drop-shadow rendering issue: */
-    transform: translateZ(0)
+    transform: translateZ(0);
+}
+
+.dark-mode #happy-day-card .card-images {
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    border-radius: 29px;
 }
 
 /* 11inch iPad Pro Landscape */
 @media (max-width: 1200px) {
 
     #happy-day-home {
-        right: -18px;
+        left: 161px;
+    }
+
+    #kenboard-splash {
+        left: 576px;
+    }
+
+    #kenboard-debug {
+        left: 721px;
     }
 
 }
@@ -89,14 +109,13 @@
     }
 
     #kenboard-splash {
-        right: 197px;
+        left: 483px;
     }
-    
+
     #kenboard-debug {
-        right: 52px;
-        top: 13px;
+        left: 628px;
     }
-    
+
     #personal-website-card p {
         width: 341px;
     }
@@ -107,7 +126,6 @@
     }
     
     #happy-day-menu {
-        left: 40px;
         top: 224px;
     }
     
