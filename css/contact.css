@@ -45,3 +45,34 @@
     }
 
 }
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    .contact-card {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .email-icon {
+        margin-left: 38px;
+    }
+
+    .linkedin-icon {
+        margin-left: 38px;
+    }
+
+    .github-icon {
+        margin-left: 36px;
+    }
+ 
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    
+
+}

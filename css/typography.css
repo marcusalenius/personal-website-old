@@ -128,3 +128,48 @@ p.paragraph-small {
     }
 
 }
+
+/* phone */
+@media (max-width: 740px) {
+    
+    h1 {
+        font-size: 54px;
+        line-height: 63px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 39px;
+    }
+
+    h3 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    p.paragraph-large {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    p.paragraph-small {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .location-text {
+        font-size: 18px;
+    }
+    
+    .button-text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .footer-text {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+
+}

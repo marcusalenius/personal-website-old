@@ -196,3 +196,74 @@
     }
 
 }
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #kenboard-card {
+        grid-column: span 1;
+    }
+
+    #kenboard-card p {
+        width: 320px;
+    }
+
+    #kenboard-demo-image {
+        left: 14px;
+        top: 138px;
+    }
+    
+    #kenboard-demo-video {
+        left: 43px;
+        top: 231px;
+    }
+    
+    #kenboard-splash {
+        display: none;
+    }
+
+    #kenboard-debug {
+        display: none;
+    }
+
+    #personal-website-card p {
+        width: 335px;
+    }
+
+    #happy-day-home {
+        width: 263px;
+        left: 131px;
+        top: 138px;
+    }
+    
+    #happy-day-menu {
+        width: 289px;
+        left: 28px;
+        top: 164px;
+    }
+
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #kenboard-demo-image {
+        left: 11px;
+    }
+
+    #personal-website-card p {
+        width: 283px;
+    }
+
+    #happy-day-home {
+        left: 118px;
+        top: 138px;
+    }
+    
+    #happy-day-menu {
+        left: 28px;
+        top: 164px;
+    }
+
+}
+

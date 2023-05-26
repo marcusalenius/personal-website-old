@@ -12,3 +12,12 @@ footer {
 .dark-mode footer {
     background-color: var(--darkFooter);
 }
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    .footer-text {
+        width: 233px;
+    }
+
+}

@@ -80,3 +80,22 @@ body.dark-mode {
     }
 
 }
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #container {
+        width: 394px;
+    }
+
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #container {
+        width: 353px;
+    }
+
+}
+

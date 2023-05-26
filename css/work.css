@@ -1,0 +1,25 @@
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #hcii-reu-card p {
+        width: 284px;
+    }
+
+    #ta-card p {
+        width: 335px;
+    }
+    
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #hcii-reu-card h3 {
+        width: 300px;
+    }
+
+    #ta-card p {
+        width: 284px;
+    }
+
+}

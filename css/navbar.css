@@ -23,6 +23,10 @@ nav {
     justify-content: center;
 }
 
+#navbutton-mobile {
+    display: none;
+}
+
 .light-mode .navbutton {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
@@ -65,8 +69,6 @@ nav {
     position: relative;
     width: 64px;
     height: 64px;
-    background: var(--lightCard);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
     border-radius: 45px;
 }
 
@@ -177,6 +179,96 @@ nav {
 
     nav {
         width: 724px;
+    }
+
+}
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    nav {
+        width: 414px;
+        top: 20px;
+    }
+
+    .navbutton {
+        display: none;
+    }
+    
+    #navbutton-mobile {
+        display: flex;
+        border-radius: 45px;
+        height: 44px;
+        width: 146px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navbutton-mobile .button-text {
+        z-index: 102;
+    }
+    
+    .light-mode #navbutton-mobile {
+        background-color: var(--lightCard);
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+    }
+    
+    .dark-mode #navbutton-mobile {
+        background-color: var(--darkCardRim);
+        box-shadow: 0px 0px 8px #000000;
+        position: relative;
+    }
+    
+    .dark-mode #navbutton-mobile::before {
+        background-color: var(--darkCard);
+        content: '';
+        position: absolute;
+        margin: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: 44px;
+        z-index: 101;
+    }
+    
+    #navbutton-home {
+        width: 50px;
+        height: 50px;
+    }    
+    
+    #navbar-headshot {
+        height: 44px;
+        width: 44px;
+        left: 3px;
+        top: 3px;
+    
+    }
+
+    #navbutton-appearance {
+        width: 44px;
+        height: 44px;
+    }
+
+    #appearance-icon-light-mode {
+        width: 27.5px;
+        height: 27.5px;
+        left: 8px;
+        top: 8px;
+    }
+    
+    #appearance-icon-dark-mode {
+        width: 24px;
+        height: 24px;
+        left: 10px;
+        top: 10px;
+    }
+    
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    nav {
+        width: 374px;
     }
 
 }
