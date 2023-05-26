@@ -91,111 +91,49 @@
 /* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
-    #hero-left {
-        width: 567px;
-    }
+    #hero-left { width: 567px; }
 
-    .location-icon {
-        height: 26px;
-    }
+    .location-icon { height: 26px; }
     
 }
 
 /* iPad Pro 12.9" Portrait */
 @media (max-width: 1120px) {
 
-    #hero-left {
-        width: 483px;
-    }
+    #hero-left { width: 483px; }
 
-    #hero h1 {
-        margin-top: 10px;
-    }
+    #hero h1 { margin-top: 10px; }
     
-    .location-icon {
-        height: 26px;
-    }
+    .location-icon { height: 26px; }
 
-    #hero-card {
-        width: 345px;
-    }
+    #hero-card { width: 345px; }
     
-    #hero-image-desktop {
-        display: none;
-    }
+    #hero-image-desktop { display: none; }
     
-    #hero-image-tablet {
-        display: inline;
-    }
-
-    #hero-image-medium-skinny {
-        display: none;
-    }
-
-    #hero-image-skinny {
-        display: none;
-    }
-
-    #hero-image-mobile {
-        display: none;
-    }
-
-    #hero-image-mobile-small {
-        display: none;
-    }    
+    #hero-image-tablet { display: inline; }
     
 }
 
 /* iPad Pro 11" Portrait */
 @media (max-width: 970px) {
 
-    #hero-left {
-        width: 409px;
-    }
+    #hero-left { width: 409px; }
 
-    #hero h1 {
-        margin-top: 8px;
-    }
+    #hero h1 { margin-top: 8px; }
 
-    #hero p {
-        margin-top: 15px;
-    }
+    #hero p { margin-top: 15px; }
 
-    .location-icon {
-        height: 26px;
-    }
+    .location-icon { height: 26px; }
 
-    #hero-card {
-        width: 325px;
-    }
+    #hero-card { width: 325px; }
 
-    #hero-image-desktop {
-        display: none;
-    }
+    #hero-image-tablet { display: none; }
 
-    #hero-image-tablet {
-        display: none;
-    }
-
-    #hero-image-medium-skinny {
-        display: inline;
-    }
-
-    #hero-image-skinny {
-        display: none;
-    }
-
-    #hero-image-mobile {
-        display: none;
-    }
-
-    #hero-image-mobile-small {
-        display: none;
-    }    
+    #hero-image-medium-skinny { display: inline; }
 
     #locations-container {
         gap: 60px;
-        margin-top: 20xpx;
+        margin-top: 20px;
     }
 
 }
@@ -203,54 +141,24 @@
 /* iPad Mini Portrait */
 @media (max-width: 830px) {
 
-    #hero-left {
-        width: 376px;
-    }
+    #hero-left { width: 376px; }
 
-    #hero h1 {
-        margin-top: 0px;
-    }
+    #hero h1 { margin-top: 0px; }
 
-    #hero p {
-        margin-top: 12px;
-    }
+    #hero p { margin-top: 12px; }
     
-    .location-icon {
-        height: 26px;
-    }
+    .location-icon { height: 26px; }
 
-    #hero-card {
-        width: 294px;
-    }
+    #hero-card { width: 294px; }
 
-    #hero-image-desktop {
-        display: none;
-    }
+    #hero-image-medium-skinny { display: none; }
 
-    #hero-image-tablet {
-        display: none;
-    }
-
-    #hero-image-medium-skinny {
-        display: none;
-    }
-
-    #hero-image-skinny {
-        display: inline;
-    }
-
-    #hero-image-mobile {
-        display: none;
-    }
-
-    #hero-image-mobile-small {
-        display: none;
-    }    
+    #hero-image-skinny { display: inline; }
 
     #locations-container {
         gap: 40px;
         margin-top: 16px;
-        }
+    }
 
 }
 
@@ -268,9 +176,7 @@
         margin-bottom: 130px;
     }
     
-    #hero-left {
-        width: 100%;
-    }
+    #hero-left { width: 100%; }
 
     #hero-card {
         margin-top: 34px;
@@ -278,47 +184,23 @@
         height: 300px;
     }
 
-    #hero h1 {
-        margin-top: 100px;
-    }
+    #hero h1 { margin-top: 100px; }
+    
+    #hero-image-skinny { display: none; }
+
+    #hero-image-mobile { display: inline; }
 
     #locations-container {
         margin-top: 22px;
         gap: 36px
     }
-    
-    #hero-image-desktop {
-        display: none;
-    }
-
-    #hero-image-tablet {
-        display: none;
-    }
-
-    #hero-image-medium-skinny {
-        display: none;
-    }
-
-    #hero-image-skinny {
-        display: none;
-    }
-
-    #hero-image-mobile {
-        display: inline;
-    }
-
-    #hero-image-mobile-small {
-        display: none;
-    }    
 
 }
 
 /* iPhone 14 */
 @media (max-width: 424px) {
 
-    #hero p {
-        width: 345px;
-    }
+    #hero p { width: 345px; }
 
     #hero-card {
         margin-top: 34px;
@@ -326,36 +208,10 @@
         height: 269px;
     }
 
-    #locations-container {
-        gap: 30px
-    }
+    #hero-image-mobile { display: none; }
 
-    #hero-image-desktop {
-        display: none;
-    }
-
-    #hero-image-tablet {
-        display: none;
-    }
-
-    #hero-image-medium-skinny {
-        display: none;
-    }
-
-    #hero-image-skinny {
-        display: none;
-    }
-
-    #hero-image-mobile {
-        display: none;
-    }
-
-    #hero-image-mobile-small {
-        display: inline;
-    }    
-
-
-
+    #hero-image-mobile-small { display: inline; }  
     
+    #locations-container { gap: 30px }
 
 }

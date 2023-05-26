@@ -1,5 +1,4 @@
 .card-layout {
-    border: 2px solid lightgreen;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
@@ -10,6 +9,7 @@
 .card {
     overflow: hidden;
     border-radius: 30px;
+    height: 374px;
 }
 
 .light-mode .card {
@@ -33,19 +33,10 @@
     border-radius: 29px;
 }
 
-.card-full-width {
-    height: 374px;
-}
-
-.card-half-width {
-    height: 374px;
-}
-
 .card h3 {
     padding-left: 40px;
     padding-top: 39px;
     position: relative;
-    z-index: 12;
 }
 
 .card p {
@@ -64,7 +55,6 @@
 }
 
 .contact-card-layout {
-    border: 2px solid lightgreen;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
@@ -98,10 +88,7 @@
     border-radius: 19px;
 }
 
-.contact-card .button-text {
-    position: relative;
-    z-index: 12;
-}
+.contact-card .button-text { position: relative; }
 
 /* iPad Pro 11" Portrait */
 @media (max-width: 970px) {
@@ -144,14 +131,8 @@
         margin-bottom: 131px;
     }    
 
-    .card-full-width {
-        height: 285px;
-    }
+    .card { height: 285px; }
     
-    .card-half-width {
-        height: 285px;
-    }    
-
     .card h3 {
         padding-left: 28px;
         padding-top: 27px;
@@ -170,15 +151,6 @@
         margin-bottom: 131px;
     }
 
-    .contact-card {
-        height: 70px;
-    }
+    .contact-card { height: 70px; }
     
-}
-
-/* iPhone 14 */
-@media (max-width: 424px) {
-
-    
-
 }

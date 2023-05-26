@@ -26,7 +26,6 @@
 }
 
 body {
-    /* border: 2px solid yellow; */
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -40,7 +39,6 @@ body.dark-mode {
 }
 
 #container {
-    border: 2px solid red;
     width: 1040px;
     margin: 0 auto;
 }
@@ -48,54 +46,41 @@ body.dark-mode {
 /* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
-    #container {
-        width: 989px;
-    }
+    #container { width: 989px; }
 
 }
 
 /* iPad Pro 12.9" Portrait */
 @media (max-width: 1120px) {
 
-    #container {
-        width: 862px;
-    }
+    #container { width: 862px; }
 
 }
 
 /* iPad Pro 11" Portrait */
 @media (max-width: 970px) {
 
-    #container {
-        width: 754px;
-    }
+    #container { width: 754px; }
 
 }
 
 /* iPad Mini Portrait */
 @media (max-width: 830px) {
 
-    #container {
-        width: 700px;
-    }
+    #container { width: 700px; }
 
 }
 
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
-    #container {
-        width: 394px;
-    }
+    #container { width: 394px; }
 
 }
 
 /* iPhone 14 */
 @media (max-width: 424px) {
 
-    #container {
-        width: 353px;
-    }
+    #container { width: 353px; }
 
 }
-

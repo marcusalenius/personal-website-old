@@ -3,9 +3,7 @@
     position: relative;
 }
 
-#kenboard-card p {
-    width: 502px;
-}
+#kenboard-card p { width: 502px; }
 
 #kenboard-demo-image {
     position: absolute;
@@ -50,13 +48,9 @@
     border-radius: 29px;
 }
 
-#personal-website-card p {
-    width: 393px;
-}
+#personal-website-card p { width: 393px; }
 
-#happy-day-card {
-    position: relative;
-}
+#happy-day-card { position: relative; }
 
 #happy-day-home {
     position: absolute;
@@ -87,83 +81,55 @@
 /* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
-    #happy-day-home {
-        left: 161px;
-    }
+    #kenboard-splash { left: 576px; }
 
-    #kenboard-splash {
-        left: 576px;
-    }
+    #kenboard-debug { left: 721px; }
 
-    #kenboard-debug {
-        left: 721px;
-    }
+    #happy-day-home { left: 161px; }
 
 }
 
 /* iPad Pro 12.9" Portrait */
 @media (max-width: 1120px) {
 
-    #kenboard-card p {
-        width: 409px;
-    }
+    #kenboard-card p { width: 409px; }
 
-    #kenboard-splash {
-        left: 483px;
-    }
+    #kenboard-splash { left: 483px; }
 
-    #kenboard-debug {
-        left: 628px;
-    }
+    #kenboard-debug { left: 628px; }
 
-    #personal-website-card p {
-        width: 341px;
-    }
+    #personal-website-card p { width: 341px; }
 
     #happy-day-home {
         left: 104px;
         top: 189px;
     }
     
-    #happy-day-menu {
-        top: 224px;
-    }
+    #happy-day-menu { top: 224px; }
     
 }
 
 /* iPad Pro 11" Portrait */
 @media (max-width: 970px) {
 
-    #kenboard-card p {
-        width: 409px;
-    }
-
     #kenboard-splash {
         top: 122px;
         left: 399px;
     }
 
-    #kenboard-debug {
-        left: 544px;
-    }
+    #kenboard-debug { left: 544px; }
 
     #happy-day-home {
         left: 104px;
         top: 187px;
     }
     
-    #happy-day-menu {
-        top: 222px;
-    }
+    #happy-day-menu { top: 222px; }
 
 }
 
 /* iPad Mini Portrait */
 @media (max-width: 830px) {
-
-    #kenboard-card p {
-        width: 409px;
-    }
 
     #kenboard-demo-image {
         left: 17px;
@@ -175,15 +141,12 @@
         top: 257px;
     }
     
-
     #kenboard-splash {
         top: 122px;
         left: 369px;
     }
 
-    #kenboard-debug {
-        left: 502px;
-    }
+    #kenboard-debug { left: 502px; }
 
     #happy-day-home {
         left: 77px;
@@ -200,13 +163,9 @@
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
-    #kenboard-card {
-        grid-column: span 1;
-    }
+    #kenboard-card { grid-column: span 1; }
 
-    #kenboard-card p {
-        width: 320px;
-    }
+    #kenboard-card p { width: 320px; }
 
     #kenboard-demo-image {
         left: 14px;
@@ -218,17 +177,11 @@
         top: 231px;
     }
     
-    #kenboard-splash {
-        display: none;
-    }
+    #kenboard-splash { display: none; }
 
-    #kenboard-debug {
-        display: none;
-    }
+    #kenboard-debug { display: none; }
 
-    #personal-website-card p {
-        width: 335px;
-    }
+    #personal-website-card p { width: 335px; }
 
     #happy-day-home {
         width: 263px;
@@ -247,13 +200,9 @@
 /* iPhone 14 */
 @media (max-width: 424px) {
 
-    #kenboard-demo-image {
-        left: 11px;
-    }
+    #kenboard-demo-image { left: 11px; }
 
-    #personal-website-card p {
-        width: 283px;
-    }
+    #personal-website-card p { width: 283px; }
 
     #happy-day-home {
         left: 118px;
@@ -266,4 +215,3 @@
     }
 
 }
-
