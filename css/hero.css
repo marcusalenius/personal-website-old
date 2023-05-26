@@ -78,6 +78,7 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    /* width: 190px; */
 }
 
 .light-mode .location-icon-dark-mode {
@@ -93,6 +94,8 @@
 
     #hero-left { width: 567px; }
 
+    /* .location { width: 175px; } */
+    
     .location-icon { height: 26px; }
     
 }
@@ -146,7 +149,9 @@
     #hero h1 { margin-top: 0px; }
 
     #hero p { margin-top: 12px; }
-    
+
+    #locations-container { gap: 40px; }
+
     .location-icon { height: 26px; }
 
     #hero-card { width: 294px; }

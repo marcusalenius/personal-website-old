@@ -1,3 +1,20 @@
+/* iPad Pro 11" Portrait */
+@media (max-width: 970px) {
+
+    #ta-card p { width: 300px; }
+
+}
+
+/* iPad Mini Portrait */
+@media (max-width: 830px) {
+
+    #hcii-reu-card p { width: 300px; }
+
+    #ta-card p { width: 300px; }
+
+}
+
+
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
@@ -11,6 +28,8 @@
 @media (max-width: 424px) {
 
     #hcii-reu-card h3 { width: 300px; }
+
+    #ta-card h3 { width: 265px; }
 
     #ta-card p { width: 284px; }
 
