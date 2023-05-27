@@ -7,6 +7,7 @@
     --lightBodyText: #6B6B6B;
     --lightFooter: #F5F5F5;
     --lightHover: #F5F5F5;
+    --lightSelected: #ECECEC;
 
     /* dark mode colors */
     --darkBackground: #262626;
@@ -15,7 +16,8 @@
     --darkText: #FAFAFA;
     --darkBodyText: #C9C9C9;
     --darkFooter: #2E2E2E;
-    --darkHover: #4D4D4D;
+    --darkHover: #414141;
+    --darkSelected: #4D4D4D;
 
 }
 
