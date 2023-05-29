@@ -67,16 +67,20 @@
           <h1>Hello,<br>I’m Marcus</h1>
           <p class="paragraph-large">I’m a sophomore at Carnegie Mellon studying Information Systems, Computer Science, and Human-Computer Interaction. I am passionate about using technology to make the world a better place. Some more text maybe goes here so that it looks good.</p>
           <div id="locations-container">
-            <div class="location">
-              <img src="icons/location-icon-light-mode.svg" alt="location pin" draggable="false" class="location-icon location-icon-light-mode">
-              <img src="icons/location-icon-dark-mode.svg" alt="location pin" draggable="false" class="location-icon location-icon-dark-mode">
-              <div class="location-text">Pittsburgh, PA</div>
-            </div>
-            <div class="location">
-              <img src="icons/location-icon-light-mode.svg" alt="location pin" draggable="false" class="location-icon location-icon-light-mode">
-              <img src="icons/location-icon-dark-mode.svg" alt="location pin" draggable="false" class="location-icon location-icon-dark-mode">
-              <div class="location-text">Gävle, Sweden</div>
-            </div>
+            <a href="https://goo.gl/maps/bNiQi64BXmRpJvmT6" target="_blank" id="pitt-link">
+              <div class="location">
+                <img src="icons/location-icon-light-mode.svg" alt="location pin" draggable="false" class="location-icon location-icon-light-mode">
+                <img src="icons/location-icon-dark-mode.svg" alt="location pin" draggable="false" class="location-icon location-icon-dark-mode">
+                <div class="location-text">Pittsburgh, PA</div>
+              </div>  
+            </a>
+            <a href="https://goo.gl/maps/P4SXTrr1t84QU3kj7" target="_blank" id="gavle-link">
+              <div class="location">
+                <img src="icons/location-icon-light-mode.svg" alt="location pin" draggable="false" class="location-icon location-icon-light-mode">
+                <img src="icons/location-icon-dark-mode.svg" alt="location pin" draggable="false" class="location-icon location-icon-dark-mode">
+                <div class="location-text">Gävle, Sweden</div>
+              </div>  
+            </a>
           </div>
         </div>
         <div id="hero-right">
@@ -133,27 +137,34 @@
       <div id="contact">
         <h2>Contact Me</h2>
         <div class="contact-card-layout">
-          <div class="contact-card" id="email-card">
-            <img src="icons/email-icon-light-mode.svg" alt="email icon" draggable="false" class="contact-icon-light-mode email-icon">
-            <img src="icons/email-icon-dark-mode.svg" alt="email icon" draggable="false" class="contact-icon-dark-mode email-icon">
-            <div class="button-text">marcus@alenius.io</div>
-          </div>
-          <div class="contact-card" id="linkedin-card">
-            <img src="icons/linkedin-icon-light-mode.svg" alt="linkedin icon" draggable="false" class="contact-icon-light-mode linkedin-icon">
-            <img src="icons/linkedin-icon-dark-mode.svg" alt="linkedin icon" draggable="false" class="contact-icon-dark-mode linkedin-icon">
-            <div class="button-text">/marcusalenius</div>
-          </div>
-          <div class="contact-card" id="github-card">
-            <img src="icons/github-icon-light-mode.svg" alt="github icon" draggable="false" class="contact-icon-light-mode github-icon">
-            <img src="icons/github-icon-dark-mode.svg" alt="github icon" draggable="false" class="contact-icon-dark-mode github-icon">
-            <div class="button-text">/marcusalenius</div>
-          </div>
+          <a href="mailto:alenius@cmu.edu" target="_blank">
+            <div class="contact-card" id="email-card">
+              <img src="icons/email-icon-light-mode.svg" alt="email icon" draggable="false" class="contact-icon-light-mode email-icon">
+              <img src="icons/email-icon-dark-mode.svg" alt="email icon" draggable="false" class="contact-icon-dark-mode email-icon">
+              <div class="button-text">alenius@cmu.edu</div>
+            </div>  
+          </a>
+          <a href="https://www.linkedin.com/in/marcusalenius/" target="_blank">
+            <div class="contact-card" id="linkedin-card">
+              <img src="icons/linkedin-icon-light-mode.svg" alt="linkedin icon" draggable="false" class="contact-icon-light-mode linkedin-icon">
+              <img src="icons/linkedin-icon-dark-mode.svg" alt="linkedin icon" draggable="false" class="contact-icon-dark-mode linkedin-icon">
+              <div class="button-text">/marcusalenius</div>
+            </div>  
+          </a>
+          <a href="https://github.com/marcusalenius" target="_blank">
+            <div class="contact-card" id="github-card">
+              <img src="icons/github-icon-light-mode.svg" alt="github icon" draggable="false" class="contact-icon-light-mode github-icon">
+              <img src="icons/github-icon-dark-mode.svg" alt="github icon" draggable="false" class="contact-icon-dark-mode github-icon">
+              <div class="button-text">/marcusalenius</div>
+            </div>  
+          </a>
         </div>
       </div>
     </div>  
     <footer>
       <div class="footer-text">Copyright &copy; 2023 Marcus Alenius. All rights reserved.</div>
     </footer>
-    <script src="main.js"></script>
+    <script src="js/navbar-and-appearance.js"></script>
+    <script src="js/locations.js"></script>
   </body>
 </html>
