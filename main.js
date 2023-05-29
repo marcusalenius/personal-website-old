@@ -1,5 +1,6 @@
 let prefersSystemAppearance = true;
 
+// Respond to system appearence changes
 if (prefersSystemAppearance) {
     const body = document.body;
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -16,6 +17,7 @@ if (prefersSystemAppearance) {
     })
 }
 
+// Load system appearance on page load
 function loadSystemAppearance() {
     const body = document.body;
     if (prefersSystemAppearance) {
@@ -34,6 +36,7 @@ function loadSystemAppearance() {
 let isScrollListenerRunning = false;
 let yUnhideAppearanceDropdown;
 
+// Toggles the appearance dropdown and adds scroll listener when unhidden
 function toggleAppearanceDropdown() {
     const appearanceDropdown = document.getElementById('appearance-drop-down');
     const navbuttonAppearance = document.getElementById('navbutton-appearance');
@@ -60,6 +63,7 @@ function toggleAppearanceDropdown() {
     }
 }
 
+// Function that closes the appearance dropdown if user scrolls more than 200px
 function scrollListener() {
     const appearanceDropdown = document.getElementById('appearance-drop-down');
     const navbuttonAppearance = document.getElementById('navbutton-appearance');
@@ -71,14 +75,29 @@ function scrollListener() {
     }
 }
 
+// Close the appearance dropdown if click outside
+window.addEventListener('click', event => {
+    const appearanceDropdown = document.getElementById('appearance-drop-down');
+    const navbuttonAppearance = document.getElementById('navbutton-appearance');
+    if (!appearanceDropdown.classList.contains('hidden')) {
+        if (event.target != appearanceDropdown && 
+            event.target != navbuttonAppearance && 
+            event.target.parentNode != navbuttonAppearance) {
+            // hide
+            appearanceDropdown.classList.add('hidden');
+            navbuttonAppearance.classList.remove('drop-down-visible');
+            navbuttonAppearance.classList.add('drop-down-hidden');
+        }
+    }
+})
 
 
+// Sets the appearance to system
 function setSytemAppearance() {
     const body = document.body;
     const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
     const dropDownItemSystem = document.getElementById('appearance-drop-down-item-system');
     if (prefersSystemAppearance) { return; }
-    // set prefersSystemAppearance to true
     prefersSystemAppearance = true;
     // enable system appearance
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -89,7 +108,7 @@ function setSytemAppearance() {
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
     }
-    // make this item selected
+    // make the system item selected
     dropDownItems.forEach((dropDownItem) => {
         if (dropDownItem.classList.contains('selected')) {
             dropDownItem.classList.remove('selected');
@@ -100,18 +119,17 @@ function setSytemAppearance() {
     toggleAppearanceDropdown();
 }
 
-
+// Sets the appearance to light
 function enableLightMode() {
     const body = document.body;
     const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
     const dropDownItemLight = document.getElementById('appearance-drop-down-item-light');
     if (dropDownItemLight.classList.contains('selected')) { return; }
-    // set prefersSystemAppearance to false
     prefersSystemAppearance = false;
     // enable light mode
     body.classList.remove('dark-mode');
     body.classList.add('light-mode');
-    // make this item selected
+    // make the light item selected
     dropDownItems.forEach((dropDownItem) => {
         if (dropDownItem.classList.contains('selected')) {
             dropDownItem.classList.remove('selected');
@@ -122,13 +140,12 @@ function enableLightMode() {
     toggleAppearanceDropdown();
 }
 
-
+// Sets the appearance to dark
 function enableDarkMode() {
     const body = document.body;
     const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
     const dropDownItemDark = document.getElementById('appearance-drop-down-item-dark');
     if (dropDownItemDark.classList.contains('selected')) { return; }
-    // set prefersSystemAppearance to false
     prefersSystemAppearance = false;
     // enable dark mode
     body.classList.remove('light-mode');
@@ -144,11 +161,12 @@ function enableDarkMode() {
     toggleAppearanceDropdown();
 }
 
-
+// Scrolls to the top
 function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
+// Scrolls to projects
 function scrollToProjects() {
     const projectsSection = document.getElementById('projects');
     const yOffset = -120; 
@@ -156,6 +174,7 @@ function scrollToProjects() {
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
+// Scrolls to work
 function scrollToWork() {
     const workSection = document.getElementById('work');
     const yOffset = -120; 
@@ -163,6 +182,7 @@ function scrollToWork() {
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
+// Scrolls to contact i.e. the bottom
 function scrollToContact() {
     window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
 }
