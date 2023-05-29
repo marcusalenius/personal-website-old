@@ -20,6 +20,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .light-mode .navbutton {
@@ -69,6 +70,7 @@ nav {
     width: 64px;
     height: 64px;
     border-radius: 45px;
+    cursor: pointer;
 }
 
 .light-mode #navbutton-home {
@@ -104,6 +106,7 @@ nav {
     width: 48px;
     height: 48px;
     border-radius: 45px;
+    cursor: pointer;
 }
 
 .light-mode #navbutton-appearance {
@@ -138,12 +141,42 @@ nav {
     top: 10px;
 }
 
-.light-mode #appearance-icon-dark-mode {
-    display: none;
+.appearance-cross-icon {
+    position: absolute;
+    left: 14px;
+    top: 14px;
 }
 
-.dark-mode #appearance-icon-light-mode {
-    display: none;
+.drop-down-hidden .appearance-icon {
+    display: inline;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform 150ms ease;
+}
+
+.drop-down-hidden .appearance-cross-icon { transform: scale(0); }
+
+.drop-down-visible .appearance-icon { transform: scale(0); }
+
+.drop-down-visible .appearance-cross-icon {
+    display: inline;
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform 150ms ease;
+}
+
+.light-mode #appearance-icon-dark-mode { transform: scale(0); }
+
+.light-mode #appearance-cross-icon-dark-mode { transform: scale(0); }
+
+.dark-mode #appearance-icon-light-mode { transform: scale(0); }
+
+.dark-mode #appearance-cross-icon-light-mode { transform: scale(0); }
+
+#appearance-drop-down.hidden {
+    transform: scale(0);
+    opacity: 0;
+    transition: 120ms ease-in;
 }
 
 #appearance-drop-down {
@@ -153,6 +186,9 @@ nav {
     width: 188px;
     height: 160px;
     border-radius: 20px;
+    transform: scale(1);
+    transform-origin: top right;
+    transition: transform 200ms ease-out;
 }
 
 .light-mode #appearance-drop-down {
@@ -341,6 +377,17 @@ nav {
         height: 24px;
         left: 10px;
         top: 10px;
+    }
+
+    .appearance-cross-icon {
+        width: 19px;
+        height: 19px;
+        left: 13px;
+        top: 13px;
+    }
+
+    #appearance-drop-down {
+        top: 60px;
     }
     
 }

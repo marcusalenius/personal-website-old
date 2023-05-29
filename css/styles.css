@@ -34,10 +34,12 @@ body {
 
 body.light-mode {
     background-color: var(--lightBackground);
+    transition: background-color 400ms;
 }
 
 body.dark-mode {
     background-color: var(--darkBackground);
+    transition: background-color 400ms;
 }
 
 #container {
