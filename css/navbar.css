@@ -14,6 +14,8 @@ nav {
     gap: 35px;
 }
 
+/* Navbuttons */
+
 .navbutton {
     border-radius: 45px;
     height: 48px;
@@ -49,10 +51,6 @@ nav {
     z-index: 102;
 }
 
-#navbutton-mobile {
-    display: none;
-}
-
 #navbutton-projects {
     width: 139px;
 }
@@ -72,6 +70,8 @@ nav {
     border-radius: 45px;
     cursor: pointer;
 }
+
+/* Home button */
 
 .light-mode #navbutton-home {
     background: var(--lightCard);
@@ -100,6 +100,8 @@ nav {
     left: 4px;
     top: 4px;
 }
+
+/* Appearance button */
 
 #navbutton-appearance {
     position: relative;
@@ -172,6 +174,8 @@ nav {
 .dark-mode #appearance-icon-light-mode { transform: scale(0); }
 
 .dark-mode #appearance-cross-icon-light-mode { transform: scale(0); }
+
+/* Appearance dropdown */
 
 #appearance-drop-down.hidden {
     transform: scale(0);
@@ -268,6 +272,101 @@ nav {
     display: none;
 }
 
+/* Navmenu mobile */
+
+#navmenu-mobile {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 188px;
+    height: 208px;
+    border-radius: 20px;
+}
+
+.light-mode #navmenu-mobile {
+    background-color: var(--lightCard);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode #navmenu-mobile {
+    background-color: var(--darkCardRim);
+    box-shadow: 0px 0px 10px #000000;
+    position: relative;
+}
+
+.dark-mode #navmenu-mobile::before {
+    background: var(--darkCard);
+    content: '';
+    position: absolute;
+    display: inline-block;
+    margin: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 19px;
+    z-index: 11;
+}
+
+#navmenu-mobile.hidden {
+    top: 3px;
+    display: flex;
+    border-radius: 45px;
+    width: 146px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 300ms ease;
+}
+
+.navmenu-item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 8px;
+    width: 172px;
+    height: 48px;
+    border-radius: 12px;
+    z-index: 12;
+    cursor: pointer;
+}
+
+.light-mode .navmenu-item.selected {
+    background-color: var(--lightSelected);
+}
+
+.dark-mode .navmenu-item.selected {
+    background-color: var(--darkSelected);
+}
+
+.navmenu-item.hidden {
+    display: none;
+}
+
+#navmenu-item-about-me {
+    margin-top: 8px;
+}
+
+.hidden #navmenu-item-about-me {
+    margin-top: 0px;
+}
+
+.hidden .navmenu-item {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden .navmenu-item.selected {
+    background: none;
+    transition: 300ms ease;
+}
+
+
+
+
 /* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
@@ -311,42 +410,7 @@ nav {
     .navbutton {
         display: none;
     }
-    
-    #navbutton-mobile {
-        display: flex;
-        border-radius: 45px;
-        width: 146px;
-        height: 44px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #navbutton-mobile .button-text {
-        z-index: 102;
-    }
-    
-    .light-mode #navbutton-mobile {
-        background-color: var(--lightCard);
-        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
-    }
-    
-    .dark-mode #navbutton-mobile {
-        background-color: var(--darkCardRim);
-        box-shadow: 0px 0px 8px #000000;
-        position: relative;
-    }
-    
-    .dark-mode #navbutton-mobile::before {
-        background-color: var(--darkCard);
-        content: '';
-        position: absolute;
-        margin: 1px;
-        width: calc(100% - 2px);
-        height: calc(100% - 2px);
-        border-radius: 44px;
-        z-index: 101;
-    }
-    
+        
     #navbutton-home {
         width: 50px;
         height: 50px;

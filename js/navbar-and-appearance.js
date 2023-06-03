@@ -1,6 +1,6 @@
 let prefersSystemAppearance = true;
 
-// Respond to system appearence changes
+// Respond to system appearance changes
 if (prefersSystemAppearance) {
     const body = document.body;
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
@@ -93,7 +93,7 @@ window.addEventListener('click', event => {
 
 
 // Sets the appearance to system
-function setSytemAppearance() {
+function setSystemAppearance() {
     const body = document.body;
     const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
     const dropDownItemSystem = document.getElementById('appearance-drop-down-item-system');

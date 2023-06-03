@@ -23,8 +23,19 @@
       <div id="navbutton-home" onclick="scrollToTop()">
         <img src="images/navbar-headshot.png" alt="small image of Marcus Alenius" draggable="false" id="navbar-headshot">
       </div>
-      <div id="navbutton-mobile">
-        <div class="button-text">About Me</div>
+      <div class="" id="navmenu-mobile">
+        <div class="navmenu-item selected" id="navmenu-item-about-me" onclick="scrollToTop()">
+          <div class="button-text">About Me</div>
+        </div>
+        <div class="navmenu-item" id="navmenu-item-projects" onclick="scrollToProjects()">
+          <div class="button-text">Projects</div>
+        </div>
+        <div class="navmenu-item" id="navmenu-item-work" onclick="scrollToWork()">
+          <div class="button-text">Work</div>
+        </div>
+        <div class="navmenu-item" id="navmenu-item-contact" onclick="scrollToContact()">
+          <div class="button-text">Contact</div>
+        </div>
       </div>
       <div id="nav-right">
         <div class="navbutton" id="navbutton-projects" onclick="scrollToProjects()">
@@ -43,7 +54,7 @@
           <img src="icons/appearance-cross-icon-dark-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-dark-mode">
         </div>
         <div class="hidden" id="appearance-drop-down">
-          <div class="appearance-drop-down-item selected" id="appearance-drop-down-item-system" onclick="setSytemAppearance()">
+          <div class="appearance-drop-down-item selected" id="appearance-drop-down-item-system" onclick="setSystemAppearance()">
             <img src="icons/appearance-drop-down-icon-system-light-mode.svg" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
             <img src="icons/appearance-drop-down-icon-system-dark-mode.png" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
             <div class="button-text">System</div>
@@ -166,5 +177,6 @@
     </footer>
     <script src="js/navbar-and-appearance.js"></script>
     <script src="js/locations.js"></script>
+    <script src="js/navmenu-mobile.js"></script>
   </body>
 </html>
