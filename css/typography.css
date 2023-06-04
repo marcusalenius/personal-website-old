@@ -25,6 +25,7 @@ h3 {
     font-weight: 500;
     font-size: 32px;
     line-height: 39px;
+    z-index: 15;
 }
 
 .light-mode h3 { color: var(--lightText); }
@@ -47,6 +48,7 @@ p.paragraph-small {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    z-index: 15;
 }
 
 .light-mode p.paragraph-small { color: var(--lightBodyText); }
