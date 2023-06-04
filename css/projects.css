@@ -1,3 +1,7 @@
+#projects {
+    border: 2px solid red;
+}
+
 #kenboard-card {
     grid-column: span 2;
     position: relative;
