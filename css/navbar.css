@@ -272,105 +272,9 @@ nav {
     display: none;
 }
 
-/* Navmenu mobile */
-
 #navmenu-mobile {
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 188px;
-    height: 208px;
-    border-radius: 20px;
-    transition: 300ms ease;
-}
-
-.light-mode #navmenu-mobile {
-    background-color: var(--lightCard);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
-}
-
-.dark-mode #navmenu-mobile {
-    background-color: var(--darkCardRim);
-    box-shadow: 0px 0px 10px #000000;
-}
-
-.dark-mode #navmenu-mobile::before {
-    background: var(--darkCard);
-    content: '';
-    position: absolute;
-    display: inline-block;
-    margin: 1px;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    border-radius: 19px;
-    z-index: 11;
-}
-
-#navmenu-mobile.hidden {
-    top: 3px;
-    display: flex;
-    border-radius: 45px;
-    width: 146px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: 300ms ease;
-}
-
-.dark-mode #navmenu-mobile.hidden::before {
-    border-radius: 44px;
-}
-
-
-.navmenu-item {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    gap: 8px;
-    width: 172px;
-    height: 48px;
-    border-radius: 12px;
-    z-index: 12;
-    cursor: pointer;
-}
-
-.light-mode .navmenu-item.selected {
-    background-color: var(--lightSelected);
-    transition: 300ms ease;
-}
-
-.dark-mode .navmenu-item.selected {
-    background-color: var(--darkSelected);
-    transition: 300ms ease;
-}
-
-.navmenu-item.hidden {
     display: none;
 }
-
-#navmenu-item-about-me {
-    margin-top: 8px;
-}
-
-.hidden #navmenu-item-about-me {
-    margin-top: 0px;
-}
-
-.hidden .navmenu-item {
-    width: 100%;
-    height: 100%;
-}
-
-.hidden .navmenu-item.selected {
-    background: none;
-    transition: 300ms ease;
-}
-
 
 
 /* iPad Pro 11" Landscape */
@@ -459,6 +363,107 @@ nav {
     #appearance-drop-down {
         top: 60px;
     }
+
+    /* Navmenu mobile */
+
+    #navmenu-mobile {
+        display: inline;
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 188px;
+        height: 208px;
+        border-radius: 20px;
+        transition: 300ms ease;
+    }
+
+    .light-mode #navmenu-mobile {
+        background-color: var(--lightCard);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .dark-mode #navmenu-mobile {
+        background-color: var(--darkCardRim);
+        box-shadow: 0px 0px 10px #000000;
+    }
+
+    .dark-mode #navmenu-mobile::before {
+        background: var(--darkCard);
+        content: '';
+        position: absolute;
+        display: inline-block;
+        margin: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        border-radius: 19px;
+        z-index: 11;
+    }
+
+    #navmenu-mobile.hidden {
+        top: 3px;
+        display: flex;
+        border-radius: 45px;
+        width: 146px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 300ms ease;
+    }
+
+    .dark-mode #navmenu-mobile.hidden::before {
+        border-radius: 44px;
+    }
+
+
+    .navmenu-item {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 8px;
+        width: 172px;
+        height: 48px;
+        border-radius: 12px;
+        z-index: 12;
+        cursor: pointer;
+    }
+
+    .light-mode .navmenu-item.selected {
+        background-color: var(--lightSelected);
+        transition: 300ms ease;
+    }
+
+    .dark-mode .navmenu-item.selected {
+        background-color: var(--darkSelected);
+        transition: 300ms ease;
+    }
+
+    .navmenu-item.hidden {
+        display: none;
+    }
+
+    #navmenu-item-about-me {
+        margin-top: 8px;
+    }
+
+    .hidden #navmenu-item-about-me {
+        margin-top: 0px;
+    }
+
+    .hidden .navmenu-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hidden .navmenu-item.selected {
+        background: none;
+        transition: 300ms ease;
+    }
+
     
 }
 
