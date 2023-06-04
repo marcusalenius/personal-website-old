@@ -1,24 +1,18 @@
-// Collapse navmenu dropdown if click outside
+// Hide navmenu dropdown if click outside
 window.addEventListener('click', event => {
     const navmenu = document.getElementById('navmenu-mobile');
-    const navmenuItems = document.querySelectorAll('.navmenu-item');
     if (!navmenu.classList.contains('hidden')) {
         if (event.target != navmenu &&
             event.target.parentNode != navmenu &&
             event.target.parentNode.parentNode != navmenu) {
-            // collapse
-            navmenu.classList.add('hidden');
-            navmenuItems.forEach(item => {
-                if (!item.classList.contains('selected')) {
-                    item.classList.add('hidden');
-                }
-            })
+            hideNavmenu();
         }
     }
 });
 
-// Switch to current section on scroll
+// Switch item to current section on scroll
 window.addEventListener('scroll', event => {
+    console.log(isNavmenuScrollListenerRunning);
     const navmenu = document.getElementById('navmenu-mobile');
     const itemSectionMap = {
         aboutMe :  { item :  document.getElementById('navmenu-item-about-me'), 
@@ -99,4 +93,112 @@ function getMostInView(itemSectionMap) {
     }
     return mostInView;
 }
+
+let isNavmenuScrollListenerRunning = false;
+let yUnhideNavmenu;
+
+// Unhide navmenu
+function unhideNavmenu() {
+    const navmenu = document.getElementById('navmenu-mobile');
+    const navmenuItems = document.querySelectorAll('.navmenu-item');
+    // cancel scroll listener if it is running
+    if (isNavmenuScrollListenerRunning) {
+        window.removeEventListener('scroll', navmenuScrollListener);
+        isNavmenuScrollListenerRunning = false;
+    }
+    // unhide navmenu
+    if (navmenu.classList.contains('hidden')) {
+        navmenu.classList.remove('hidden');
+        navmenuItems.forEach(item => {
+            if (!item.classList.contains('selected')) {
+                item.classList.remove('hidden');
+            }
+        })
+        // start navmenu scroll listener
+        yUnhideNavmenu = window.scrollY;
+        window.addEventListener('scroll', navmenuScrollListener);
+        isNavmenuScrollListenerRunning = true;
+    }
+}
+
+// Hide navmenu
+function hideNavmenu() {
+    const navmenu = document.getElementById('navmenu-mobile');
+    const navmenuItems = document.querySelectorAll('.navmenu-item');
+    // cancel scroll listener if it is running
+    if (isNavmenuScrollListenerRunning) {
+        window.removeEventListener('scroll', navmenuScrollListener);
+        isNavmenuScrollListenerRunning = false;
+    }
+    // hide navmenu
+    if (!navmenu.classList.contains('hidden')) {
+        navmenu.classList.add('hidden');
+        navmenuItems.forEach(item => {
+            if (!item.classList.contains('selected')) {
+                item.classList.add('hidden');
+            }
+        })    
+    }
+}
+
+// Function that closes the navmenu if user scrolls more than 200px
+function navmenuScrollListener() {
+    const navmenu = document.getElementById('navmenu-mobile');
+    const navmenuItems = document.querySelectorAll('.navmenu-item');
+    if (Math.abs(yUnhideNavmenu - window.scrollY) >= 200) {
+        // hide navmenu
+        if (!navmenu.classList.contains('hidden')) {
+            navmenu.classList.add('hidden');
+            navmenuItems.forEach(item => {
+                if (!item.classList.contains('selected')) {
+                    item.classList.add('hidden');
+                }
+            })    
+        }
+    }
+}
+
+
+
+
+// Handle navmenu item clicks
+
+function handleAboutMeClick() {
+    const navmenu = document.getElementById('navmenu-mobile');
+    if (navmenu.classList.contains('hidden')) { unhideNavmenu(); }
+    else { 
+        scrollToTop(); 
+        hideNavmenu();
+    }
+}
+
+function handleProjectsClick() {
+    const navmenu = document.getElementById('navmenu-mobile');
+    if (navmenu.classList.contains('hidden')) { unhideNavmenu(); }
+    else { 
+        scrollToProjects(); 
+        hideNavmenu();
+    }
+
+}
+
+function handleWorkClick() {
+    const navmenu = document.getElementById('navmenu-mobile');
+    if (navmenu.classList.contains('hidden')) { unhideNavmenu(); }
+    else { 
+        scrollToWork(); 
+        hideNavmenu();
+    }
+}
+
+function handleContactClick() {
+    const navmenu = document.getElementById('navmenu-mobile');
+    if (navmenu.classList.contains('hidden')) { unhideNavmenu(); }
+    else { 
+        scrollToContact(); 
+        hideNavmenu();
+    }
+}
+
+
 

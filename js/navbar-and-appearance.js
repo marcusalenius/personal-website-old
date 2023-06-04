@@ -33,7 +33,7 @@ function loadSystemAppearance() {
     }
 }
 
-let isScrollListenerRunning = false;
+let isAppearanceScrollListenerRunning = false;
 let yUnhideAppearanceDropdown;
 
 // Toggles the appearance dropdown and adds scroll listener when unhidden
@@ -41,9 +41,9 @@ function toggleAppearanceDropdown() {
     const appearanceDropdown = document.getElementById('appearance-drop-down');
     const navbuttonAppearance = document.getElementById('navbutton-appearance');
     // cancel scroll listener if it is running
-    if (isScrollListenerRunning) {
-        window.removeEventListener('scroll', scrollListener);
-        isScrollListenerRunning = false;
+    if (isAppearanceScrollListenerRunning) {
+        window.removeEventListener('scroll', appearanceScrollListener);
+        isAppearanceScrollListenerRunning = false;
     }
     // unhide appearance dropdown
     if (appearanceDropdown.classList.contains('hidden')) {
@@ -52,8 +52,8 @@ function toggleAppearanceDropdown() {
         navbuttonAppearance.classList.add('drop-down-visible');
         // auto hide on scroll of more tha 200px
         yUnhideAppearanceDropdown = window.scrollY;
-        window.addEventListener('scroll', scrollListener);
-        isScrollListenerRunning = true;
+        window.addEventListener('scroll', appearanceScrollListener);
+        isAppearanceScrollListenerRunning = true;
     }
     // hide
     else {
@@ -64,7 +64,7 @@ function toggleAppearanceDropdown() {
 }
 
 // Function that closes the appearance dropdown if user scrolls more than 200px
-function scrollListener() {
+function appearanceScrollListener() {
     const appearanceDropdown = document.getElementById('appearance-drop-down');
     const navbuttonAppearance = document.getElementById('navbutton-appearance');
     if (Math.abs(yUnhideAppearanceDropdown - window.scrollY) >= 200) {
