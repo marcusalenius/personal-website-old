@@ -1,0 +1,17 @@
+.post {
+    border: 2px solid red;
+    width: 685px;
+    margin: 0 auto;
+}
+
+p.paragraph-small.post-intro {
+    margin-top: 12px;
+}
+
+.light-mode p.paragraph-small.post-intro {
+    color: var(--lightText);
+}
+
+.dark-mode p.paragraph-small.post-intro {
+    color: var(--darkText);
+}

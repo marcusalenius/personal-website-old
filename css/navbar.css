@@ -71,6 +71,12 @@ nav {
     cursor: pointer;
 }
 
+#navbutton-back {
+    width: 118px;
+    display: flex;
+    gap: 8px;
+}
+
 /* Home button */
 
 .light-mode #navbutton-home {
@@ -100,6 +106,22 @@ nav {
     left: 4px;
     top: 4px;
 }
+
+/* Back button */
+
+#back-icon-dark-mode,
+#back-icon-light-mode {
+    z-index: 102;
+}
+
+.light-mode #back-icon-dark-mode {
+    display: none;
+}
+
+.dark-mode #back-icon-light-mode {
+    display: none;
+}
+
 
 /* Appearance button */
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus Alenius</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body class="light-mode" onload="loadSystemAppearance()">
+    <nav>
+      <div class="navbutton" id="navbutton-back">
+        <img src="icons/back-icon-light-mode.svg" alt="left-arrow" draggable="false" id="back-icon-light-mode">
+        <img src="icons/back-icon-dark-mode.svg" alt="left-arrow" draggable="false" id="back-icon-dark-mode">
+        <div class="button-text">Home</div>
+      </div>
+      <div class="drop-down-hidden" id="navbutton-appearance" onclick="toggleAppearanceDropdown()">
+        <img src="icons/appearance-icon-light-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-light-mode">
+        <img src="icons/appearance-icon-dark-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-dark-mode">
+        <img src="icons/appearance-cross-icon-light-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-light-mode">
+        <img src="icons/appearance-cross-icon-dark-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-dark-mode">
+      </div>
+      <div class="hidden" id="appearance-drop-down">
+        <div class="appearance-drop-down-item selected" id="appearance-drop-down-item-system" onclick="setSystemAppearance()">
+          <img src="icons/appearance-drop-down-icon-system-light-mode.svg" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-system-dark-mode.png" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">System</div>
+        </div>
+        <div class="appearance-drop-down-item" id="appearance-drop-down-item-light" onclick="enableLightMode()">
+          <img src="icons/appearance-drop-down-icon-light-light-mode.svg" alt="sun icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-light-dark-mode.svg" alt="sun icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">Light</div>
+        </div>
+        <div class="appearance-drop-down-item" id="appearance-drop-down-item-dark" onclick="enableDarkMode()">
+          <img src="icons/appearance-drop-down-icon-dark-light-mode.svg" alt="moon icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-dark-dark-mode.svg" alt="moon icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">Dark</div>
+        </div>
+      </div>
+    </nav>
+    <div id="container">
+      <div class="post">
+        <h2>Kenboard</h2>
+        <p class="paragraph-small post-intro">
+          A virtual keyboard with a custom intelligent typing error correction system – my term project for Carnegie Mellon's 15-112 Fundamentals of Programming and Computer Science. Written in Python using the Kivy app development framework.
+        </p>
+      </div>
+    </div>  
+    <footer>
+      <div class="footer-text">Copyright &copy; 2023 Marcus Alenius. All rights reserved.</div>
+    </footer>
+    <script src="js/navbar-and-appearance.js"></script>
+  </body>
+</html>
