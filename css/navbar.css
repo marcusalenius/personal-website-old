@@ -397,7 +397,7 @@ nav {
         width: 188px;
         height: 208px;
         border-radius: 20px;
-        transition: 300ms ease;
+        transition: 200ms ease;
     }
 
     .light-mode #navmenu-mobile {
@@ -420,6 +420,8 @@ nav {
         height: calc(100% - 2px);
         border-radius: 19px;
         z-index: 11;
+        transition: 200ms ease;
+
     }
 
     #navmenu-mobile.hidden {
@@ -432,13 +434,11 @@ nav {
         justify-content: center;
         left: 50%;
         transform: translateX(-50%);
-        transition: 300ms ease;
     }
 
     .dark-mode #navmenu-mobile.hidden::before {
         border-radius: 44px;
     }
-
 
     .navmenu-item {
         display: flex;
@@ -454,14 +454,17 @@ nav {
         cursor: pointer;
     }
 
+    .navmenu-item.selected {
+        transition: 250ms ease;
+    }
+
     .light-mode .navmenu-item.selected {
         background-color: var(--lightSelected);
-        transition: 300ms ease;
+        
     }
 
     .dark-mode .navmenu-item.selected {
         background-color: var(--darkSelected);
-        transition: 300ms ease;
     }
 
     .navmenu-item.hidden {
@@ -483,9 +486,11 @@ nav {
 
     .hidden .navmenu-item.selected {
         background: none;
-        transition: 300ms ease;
+        border-radius: 45px;
+        width: 146px;
+        height: 44px;
+        transition: 200ms ease;
     }
-
     
 }
 
