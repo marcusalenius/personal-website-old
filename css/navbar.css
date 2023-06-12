@@ -467,8 +467,20 @@ nav {
         background-color: var(--darkSelected);
     }
 
+    .light-mode .navmenu-item:hover:not(.selected) {
+        background-color: var(--lightHover);
+    }
+    
+    .dark-mode .navmenu-item:hover:not(.selected) {
+        background-color: var(--darkHover);
+    }
+    
+
     .navmenu-item.hidden {
         display: none;
+        /* visibility: hidden; */
+        /* opacity: 0;
+        position: absolute; */
     }
 
     #navmenu-item-about-me {
