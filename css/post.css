@@ -11,6 +11,42 @@
     margin-bottom: 45px;
 }
 
+/* Post introduction */
+
+.post-intro {
+    margin-top: 12px;
+}
+
+.light-mode .post-intro p.paragraph-small {
+    color: var(--lightText);
+}
+
+.dark-mode .post-intro p.paragraph-small {
+    color: var(--darkText);
+}
+
+.info-items {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+p.info-item-header {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.light-mode p.info-item-header {
+    color: var(--lightBodyText);
+}
+
+.dark-mode p.info-item-header {
+    color: var(--darkBodyText);
+}
+
+/* Kenboard post */
 
 #kenboard-demo-image-full-length {
     position: absolute;
@@ -49,43 +85,50 @@
     transform: translateZ(0);
 }
 
-
-.post-intro {
-    margin-top: 12px;
-}
-
-.light-mode .post-intro p.paragraph-small {
-    color: var(--lightText);
-}
-
-.dark-mode .post-intro p.paragraph-small {
-    color: var(--darkText);
-}
-
-.info-items {
-    margin-top: 26px;
-    display: flex;
-    justify-content: space-between;
-}
-
-p.info-item-header {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-}
-
-.light-mode p.info-item-header {
-    color: var(--lightBodyText);
-}
-
-.dark-mode p.info-item-header {
-    color: var(--darkBodyText);
-}
-
 iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
     margin-top: 40px;
     margin-bottom: 48px;
 }
+
+/* Happy Day post */
+
+#happy-day-post .info-items {
+    width: 526px;
+}
+
+#happy-day-home-full {
+    position: absolute;
+    width: 474px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+#happy-day-menu-full {
+    position: absolute;
+    width: 439px;
+    left: 145px;
+    top: 12px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+#happy-day-location-full {
+    position: absolute;
+    width: 399px;
+    left: 284px;
+    top: 22px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+#happy-day-post .post-image {
+    margin-bottom: 10px;
+}
+
+
+
