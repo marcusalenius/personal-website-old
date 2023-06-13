@@ -421,12 +421,11 @@ nav {
         border-radius: 19px;
         z-index: 11;
         transition: 200ms ease;
-
     }
 
     #navmenu-mobile.hidden {
         top: 3px;
-        display: flex;
+        display: inline;
         border-radius: 45px;
         width: 146px;
         height: 44px;
@@ -455,6 +454,10 @@ nav {
     }
 
     .navmenu-item.selected {
+        /* transition: background 250ms ease,
+                    border-radius 250ms ease,
+                    width 250ms ease,
+                    height 250ms ease; */
         transition: 250ms ease;
     }
 
@@ -475,12 +478,8 @@ nav {
         background-color: var(--darkHover);
     }
     
-
     .navmenu-item.hidden {
         display: none;
-        /* visibility: hidden; */
-        /* opacity: 0;
-        position: absolute; */
     }
 
     #navmenu-item-about-me {
@@ -497,11 +496,10 @@ nav {
     }
 
     .hidden .navmenu-item.selected {
-        background: none;
+        background-color: rgba(0, 0, 0, 0);
         border-radius: 45px;
         width: 146px;
         height: 44px;
-        transition: 200ms ease;
     }
     
 }
