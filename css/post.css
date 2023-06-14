@@ -49,6 +49,7 @@ p.info-item-header {
 
 .post-body h3 {
     margin-top: 44px;
+    margin-bottom: -10px;
 }
 
 .post-body p {
@@ -72,7 +73,6 @@ blockquote {
     position: relative;
     width: fit-content;
     margin: 40px auto;
-    /* border: 2px solid red; */
 }
 
 .body-image img {
@@ -109,7 +109,6 @@ blockquote {
 .dark-mode .colored-section-background {
     background-color: var(--darkFooter);
 }
-
 
 .colored-section-content {
     z-index: 2;
@@ -204,7 +203,6 @@ iframe {
     width: 100%;
     aspect-ratio: 16 / 9;
     margin-top: 40px;
-    margin-bottom: 48px;
 }
 
 #kenboard-proof-of-concept {
