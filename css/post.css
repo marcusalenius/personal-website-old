@@ -1,5 +1,6 @@
 .post {
-    width: 685px;
+    /* width: 685px; */
+    width: 630px;
     margin: 0 auto;
     margin-top: 30px;
 }
@@ -182,7 +183,8 @@ hr {
 #kenboard-splash-full-length {
     position: absolute;
     width: 180px;
-    left: 370px;
+    /* left: 370px; */
+    left: 346px;
     top: -3px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
     /* to fix safari filter drop-shadow rendering issue: */
@@ -192,7 +194,8 @@ hr {
 #kenboard-debug-full-length {
     position: absolute;
     width: 180px;
-    left: 510px;
+    /* left: 510px; */
+    left: 455px;
     top: -3px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
     /* to fix safari filter drop-shadow rendering issue: */
