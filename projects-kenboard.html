@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -50,8 +52,8 @@
         <div class="post-image">
           <img src="images/kenboard-demo-full-length.png" alt="screenshot of Kenboard's typing experience" id="kenboard-demo-image-full-length">
           <video src="images/kenboard-demo.mp4" autoplay playsinline muted loop id="kenboard-demo-video"></video>
-          <img src="images/kenboard-debug-full-length.png" alt="screenshot of Kenboard's typing experience in debug mode" id="kenboard-debug-full-length">  
           <img src="images/kenboard-splash-full-length.png" alt="screenshot of Kenboard's splash screen" id="kenboard-splash-full-length">
+          <img src="images/kenboard-debug-full-length.png" alt="screenshot of Kenboard's typing experience in debug mode" id="kenboard-debug-full-length">  
         </div>
         <h2>Kenboard</h2>
         <div class="post-intro">
@@ -78,9 +80,167 @@
           </div>
           <iframe src="https://www.youtube.com/embed/GL7kLWBDsWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <h3>Full Circle</h3>
+
+        <div class="post-body">
+
+          <h3>Full Circle</h3>
+          <p>
+            Long before coming to Carnegie Mellon, I watched the video of Steve Jobs introducing the original iPhone. I was fascinated by the applause he received when simply scrolling through a list of artists or pinching to zoom on a photo, something that was so natural to me. I understood that this was completely different from anything that existed before, yet so natural and intuitive.
+          </p>
+          <p>
+            It sparked my interest in software and human-computer interaction and made me want to go learn from the best people in the field. I decided to leave Sweden and go to college at CMU. I wrote about my inspiration in my CMU application essay:
+          </p>
+          <blockquote>
+            <p>
+              I began reading everything I could find about the process of building the first iPhone. I watched interviews with the UI wizard Bas Ording and preordered the book written by the keyboard engineer Ken Kocienda. I learned about the invention of inertial scrolling and rubber banding and the AI that was required to build a reliable touch keyboard. It was fascinating.
+            </p>
+          </blockquote>
+          <p>
+            Reading Ken Kocienda's book <em>Creative Selection</em> made me realize that this was a field I wanted to dedicate my career to. A project like the iPhone keyboard has a blend of creativity and design, and deep technical problem-solving that really appeals to me.
+          </p>
+          <p>
+            When it was time to decide what to do for my term project in CMU's Python CS course, 15-112, I thought: Wouldn't it be cool to end my first year at CMU by recreating the technology that made me want to come here in the first place?
+          </p>
+          
+          <div class="colored-section">
+            <div class="colored-section-background"></div>
+            <div class="colored-section-content">
+              <h3>Creative Selection</h3>
+              <p>
+                In 2018 Ken Kocienda, the engineer behind the original iPhone's software keyboard, published a book about his time at Apple. Expecting a goldmine of fascinating stories, I ordered it as soon as it became available.
+              </p>
+              <p>
+                The most intriguing story was the now-famous keyboard derby. About a year before its announcement, Scott Forstall, the executive leading the small software team working on <em>Purple</em> , the code name for the secret phone project, paused development on all other <em>Purple</em> software and made everyone keyboard engineers. Two weeks later they all met to demo their solution to the iPhone's most critical software challenge. Kocienda vividly describes this demo – how wonky some of the designs were, with complex gestures and key combinations, and how Scott reacted to his normal-looking but error-free keyboard.
+              </p>
+              <p>
+                Kocienda's process of developing the keyboard is a centerpiece of his book. It's a great illustration of the iterative software development process, of creating prototypes and living on those prototypes, and ultimately letting the best idea, embodied by the most promising prototype, prevail – in a process he calls <em>creative selection</em>.
+              </p>
+              <p>
+                Beyond his work on Purple, Ken describes what it was like to demo for Steve Jobs and how a team of three engineers developed the Safari web browser. This includes creating WebKit, the browser engine that powers Safari, and now more than 90%<sup><a id="footnote-1-number" href="#footnote-1-text">1</a></sup> of the browser market share.
+              </p>
+              <p>
+                I can't do this book justice here, if you are interested in software engineering, product design, or just fascinating stories I highly recommend his book. The physical book contains incredible illustrations while the audiobook is read by Kocienda himself: <a href="http://creativeselection.io" target="_blank">creativeselection.io</a>.
+              </p>  
+            </div>
+          </div>
+
+          <h3>Getting the Go-Ahead</h3>
+          <p>
+            Starting the semester before I took 15-112, Professor Kosbie has all his students build a Sudoku game for the term project. That is unless you can convince him that you have a better idea, that is more difficult but that you can finish in the 2.5 weeks allotted for the term project. So, I knew I had some convincing to do.
+          </p>
+          <p>
+            About two weeks before the term project was slated to begin, I went to Kosbie's office hours to tell him about my idea. He was intrigued but pointed out that the feasibility of the project depended on my ability to build a Python app that could run on my iPhone (using Python was one of the few requirements of the project). He told me about a framework called Kivy, which allows you to build cross-platform Python apps for multitouch, but warned me that neither he nor any of the TAs had much experience with this framework, so I would be on my own. The meeting ended with Kosbie telling me to have a demo of a Python app running on my phone after the weekend.
+          </p>
+          <p>
+            I had to learn Kivy and how to get a Python app running on my iPhone.
+          </p>
+          <p>
+            The weekend passed and I had a simple little game running on my phone. A red square appeared in the middle of the screen. If you tap it, it moves to a random spot on the screen; if you miss it, it shows the coordinates you tapped. This had all the components I needed to build my keyboard: drawing shapes, registering where the user tapped, and drawing and updating text labels. It was enough for Kosbie to approve my project. As far as I know, I was the only student (or possibly one of the only two) of the 100+ students in Kosbie's lecture who got the go-ahead to do a custom term project.
+          </p>
+
+          <div class="body-image">
+            <img src="images/kenboard-proof-of-concept.png" alt="screenshot of proof of concept demo" id="kenboard-proof-of-concept">
+            <video src="images/kenboard-proof-of-concept-video.mp4" autoplay playsinline muted loop id="kenboard-proof-of-concept-video"></video>
+            <div class="footer-text">Proof of concept demo</div>
+          </div>
+
+          <h3>The Naive Approach</h3>
+          <p>
+            I decided to draw all shapes, text, and buttons imperatively, instead of making use of some of Kivy's declarative components. I figured it was better to stay more true to CMU's in-house Python graphics framework which the other students were using. It made my code more complex but allowed me to control every detail of how my app looked and responded to the user.
+          </p>
+          <p>
+            At the core of this project is the autocorrection algorithm. My initial approach was based on my naive understanding of how the iPhone's autocorrection worked. I planned to dynamically adjust the hit region of each key based on how likely it was to be the next key the user would want to hit. That way you would have a greater chance of hitting the key you wanted to type.
+          </p>
+          <div class="body-image">
+            <img src="images/kenboard-naive-approach.png" alt="sketch of dynamically changing hit regions" id="kenboard-naive-approach">
+            <div class="footer-text">Sketch of dynamically changing hit regions. For example, after typing ‘t’, it is likely that ‘h’ is the next letter since ‘the’ is a common word. Another ‘t’ is unlikely.</div>
+          </div>
+          <p>
+            To do this I planned to represent common English words in a <a href="https://en.wikipedia.org/wiki/Trie" target="_blank">trie</a>. That way, after each key is tapped, I can look at which next key has a subtree making up more common words and make that key’s touch target larger.
+          </p>
+          <p>
+            A big downside of this approach is that it requires the first key to be correct. This is not guaranteed since all keys' touch targets are the same size to start. If an unintended key is tapped, the algorithm will go down the wrong subtree in the trie and will never find the word the user is trying to type. It made this approach a non-starter.
+          </p>
+
+          <h3>The Algorithm</h3>
+          <p>
+            I went back to Kocienda's book to read about what he had come up with. The autocorrection algorithm shipped on the first iPhone more or less worked like this:
+          </p>
+          <ol>
+            <li>
+              <p>
+                All keys are grouped with their neighboring keys.
+              </p>
+            </li>
+            <li>
+              <p>
+                When a word is typed, all letter combinations possible from the keys you hit, and their neighboring keys are generated.
+              </p>
+            </li>
+            <li>
+              <p>
+                The letter combinations that are not dictionary words are removed.
+              </p>
+            </li>
+            <li>
+              <p>
+                From these dictionary words, the word that is more common and closer to what you typed is suggested.
+              </p>
+            </li>
+          </ol>
+          <p>
+            This is the approach I used for my algorithm.
+          </p>
+          <p>
+            The algorithm is triggered when the user taps the space bar or a punctuation key. The last typed word is run through the autocorrection. For each tapped key, the algorithm grabs its neighboring keys on the keyboard. Then, it generates all possible letter combinations from these sets of keys (that is their Cartesian Product). Next, these strings of letters are compared to <a href="https://www.kaggle.com/datasets/rtatman/english-word-frequency?resource=download" target="_blank">a data set of English words</a>, and all non-dictionary words are removed. This leaves a set of, usually a couple of dozen, words that are all plausible. So how does the algorithm determine which word to suggest?
+          </p>
+          <div class="body-image">
+            <img src="images/kenboard-letter-combinations.png" alt="sketch of how the letter combinations are generated" id="kenboard-letter-combinations">
+            <div class="footer-text">Sketch of how the letter combinations are generated. For example, when trying to type 'the' but actually tapping the 'y', 'j', and 'r' keys, the letter combinations generated form their neighboring keys include 'the'.</div>
+          </div>
+          <p>
+            Two parameters are used to determine which word to suggest: pattern skew and usage frequency. Every time a key is pressed, the algorithm records the coordinates of the tap. This means that each typed word has a corresponding typed pattern on the keyboard (what Kocienda calls constellations). Each dictionary word also has an ideal constellation, which represents a tap in the center of each key. The difference between the tapped constellation and the ideal constellation for a given word is what Kocienda calls pattern skew. A smaller pattern skew means that a word is a better match.
+          </p>
+          <div class="body-image">
+            <img src="images/kenboard-pattern-skew.png" alt="sketch of pattern skew" id="kenboard-pattern-skew">
+            <div class="footer-text">Sketch of pattern skew. Here, the tapped constellation (in blue) is closer to the ideal constellation for 'the' than the ideal constellation for 'hit'.</div>
+          </div>
+          <p>
+            The usage frequency represents how often a word is used in the English language. This data was included in the data set I used. Here, a higher usage frequency makes a word more probable. Finding the right balance between pattern skew and usage frequency required some testing, but I ultimately settled on the following formula:
+          </p>
+          <p class="code">
+            wordLikelihood = (1/(patternSkew**4)) * (relativeFreq)
+          </p>
+          <p>
+            Finally, when a word has been decided on by the algorithm, the string of characters you typed is replaced with that word.
+          </p>
+
+          <h3>Invisible Technology</h3>
+          <p>
+            The moment I had the right balance between pattern skew and usage frequency, typing on the keyboard felt completely effortless. It felt like none of the technology I had spent the past two weeks coding was there – the keyboard simply typed what I wanted it to type. The technology had melted away and become invisible to the user.
+          </p>
+          <p>
+            I realized why this project had captured my interest all those years ago – technology is never the end goal; the end goal is always the user. Technology should be an invisible tool that aids and empowers the user.
+          </p>
+          <p>
+            This project had a profound impact on me – it made me realize that my ultimate goal when creating technology is to make it less obtrusive, less cumbersome, to the point where it almost disappears.
+          </p>
+
+          <hr>
+          <div id="post-footnotes">
+            <ol>
+              <li id="footnote-1-text">
+                <p>
+                  This includes all Chromium browsers powered by Blink, Google's fork of WebKit's WebCore component, <a href="https://en.wikipedia.org/wiki/Usage_share_of_web_browsers" target="_blank">https://en.wikipedia.org/wiki/Usage_share_of_web_browsers</a>. <a href="#footnote-1-number">↩︎︎</a>
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>  
+
+
     <footer>
       <div class="footer-text">Copyright &copy; 2023 Marcus Alenius. All rights reserved.</div>
     </footer>
