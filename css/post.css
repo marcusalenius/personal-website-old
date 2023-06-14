@@ -1,16 +1,19 @@
 .post {
-    /* width: 685px; */
-    /* width: 630px; */
     width: 600px;
     margin: 0 auto;
     margin-top: 30px;
-    /* border: 2px solid red; */
 }
 
 .post-image {
     position: relative;
     height: 347px;
     margin-bottom: 45px;
+    z-index: 10;
+}
+
+.post h2 {
+    position: relative;
+    z-index: 11;
 }
 
 /* Post introduction */
@@ -185,7 +188,6 @@ hr {
 #kenboard-splash-full-length {
     position: absolute;
     width: 180px;
-    /* left: 370px; */
     left: 346px;
     top: -3px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
@@ -196,8 +198,6 @@ hr {
 #kenboard-debug-full-length {
     position: absolute;
     width: 180px;
-    /* left: 510px; */
-    /* left: 455px; */
     left: 426px;
     top: -3px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
@@ -278,6 +278,3 @@ iframe {
 #happy-day-post .post-image {
     margin-bottom: 10px;
 }
-
-
-
