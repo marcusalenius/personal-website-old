@@ -84,7 +84,7 @@ blockquote {
     position: relative;
     width: fit-content;
     margin: 40px auto;
-    /* border: 2px solid orange; */
+    border: 2px solid orange;
 }
 
 .body-image img {
@@ -98,7 +98,7 @@ blockquote {
     text-align: center;
     width: 440px;
     margin-top: 14px;
-    /* border: 2px solid purple; */
+    border: 2px solid purple;
 }
 
 .colored-section {
@@ -158,6 +158,10 @@ p.code {
 
 #code-mobile {
     display: none;
+}
+
+#code-mobile-small { 
+    display: none; 
 }
 
 #post-footnotes {
@@ -295,7 +299,7 @@ iframe {
 
     .post { 
         width: 100%; 
-        /* border: 2px solid red; */
+        border: 2px solid red;
     }
 
     #kenboard-demo-image-full-length { left: 14px; }
@@ -329,13 +333,11 @@ iframe {
     #kenboard-letter-combinations,
     #kenboard-pattern-skew { width: 380px; }
 
-    #code-desktop {
-        display: none;
-    }
+    #code-desktop { display: none; }
 
-    #code-mobile {
-        display: block;
-    }
+    #code-mobile { display: block; }
+
+    #code-mobile-small { display: none; }
 
     hr { width: 30%; }
     
@@ -345,6 +347,25 @@ iframe {
 @media (max-width: 424px) {
 
     .post { width: 340px; }
+
+    #kenboard-demo-image-full-length { left: -14px; }
+
+    #kenboard-demo-video { left: 34px; }
+
+    .body-image .footer-text { width: 324px; }
+
+    #kenboard-proof-of-concept-video { left: 83px; }
+
+    #kenboard-naive-approach { width: 280px; }
+
+    #kenboard-letter-combinations,
+    #kenboard-pattern-skew { width: 334px; }
+
+    #code-mobile { display: none; }
+
+    #code-mobile-small { display: block; }
+
+
 
 }
 
