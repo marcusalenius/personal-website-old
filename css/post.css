@@ -84,7 +84,6 @@ blockquote {
     position: relative;
     width: fit-content;
     margin: 40px auto;
-    border: 2px solid orange;
 }
 
 .body-image img {
@@ -98,7 +97,6 @@ blockquote {
     text-align: center;
     width: 440px;
     margin-top: 14px;
-    border: 2px solid purple;
 }
 
 .colored-section {
@@ -299,7 +297,6 @@ iframe {
 
     .post { 
         width: 100%; 
-        border: 2px solid red;
     }
 
     #kenboard-demo-image-full-length { left: 14px; }
