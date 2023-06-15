@@ -80,6 +80,10 @@ blockquote {
     border-left: 1px solid var(--darkBodyText);
 }
 
+sup {
+    line-height: 0;
+}
+
 .body-image {
     position: relative;
     width: fit-content;

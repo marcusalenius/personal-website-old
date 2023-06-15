@@ -87,7 +87,7 @@
         <div class="post-body">
           <h3>Full Circle</h3>
           <p>
-            Long before coming to Carnegie Mellon, I watched the video of Steve Jobs introducing the original iPhone. I was fascinated by the applause he received when simply scrolling through a list of artists or pinching to zoom on a photo, something that was so natural to me. I understood that this was completely different from anything that existed before, yet so natural and intuitive.
+            Long before coming to Carnegie Mellon, I watched the video of Steve Jobs introducing the original iPhone. I was fascinated by the applause he received when simply <a href="https://youtu.be/VQKMoT-6XSg?t=971" target="_blank">scrolling through a list of artists</a> or pinching to zoom on a photo, something that was so natural to me. I understood that this was completely different from anything that existed before, yet so natural and intuitive.
           </p>
           <p>
             It sparked my interest in software and human-computer interaction and made me want to go learn from the best people in the field. I decided to leave Sweden and go to college at CMU. I wrote about my inspiration in my CMU application essay:
@@ -112,23 +112,23 @@
                 In 2018 Ken Kocienda, the engineer behind the original iPhone's software keyboard, published a book about his time at Apple. Expecting a goldmine of fascinating stories, I ordered it as soon as it became available.
               </p>
               <p>
-                The most intriguing story was the now-famous keyboard derby. About a year before its announcement, Scott Forstall, the executive leading the small software team working on <em>Purple</em> , the code name for the secret phone project, paused development on all other <em>Purple</em> software and made everyone keyboard engineers. Two weeks later they all met to demo their solution to the iPhone's most critical software challenge. Kocienda vividly describes this demo – how wonky some of the designs were, with complex gestures and key combinations, and how Scott reacted to his normal-looking but error-free keyboard.
+                The most intriguing story was the now-famous keyboard derby. About a year before its announcement, Scott Forstall, the executive leading the small software team working on <em>Purple</em> , the code name for the secret phone project, paused development on all other <em>Purple</em> software and made everyone keyboard engineers. Two weeks later they all met to demo their solutions to the iPhone's most critical software challenge. Kocienda vividly describes this demo – how wonky some of the designs were, with complex gestures and key combinations, and how Scott reacted to his normal-looking but error-free keyboard.
               </p>
               <p>
                 Kocienda's process of developing the keyboard is a centerpiece of his book. It's a great illustration of the iterative software development process, of creating prototypes and living on those prototypes, and ultimately letting the best idea, embodied by the most promising prototype, prevail – in a process he calls <em>creative selection</em>.
               </p>
               <p>
-                Beyond his work on Purple, Ken describes what it was like to demo for Steve Jobs and how a team of three engineers developed the Safari web browser. This includes creating WebKit, the browser engine that powers Safari, and now more than 90%<sup><a id="footnote-1-number" href="#footnote-1-text">1</a></sup> of the browser market share.
+                Beyond his work on <em>Purple</em>, Kocienda describes what it was like to demo for Steve Jobs and how a team of three engineers developed the Safari web browser. This includes creating WebKit, the browser engine that powers Safari, and now more than 90%<sup><a id="footnote-1-number" href="#footnote-1-text">1</a></sup> of the browser market share.
               </p>
               <p>
-                I can't do this book justice here, if you are interested in software engineering, product design, or just fascinating stories I highly recommend his book. The physical book contains incredible illustrations while the audiobook is read by Kocienda himself: <a href="http://creativeselection.io" target="_blank">creativeselection.io</a>.
+                I can't do this book justice here – if you are interested in software engineering, product design, or just fascinating stories I highly recommend this book. The physical book contains incredible illustrations while the audiobook is read by Kocienda himself: <a href="http://creativeselection.io" target="_blank">creativeselection.io</a>.
               </p>  
             </div>
           </div>
 
           <h3>Getting the Go-Ahead</h3>
           <p>
-            Starting the semester before I took 15-112, Professor Kosbie has all his students build a Sudoku game for the term project. That is unless you can convince him that you have a better idea, that is more difficult but that you can finish in the 2.5 weeks allotted for the term project. So, I knew I had some convincing to do.
+            Starting the semester before I took 15-112, Professor Kosbie had all his students build a Sudoku game for the term project. That is unless you can convince him that you have a better idea, that is more difficult but that you can finish in the 2.5 weeks allotted for the term project. So I knew I had some convincing to do.
           </p>
           <p>
             About two weeks before the term project was slated to begin, I went to Kosbie's office hours to tell him about my idea. He was intrigued but pointed out that the feasibility of the project depended on my ability to build a Python app that could run on my iPhone (using Python was one of the few requirements of the project). He told me about a framework called Kivy, which allows you to build cross-platform Python apps for multitouch, but warned me that neither he nor any of the TAs had much experience with this framework, so I would be on my own. The meeting ended with Kosbie telling me to have a demo of a Python app running on my phone after the weekend.
@@ -148,7 +148,7 @@
 
           <h3>The Naive Approach</h3>
           <p>
-            I decided to draw all shapes, text, and buttons imperatively, instead of making use of some of Kivy's declarative components. I figured it was better to stay more true to CMU's in-house Python graphics framework which the other students were using. It made my code more complex but allowed me to control every detail of how my app looked and responded to the user.
+            To start, I decided to draw all shapes, text, and buttons imperatively, instead of making use of some of Kivy's declarative components. I figured it was better to stay more true to CMU's in-house Python graphics framework which the other students were using. It made my code more complex but allowed me to control every detail of how my app looked and responded to the user.
           </p>
           <p>
             At the core of this project is the autocorrection algorithm. My initial approach was based on my naive understanding of how the iPhone's autocorrection worked. I planned to dynamically adjust the hit region of each key based on how likely it was to be the next key the user would want to hit. That way you would have a greater chance of hitting the key you wanted to type.
@@ -158,10 +158,10 @@
             <div class="footer-text">Sketch of dynamically changing hit regions. For example, after typing ‘t’, it is likely that ‘h’ is the next letter since ‘the’ is a common word. Another ‘t’ is unlikely.</div>
           </div>
           <p>
-            To do this I planned to represent common English words in a <a href="https://en.wikipedia.org/wiki/Trie" target="_blank">trie</a>. That way, after each key is tapped, I can look at which next key has a subtree making up more common words and make that key’s touch target larger.
+            To do this I planned to represent common English words in a <a href="https://en.wikipedia.org/wiki/Trie" target="_blank">trie</a>. That way, after a key is tapped, I can look at which next key has a subtree making up more common words and make that key’s touch target larger.
           </p>
           <p>
-            A big downside of this approach is that it requires the first key to be correct. This is not guaranteed since all keys' touch targets are the same size to start. If an unintended key is tapped, the algorithm will go down the wrong subtree in the trie and will never find the word the user is trying to type. It made this approach a non-starter.
+            A big downside to this approach is that it requires the first key to be correct. This is not guaranteed since all keys' touch targets are the same size to start. If an unintended key is tapped, the algorithm will go down the wrong subtree in the trie and will never find the word the user is trying to type. It made this approach a non-starter.
           </p>
 
           <h3>The Algorithm</h3>
@@ -181,12 +181,12 @@
             </li>
             <li>
               <p>
-                The letter combinations that are not dictionary words are removed.
+                The letter combinations that are not dictionary words are disregarded.
               </p>
             </li>
             <li>
               <p>
-                From these dictionary words, the word that is more common and closer to what you typed is suggested.
+                From these dictionary words, the word that is more common and closer to what the user typed is suggested.
               </p>
             </li>
           </ol>
@@ -208,7 +208,7 @@
             <div class="footer-text">Sketch of pattern skew. Here, the tapped constellation (in blue) is closer to the ideal constellation for 'the' than the ideal constellation for 'hit'.</div>
           </div>
           <p>
-            The usage frequency represents how often a word is used in the English language. This data was included in the data set I used. Here, a higher usage frequency makes a word more probable. Finding the right balance between pattern skew and usage frequency required some testing, but I ultimately settled on the following formula:
+            Usage frequency represents how often a word is used in the English language. This data was included in the data set I used. Here, a higher usage frequency makes a word more probable. Finding the right balance between pattern skew and usage frequency required some testing, but I ultimately settled on the following formula:
           </p>
           <p class="code" id="code-desktop">
             wordLikelihood = (1/(patternSkew**4)) * (relativeFreq)
@@ -220,12 +220,12 @@
             wordLikelihood =<br>&nbsp;&nbsp;((1/(patternSkew**4)) * <br>&nbsp;&nbsp;&nbsp;(relativeFreq))
           </p>
           <p>
-            Finally, when a word has been decided on by the algorithm, the string of characters you typed is replaced with that word.
+            Finally, when the algorithm has decided on a word, the string of characters you typed is replaced with that word.
           </p>
 
           <h3>Invisible Technology</h3>
           <p>
-            The moment I had the right balance between pattern skew and usage frequency, typing on the keyboard felt completely effortless. It felt like none of the technology I had spent the past two weeks coding was there – the keyboard simply typed what I wanted it to type. The technology had melted away and become invisible to the user.
+            The moment I had the right balance between pattern skew and usage frequency, typing on the keyboard felt completely effortless. It felt like none of the technology I had spent the past week coding was there – the keyboard simply typed what I wanted it to type. The technology had melted away and become invisible to the user.
           </p>
           <p>
             I realized why this project had captured my interest all those years ago – technology is never the end goal; the end goal is always the user. Technology should be an invisible tool that aids and empowers the user.
