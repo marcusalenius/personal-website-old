@@ -36,6 +36,11 @@
     justify-content: space-between;
 }
 
+.info-item-desktop { display: inline-flex; }
+
+.info-item-mobile { display: none; }
+
+
 p.info-item-header {
     font-style: normal;
     font-weight: 600;
@@ -79,6 +84,7 @@ blockquote {
     position: relative;
     width: fit-content;
     margin: 40px auto;
+    /* border: 2px solid orange; */
 }
 
 .body-image img {
@@ -92,6 +98,7 @@ blockquote {
     text-align: center;
     width: 440px;
     margin-top: 14px;
+    /* border: 2px solid purple; */
 }
 
 .colored-section {
@@ -136,7 +143,7 @@ blockquote {
 }
 
 .post li p {
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .post li:first-child {
@@ -147,6 +154,10 @@ p.code {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#code-mobile {
+    display: none;
 }
 
 #post-footnotes {
@@ -278,3 +289,62 @@ iframe {
 #happy-day-post .post-image {
     margin-bottom: 10px;
 }
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    .post { 
+        width: 100%; 
+        /* border: 2px solid red; */
+    }
+
+    #kenboard-demo-image-full-length { left: 14px; }
+    
+    #kenboard-demo-video { left: 62px; }
+    
+    p.info-item-header {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    .info-item-desktop { display: none; }
+
+    .info-item-mobile { display: inline-flex; }
+
+    .body-image .footer-text { width: 360px; }
+    
+    #kenboard-splash-full-length,
+    #kenboard-debug-full-length { display: none; }
+
+    #kenboard-proof-of-concept { width: 220px; }
+
+    #kenboard-proof-of-concept-video {
+        left: 101px;
+        top: 31px;
+        width: 168px;
+    }
+
+    #kenboard-naive-approach { width: 280px; }
+
+    #kenboard-letter-combinations,
+    #kenboard-pattern-skew { width: 380px; }
+
+    #code-desktop {
+        display: none;
+    }
+
+    #code-mobile {
+        display: block;
+    }
+
+    hr { width: 30%; }
+    
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    .post { width: 340px; }
+
+}
+
