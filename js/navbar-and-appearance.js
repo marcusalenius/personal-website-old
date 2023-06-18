@@ -1,5 +1,6 @@
 // Get stored preferred appearance
 let preferredAppearance = localStorage.getItem("preferredAppearance");
+// if nothing in storage, default to system
 if (preferredAppearance === null) {
     preferredAppearance = 'system';
 }
