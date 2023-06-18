@@ -9,7 +9,7 @@ if (prefersSystemAppearance) {
             body.classList.remove('light-mode');
             body.classList.add('dark-mode');
         }
-        // enable light mode
+        // enable dark mode
         else {
             body.classList.remove('dark-mode');
             body.classList.add('light-mode');
@@ -21,12 +21,13 @@ if (prefersSystemAppearance) {
 function loadSystemAppearance() {
     const body = document.body;
     if (prefersSystemAppearance) {
-        // enable system appearance
+        // enable dark mode
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             body.classList.remove('light-mode');
             body.classList.add('dark-mode');
         } 
-        else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        // enable dark mode
+        else {
             body.classList.remove('dark-mode');
             body.classList.add('light-mode');
         }
