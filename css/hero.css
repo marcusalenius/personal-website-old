@@ -6,6 +6,7 @@
     max-height: 700px;
     align-items: center;
     transform: translateY(-30px);
+    border: 2px solid red;
 }
 
 #hero-left {

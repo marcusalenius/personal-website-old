@@ -12,7 +12,6 @@ window.addEventListener('click', event => {
 
 // Switch item to current section on scroll
 window.addEventListener('scroll', event => {
-    console.log(isNavmenuScrollListenerRunning);
     const navmenu = document.getElementById('navmenu-mobile');
     const itemSectionMap = {
         aboutMe :  { item :  document.getElementById('navmenu-item-about-me'), 
@@ -85,6 +84,11 @@ function getMostInView(itemSectionMap) {
         else if (viewportBottom > sectionBottom && viewportTop >= sectionTop) {
             currInViewAmount = (sectionBottom - viewportTop) / (viewportBottom - viewportTop);
             // console.log(currSection, 'space below', currInViewAmount);
+        }
+        // partially in viewport, space above and below
+        else {
+            currInViewAmount = 1;
+            // console.log(currSection, 'space above and below')
         }
         if (currInViewAmount >= mostInViewAmount) {
             mostInViewAmount = currInViewAmount;
