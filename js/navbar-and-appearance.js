@@ -169,7 +169,9 @@ function scrollToTop() {
 // Scrolls to projects
 function scrollToProjects() {
     const projectsSection = document.getElementById('projects');
-    const yOffset = -120; 
+    const yOffset = window.matchMedia("(max-width: 740px)").matches 
+        ? -85
+        : -120;
     const y = projectsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({top: y, behavior: 'smooth'});
 }
@@ -177,7 +179,9 @@ function scrollToProjects() {
 // Scrolls to work
 function scrollToWork() {
     const workSection = document.getElementById('work');
-    const yOffset = -120; 
+    const yOffset = window.matchMedia("(max-width: 740px)").matches 
+        ? -85
+        : -120;
     const y = workSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({top: y, behavior: 'smooth'});
 }
