@@ -7,19 +7,7 @@ if (preferredAppearance === 'light') {
     setLightMode();
 }
 else if (preferredAppearance === 'dark') {
-    const body = document.body;
-    const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
-    const dropDownItemDark = document.getElementById('appearance-drop-down-item-dark');
-    // enable dark mode
-    body.classList.remove('light-mode');
-    body.classList.add('dark-mode');
-    // make this item selected
-    dropDownItems.forEach((dropDownItem) => {
-        if (dropDownItem.classList.contains('selected')) {
-            dropDownItem.classList.remove('selected');
-        }
-    })
-    dropDownItemDark.classList.add('selected');
+    setDarkMode();
 }
 else {
     setSystemAppearance();
