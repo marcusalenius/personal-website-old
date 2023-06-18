@@ -1,8 +1,33 @@
-let prefersSystemAppearance = true;
+// Get stored preferred appearance
+let preferredAppearance = localStorage.getItem("preferredAppearance");
+if (preferredAppearance === null) {
+    preferredAppearance = 'system';
+}
+if (preferredAppearance === 'light') {
+    setLightMode();
+}
+else if (preferredAppearance === 'dark') {
+    const body = document.body;
+    const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
+    const dropDownItemDark = document.getElementById('appearance-drop-down-item-dark');
+    // enable dark mode
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    // make this item selected
+    dropDownItems.forEach((dropDownItem) => {
+        if (dropDownItem.classList.contains('selected')) {
+            dropDownItem.classList.remove('selected');
+        }
+    })
+    dropDownItemDark.classList.add('selected');
+}
+else {
+    setSystemAppearance();
+}
 
 // Add event listener to respond to system appearance changes
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    if (prefersSystemAppearance) {
+    if (preferredAppearance === 'system') {
         const body = document.body;
         // enable dark mode
         if (event.matches) {
@@ -17,22 +42,96 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     }
 })
 
-// Load system appearance on page load
-function loadSystemAppearance() {
+// Function that sets the appearance to system
+function setSystemAppearance() {
     const body = document.body;
-    if (prefersSystemAppearance) {
-        // enable dark mode
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            body.classList.remove('light-mode');
-            body.classList.add('dark-mode');
-        } 
-        // enable dark mode
-        else {
-            body.classList.remove('dark-mode');
-            body.classList.add('light-mode');
-        }
+    const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
+    const dropDownItemSystem = document.getElementById('appearance-drop-down-item-system');
+    // enable system appearance
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+    } 
+    else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
     }
+    // make the system item selected
+    dropDownItems.forEach((dropDownItem) => {
+        if (dropDownItem.classList.contains('selected')) {
+            dropDownItem.classList.remove('selected');
+        }
+    })
+    dropDownItemSystem.classList.add('selected');
 }
+
+// Called by button click to set appearance to system
+function buttonClickToSetSystemAppearance() {
+    if (preferredAppearance === 'system') { return; }
+    preferredAppearance = 'system';
+    // store preferredAppearance
+    localStorage.setItem("preferredAppearance", preferredAppearance);
+    setSystemAppearance();
+    // close dropdown menu
+    toggleAppearanceDropdown();
+}
+
+// Function that sets the appearance to light
+function setLightMode() {
+    const body = document.body;
+    const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
+    const dropDownItemLight = document.getElementById('appearance-drop-down-item-light');
+    // enable light mode
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+    // make the light item selected
+    dropDownItems.forEach((dropDownItem) => {
+        if (dropDownItem.classList.contains('selected')) {
+            dropDownItem.classList.remove('selected');
+        }
+    })
+    dropDownItemLight.classList.add('selected');
+}
+
+// Called by button click to set appearance to light
+function buttonClickToSetLightMode() {
+    if (preferredAppearance === 'light') { return; }
+    preferredAppearance = 'light';
+    // store preferredAppearance
+    localStorage.setItem("preferredAppearance", preferredAppearance);
+    setLightMode();
+    // close dropdown menu
+    toggleAppearanceDropdown();
+}
+
+// Function that sets the appearance to dark
+function setDarkMode() {
+    const body = document.body;
+    const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
+    const dropDownItemDark = document.getElementById('appearance-drop-down-item-dark');
+    // enable dark mode
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    // make this item selected
+    dropDownItems.forEach((dropDownItem) => {
+        if (dropDownItem.classList.contains('selected')) {
+            dropDownItem.classList.remove('selected');
+        }
+    })
+    dropDownItemDark.classList.add('selected');
+}
+
+// Called by button click to set appearance to dark
+function buttonClickToSetDarkMode() {
+    if (preferredAppearance === 'dark') { return; }
+    preferredAppearance = 'dark';
+    // store preferredAppearance
+    localStorage.setItem("preferredAppearance", preferredAppearance);
+    setDarkMode();
+    // close dropdown menu
+    toggleAppearanceDropdown();
+}
+
 
 let isAppearanceScrollListenerRunning = false;
 let yUnhideAppearanceDropdown;
@@ -91,75 +190,6 @@ window.addEventListener('click', event => {
         }
     }
 })
-
-// Sets the appearance to system
-function setSystemAppearance() {
-    const body = document.body;
-    const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
-    const dropDownItemSystem = document.getElementById('appearance-drop-down-item-system');
-    if (prefersSystemAppearance) { return; }
-    prefersSystemAppearance = true;
-    // enable system appearance
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-    } 
-    else {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-    }
-    // make the system item selected
-    dropDownItems.forEach((dropDownItem) => {
-        if (dropDownItem.classList.contains('selected')) {
-            dropDownItem.classList.remove('selected');
-        }
-    })
-    dropDownItemSystem.classList.add('selected');
-    // close dropdown menu
-    toggleAppearanceDropdown();
-}
-
-// Sets the appearance to light
-function enableLightMode() {
-    const body = document.body;
-    const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
-    const dropDownItemLight = document.getElementById('appearance-drop-down-item-light');
-    if (dropDownItemLight.classList.contains('selected')) { return; }
-    prefersSystemAppearance = false;
-    // enable light mode
-    body.classList.remove('dark-mode');
-    body.classList.add('light-mode');
-    // make the light item selected
-    dropDownItems.forEach((dropDownItem) => {
-        if (dropDownItem.classList.contains('selected')) {
-            dropDownItem.classList.remove('selected');
-        }
-    })
-    dropDownItemLight.classList.add('selected');
-    // close dropdown menu
-    toggleAppearanceDropdown();
-}
-
-// Sets the appearance to dark
-function enableDarkMode() {
-    const body = document.body;
-    const dropDownItems = document.querySelectorAll('.appearance-drop-down-item');
-    const dropDownItemDark = document.getElementById('appearance-drop-down-item-dark');
-    if (dropDownItemDark.classList.contains('selected')) { return; }
-    prefersSystemAppearance = false;
-    // enable dark mode
-    body.classList.remove('light-mode');
-    body.classList.add('dark-mode');
-    // make this item selected
-    dropDownItems.forEach((dropDownItem) => {
-        if (dropDownItem.classList.contains('selected')) {
-            dropDownItem.classList.remove('selected');
-        }
-    })
-    dropDownItemDark.classList.add('selected');
-    // close dropdown menu
-    toggleAppearanceDropdown();
-}
 
 // Scrolls to the top
 function scrollToTop() {
