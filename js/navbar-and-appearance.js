@@ -1,9 +1,9 @@
 let prefersSystemAppearance = true;
 
-// Respond to system appearance changes
-if (prefersSystemAppearance) {
-    const body = document.body;
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+// Add event listener to respond to system appearance changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (prefersSystemAppearance) {
+        const body = document.body;
         // enable dark mode
         if (event.matches) {
             body.classList.remove('light-mode');
@@ -14,8 +14,8 @@ if (prefersSystemAppearance) {
             body.classList.remove('dark-mode');
             body.classList.add('light-mode');
         }
-    })
-}
+    }
+})
 
 // Load system appearance on page load
 function loadSystemAppearance() {
