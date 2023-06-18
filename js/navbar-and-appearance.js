@@ -1,32 +1,33 @@
 let prefersSystemAppearance = true;
 
-// Respond to system appearance changes
-if (prefersSystemAppearance) {
-    const body = document.body;
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+// Add event listener to respond to system appearance changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (prefersSystemAppearance) {
+        const body = document.body;
         // enable dark mode
         if (event.matches) {
             body.classList.remove('light-mode');
             body.classList.add('dark-mode');
         }
-        // enable light mode
+        // enable dark mode
         else {
             body.classList.remove('dark-mode');
             body.classList.add('light-mode');
         }
-    })
-}
+    }
+})
 
 // Load system appearance on page load
 function loadSystemAppearance() {
     const body = document.body;
     if (prefersSystemAppearance) {
-        // enable system appearance
+        // enable dark mode
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             body.classList.remove('light-mode');
             body.classList.add('dark-mode');
         } 
-        else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        // enable dark mode
+        else {
             body.classList.remove('dark-mode');
             body.classList.add('light-mode');
         }
@@ -91,7 +92,6 @@ window.addEventListener('click', event => {
     }
 })
 
-
 // Sets the appearance to system
 function setSystemAppearance() {
     const body = document.body;
@@ -104,7 +104,7 @@ function setSystemAppearance() {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
     } 
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    else {
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
     }
@@ -113,8 +113,8 @@ function setSystemAppearance() {
         if (dropDownItem.classList.contains('selected')) {
             dropDownItem.classList.remove('selected');
         }
-        dropDownItemSystem.classList.add('selected');
     })
+    dropDownItemSystem.classList.add('selected');
     // close dropdown menu
     toggleAppearanceDropdown();
 }
@@ -134,8 +134,8 @@ function enableLightMode() {
         if (dropDownItem.classList.contains('selected')) {
             dropDownItem.classList.remove('selected');
         }
-        dropDownItemLight.classList.add('selected');
     })
+    dropDownItemLight.classList.add('selected');
     // close dropdown menu
     toggleAppearanceDropdown();
 }
@@ -155,8 +155,8 @@ function enableDarkMode() {
         if (dropDownItem.classList.contains('selected')) {
             dropDownItem.classList.remove('selected');
         }
-        dropDownItemDark.classList.add('selected');
     })
+    dropDownItemDark.classList.add('selected');
     // close dropdown menu
     toggleAppearanceDropdown();
 }
