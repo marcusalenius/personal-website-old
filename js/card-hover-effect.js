@@ -20,3 +20,16 @@ heroCard.onmousemove = event => {
     heroCard.style.setProperty('--mouseX', `${x}px`)
     heroCard.style.setProperty('--mouseY', `${y}px`)
 }
+
+// Apply hover effect to contact cards
+for (const cardLayout of document.querySelectorAll('.contact-card-layout')) {
+    cardLayout.onmousemove = event => {
+        for (const card of document.querySelectorAll('.contact-card')) {
+            const rect = card.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            card.style.setProperty('--mouseX', `${x}px`)
+            card.style.setProperty('--mouseY', `${y}px`)
+        }
+    }
+}
