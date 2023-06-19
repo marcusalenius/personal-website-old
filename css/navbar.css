@@ -192,26 +192,6 @@ nav {
     cursor: pointer;
 }
 
-.light-mode #navbutton-appearance {
-    background: var(--lightCard);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
-}
-
-.dark-mode #navbutton-appearance {
-    background: var(--darkCardRim);
-    box-shadow: 0px 0px 8px #000000;
-}
-
-.dark-mode #navbutton-appearance::before {
-    background: var(--darkCard);
-    content: '';
-    display: inline-block;
-    margin: 1px;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    border-radius: 45px;
-}
-
 #appearance-icon-light-mode {
     position: absolute;
     left: 9px;
