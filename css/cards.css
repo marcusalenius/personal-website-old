@@ -55,7 +55,7 @@
 /* Foreground hover element */
 .card::after {
     background: radial-gradient(
-        circle 800px at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), 
+        circle 800px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.06), 
         transparent 40%
     );
     z-index: 20;
@@ -64,7 +64,7 @@
 /* Background hover element */
 .card .card-border {
     background: radial-gradient(
-        circle 400px at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.7), 
+        circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
         transparent 40%
     );
     z-index: 9;
@@ -77,6 +77,11 @@
 
 /* when card-layout hovered, show background hover element */
 .card-layout:hover .card .card-border {
+    opacity: 1;
+}
+
+/* when hero-card hovered, show background hover element */
+#hero-card:hover .card-border {
     opacity: 1;
 }
 
