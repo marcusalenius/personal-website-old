@@ -12,6 +12,7 @@ nav {
 #nav-right {
     display: flex;
     gap: 35px;
+    border: 2px solid red;
 }
 
 /* Navbuttons */
@@ -23,6 +24,7 @@ nav {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .light-mode .navbutton {
@@ -30,12 +32,14 @@ nav {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* Background card */
 .dark-mode .navbutton {
     background-color: var(--darkCardRim);
     box-shadow: 0px 0px 8px #000000;
     position: relative;
 }
 
+/* Foreground card */
 .dark-mode .navbutton::before {
     background-color: var(--darkCard);
     content: '';
@@ -45,6 +49,62 @@ nav {
     height: calc(100% - 2px);
     border-radius: 44px;
     z-index: 101;
+}
+
+/* Foreground hover element and background hover element */
+.navbutton::after,
+.navbutton .card-border {
+    opacity: 0;
+    transition: opacity 500ms;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+/* Foreground hover element, dark mode */
+.dark-mode .navbutton::after {
+    background: radial-gradient(
+        circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
+        transparent 40%
+    );
+    z-index: 120;
+}
+
+/* Foreground hover element, light mode */
+.light-mode .navbutton::after {
+    background: radial-gradient(
+        circle 200px at var(--mouseX) var(--mouseY), rgba(245, 222, 170, 0.1), 
+        transparent 40%
+    );
+    z-index: 120;
+}
+
+/* Background hover element, only in dark mode, o */
+.dark-mode .navbutton .card-border {
+    background: radial-gradient(
+        circle 100px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
+        transparent 40%
+    );
+    z-index: 100;
+}
+
+/* Background hover element, hide in light mode */
+.light-mode .navbutton .card-border {
+    display: none;
+}
+
+/* when card hovered, show foreground hover element */
+.navbutton:hover::after {
+    opacity: 1;
+}
+
+/* when nav-right hovered, show background hover element */
+#nav-right:hover .navbutton .card-border {
+    opacity: 1;
 }
 
 .navbutton .button-text {
@@ -63,14 +123,6 @@ nav {
     width: 135px;
 }
 
-#navbutton-home {
-    position: relative;
-    width: 64px;
-    height: 64px;
-    border-radius: 45px;
-    cursor: pointer;
-}
-
 #navbutton-back {
     width: 118px;
     display: flex;
@@ -78,6 +130,14 @@ nav {
 }
 
 /* Home button */
+
+#navbutton-home {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 45px;
+    cursor: pointer;
+}
 
 .light-mode #navbutton-home {
     background: var(--lightCard);
@@ -122,7 +182,6 @@ nav {
     display: none;
 }
 
-
 /* Appearance button */
 
 #navbutton-appearance {
@@ -157,18 +216,21 @@ nav {
     position: absolute;
     left: 9px;
     top: 9px;
+    z-index: 102;
 }
 
 #appearance-icon-dark-mode {
     position: absolute;
     left: 11px;
     top: 10px;
+    z-index: 102;
 }
 
 .appearance-cross-icon {
     position: absolute;
     left: 14px;
     top: 14px;
+    z-index: 102;
 }
 
 .drop-down-hidden .appearance-icon {

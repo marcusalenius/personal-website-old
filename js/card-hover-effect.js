@@ -33,3 +33,14 @@ for (const cardLayout of document.querySelectorAll('.contact-card-layout')) {
         }
     }
 }
+
+// Apply hover effect to nav-right navbuttons
+document.getElementById('nav-right').onmousemove = event => {
+    for (const navbutton of document.querySelectorAll('.navbutton')) {
+        const rect = navbutton.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        navbutton.style.setProperty('--mouseX', `${x}px`)
+        navbutton.style.setProperty('--mouseY', `${y}px`)
+    }
+}

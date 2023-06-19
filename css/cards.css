@@ -123,30 +123,6 @@
     opacity: 1;
 }
 
-.card h3 {
-    padding-left: 40px;
-    padding-top: 39px;
-    position: relative;
-}
-
-.card p {
-    margin-left: 40px;
-    margin-top: 12px;
-    position: relative;
-}
-
-.card-images {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 11;
-    /* to fix safari border radius overflow hidden issue: */
-    transform: translateZ(0);
-}
-
 .contact-card-layout {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -212,10 +188,29 @@
     z-index: 9;
 }
 
+.card h3 {
+    padding-left: 40px;
+    padding-top: 39px;
+    position: relative;
+}
 
+.card p {
+    margin-left: 40px;
+    margin-top: 12px;
+    position: relative;
+}
 
-
-
+.card-images {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 11;
+    /* to fix safari border radius overflow hidden issue: */
+    transform: translateZ(0);
+}
 
 .contact-card .button-text { 
     position: relative; 
