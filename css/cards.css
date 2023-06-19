@@ -52,22 +52,55 @@
     height: 100%;
 }
 
-/* Foreground hover element */
-.card::after {
+/* Foreground hover element, dark mode */
+.dark-mode .card::after {
     background: radial-gradient(
-        circle 800px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.06), 
+        circle 800px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
         transparent 40%
     );
     z-index: 20;
 }
 
-/* Background hover element */
-.card .card-border {
+/* Foreground hover element, light mode */
+.light-mode .card::after {
+    background: radial-gradient(
+        circle 800px at var(--mouseX) var(--mouseY), rgba(245, 222, 170, 0.1), 
+        transparent 40%
+    );
+    z-index: 20;
+}
+
+/* Hero card hover element, dark mode */
+.dark-mode #hero-card::after {
+    background: radial-gradient(
+        circle 800px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.1), 
+        transparent 40%
+    );
+    z-index: 20;
+}
+
+/* Hero card hover element, light mode */
+.light-mode #hero-card::after {
+    background: radial-gradient(
+        circle 800px at var(--mouseX) var(--mouseY), rgba(245, 222, 170, 0.15), 
+        transparent 40%
+    );
+    z-index: 20;
+}
+
+
+/* Background hover element, only in dark mode, o */
+.dark-mode .card .card-border {
     background: radial-gradient(
         circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
         transparent 40%
     );
     z-index: 9;
+}
+
+/* Background hover element, hide in light mode */
+.light-mode .card .card-border {
+    display: none;
 }
 
 /* when card hovered, show foreground hover element */
