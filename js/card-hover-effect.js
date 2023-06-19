@@ -54,3 +54,13 @@ appearanceDropDown.onmousemove = event => {
     appearanceDropDown.style.setProperty('--mouseX', `${x}px`)
     appearanceDropDown.style.setProperty('--mouseY', `${y}px`)
 }
+
+// Apply hover effects to navbutton-home
+const navbuttonHome = document.getElementById('navbutton-home')
+navbuttonHome.onmousemove = event => {
+    const rect = navbuttonHome.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    navbuttonHome.style.setProperty('--mouseX', `${x}px`)
+    navbuttonHome.style.setProperty('--mouseY', `${y}px`)
+}

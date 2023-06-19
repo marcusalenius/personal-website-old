@@ -54,7 +54,9 @@ nav {
 .navbutton::after,
 .navbutton .card-border,
 #appearance-drop-down::after,
-#appearance-drop-down .card-border {
+#appearance-drop-down .card-border,
+#navbutton-home::after,
+#navbutton-home .card-border {
     opacity: 0;
     transition: opacity 500ms;
     content: '';
@@ -85,7 +87,8 @@ nav {
 }
 
 /* Background hover element, only in dark mode */
-.dark-mode .navbutton .card-border {
+.dark-mode .navbutton .card-border,
+.dark-mode #navbutton-home .card-border {
     background: radial-gradient(
         circle 100px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
         transparent 40%
@@ -95,19 +98,22 @@ nav {
 
 /* Background hover element, hide in light mode */
 .light-mode .navbutton .card-border,
-.light-mode #appearance-drop-down .card-border {
+.light-mode #appearance-drop-down .card-border,
+.light-mode #navbutton-home .card-border {
     display: none;
 }
 
 /* when card hovered, show foreground hover element */
 .navbutton:hover::after,
-#appearance-drop-down:hover::after {
+#appearance-drop-down:hover::after,
+#navbutton-home::after {
     opacity: 1;
 }
 
 /* when nav-right hovered, show background hover element */
 #nav-right:hover .navbutton .card-border,
-#appearance-drop-down:hover .card-border {
+#appearance-drop-down:hover .card-border,
+#navbutton-home:hover .card-border {
     opacity: 1;
 }
 
@@ -148,19 +154,41 @@ nav {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* Background card */
 .dark-mode #navbutton-home {
     background: var(--darkCardRim);
     box-shadow: 0px 0px 8px #000000;
 }
 
-.dark-mode #navbutton-home::after {
+/* Foreground card */
+.dark-mode #navbutton-home::before {
     background: var(--darkCard);
+    position: relative;
     content: '';
     display: inline-block;
     margin: 1px;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     border-radius: 45px;
+    z-index: 101;
+}
+
+/* Foreground hover element, dark mode */
+.dark-mode #navbutton-home::after {
+    background: radial-gradient(
+        circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.1), 
+        transparent 40%
+    );
+    z-index: 120;
+}
+
+/* Foreground hover element, light mode */
+.light-mode #navbutton-home::after {
+    background: radial-gradient(
+        circle 200px at var(--mouseX) var(--mouseY), rgba(245, 222, 170, 0.15), 
+        transparent 40%
+    );
+    z-index: 120;
 }
 
 #navbar-headshot {
@@ -169,6 +197,7 @@ nav {
     height: 56px;
     left: 4px;
     top: 4px;
+    z-index: 102;
 }
 
 /* Back button */
