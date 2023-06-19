@@ -44,3 +44,13 @@ document.getElementById('nav-right').onmousemove = event => {
         navbutton.style.setProperty('--mouseY', `${y}px`)
     }
 }
+
+// Apply hover effect to appearance drop-down
+const appearanceDropDown = document.getElementById('appearance-drop-down')
+appearanceDropDown.onmousemove = event => {
+    const rect = appearanceDropDown.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    appearanceDropDown.style.setProperty('--mouseX', `${x}px`)
+    appearanceDropDown.style.setProperty('--mouseY', `${y}px`)
+}
