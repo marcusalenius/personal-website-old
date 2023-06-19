@@ -52,7 +52,9 @@ nav {
 
 /* Foreground hover element and background hover element */
 .navbutton::after,
-.navbutton .card-border {
+.navbutton .card-border,
+#appearance-drop-down::after,
+#appearance-drop-down .card-border {
     opacity: 0;
     transition: opacity 500ms;
     content: '';
@@ -92,17 +94,20 @@ nav {
 }
 
 /* Background hover element, hide in light mode */
-.light-mode .navbutton .card-border {
+.light-mode .navbutton .card-border,
+.light-mode #appearance-drop-down .card-border {
     display: none;
 }
 
 /* when card hovered, show foreground hover element */
-.navbutton:hover::after {
+.navbutton:hover::after,
+#appearance-drop-down:hover::after {
     opacity: 1;
 }
 
 /* when nav-right hovered, show background hover element */
-#nav-right:hover .navbutton .card-border {
+#nav-right:hover .navbutton .card-border,
+#appearance-drop-down:hover .card-border {
     opacity: 1;
 }
 
@@ -286,15 +291,6 @@ nav {
 /* Foreground hover element and background hover element */
 #appearance-drop-down::after,
 #appearance-drop-down .card-border {
-    opacity: 0;
-    transition: opacity 500ms;
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
     pointer-events: none;
 }
 
@@ -324,30 +320,6 @@ nav {
     );
     z-index: 100;
 }
-
-/* Background hover element, hide in light mode */
-.light-mode #appearance-drop-down .card-border {
-    display: none;
-}
-
-/* when card hovered, show foreground hover element */
-#appearance-drop-down:hover::after {
-    opacity: 1;
-}
-
-/* when appearance-drop-down hovered, show background hover element */
-#appearance-drop-down:hover .card-border {
-    opacity: 1;
-}
-
-
-
-
-
-
-
-
-
 
 .appearance-drop-down-item {
     display: flex;
