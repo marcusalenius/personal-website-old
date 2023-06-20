@@ -29,6 +29,13 @@ nav {
 .light-mode .navbutton {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+    transition: 300ms ease;
+}
+
+.light-mode .navbutton:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
+    transform: scale(1.0005);
+    transition: 300ms ease;
 }
 
 /* Background card */
@@ -80,7 +87,7 @@ nav {
 /* Foreground hover element, light mode */
 .light-mode .navbutton::after {
     background: radial-gradient(
-        circle 200px at var(--mouseX) var(--mouseY), rgba(245, 222, 170, 0.1), 
+        circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
         transparent 40%
     );
     z-index: 120;
@@ -154,6 +161,13 @@ nav {
 .light-mode #navbutton-home {
     background: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+    transition: 300ms ease;
+}
+
+.light-mode #navbutton-home:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
+    transform: scale(1.005);
+    transition: 300ms ease;
 }
 
 /* Background card */
@@ -187,7 +201,7 @@ nav {
 /* Foreground hover element, light mode */
 .light-mode #navbutton-home::after {
     background: radial-gradient(
-        circle 200px at var(--mouseX) var(--mouseY), rgba(245, 222, 170, 0.15), 
+        circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
         transparent 40%
     );
     z-index: 120;
@@ -297,6 +311,13 @@ nav {
 .light-mode #appearance-drop-down {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
+    transition: 300ms ease;
+}
+
+.light-mode #appearance-drop-down:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
+    transform: scale(1.0005);
+    transition: 300ms ease;
 }
 
 /* Background card */
@@ -337,7 +358,7 @@ nav {
 /* Foreground hover element, light mode */
 .light-mode #appearance-drop-down::after {
     background: radial-gradient(
-        circle 400px at var(--mouseX) var(--mouseY), rgba(245, 222, 170, 0.1), 
+        circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
         transparent 40%
     );
     z-index: 120;
