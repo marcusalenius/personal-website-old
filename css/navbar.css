@@ -43,6 +43,14 @@ nav {
     background-color: var(--darkCardRim);
     box-shadow: 0px 0px 8px #000000;
     position: relative;
+    transition: scale 200ms ease, box-shadow 200ms ease;
+
+}
+
+.dark-mode .navbutton:hover {
+    box-shadow: 0px 0px 13px #000000;
+    scale: 1.0001;
+    transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
 /* Foreground card */
@@ -179,6 +187,14 @@ nav {
 .dark-mode #navbutton-home {
     background: var(--darkCardRim);
     box-shadow: 0px 0px 8px #000000;
+    transition: scale 200ms ease, box-shadow 200ms ease;
+}
+
+.dark-mode #navbutton-home:hover {
+    box-shadow: 0px 0px 13px #000000;
+    scale: 1.0005;
+    transition: scale 200ms ease, box-shadow 200ms ease;
+
 }
 
 /* Foreground card */
@@ -316,13 +332,13 @@ nav {
 .light-mode #appearance-drop-down {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
-    transition: 200ms ease;
+    transition: 200ms ease-out;
 }
 
 .light-mode #appearance-drop-down:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
     scale: 1.0005;
-    transition: 200ms ease;
+    transition: 200ms ease-out;
 }
 
 /* Background card */
@@ -330,6 +346,14 @@ nav {
     background-color: var(--darkCardRim);
     box-shadow: 0px 0px 10px #000000;
     display: inline;
+    transition: 200ms ease-out;
+}
+
+.dark-mode #appearance-drop-down:hover {
+    box-shadow: 0px 0px 15px #000000;
+    scale: 1.0005;
+    transition: 200ms ease-out;
+
 }
 
 /* Foreground card */
@@ -542,19 +566,26 @@ nav {
     .light-mode #navmenu-mobile {
         background-color: var(--lightCard);
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
-        transition: scale 200ms ease, box-shadow 200ms ease;
+        transition: 200ms ease;
     }
 
     .light-mode #navmenu-mobile:hover {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
         scale: 1.0005;
-        transition: scale 200ms ease, box-shadow 200ms ease;
+        transition: 200ms ease;
     }
 
     /* Background card */
     .dark-mode #navmenu-mobile {
         background-color: var(--darkCardRim);
         box-shadow: 0px 0px 10px #000000;
+        transition: 200ms ease;
+    }
+
+    .dark-mode #navmenu-mobile:hover {
+        box-shadow: 0px 0px 15px #000000;
+        scale: 1.0005;
+        transition: 200ms ease;
     }
 
     /* Foreground card */
