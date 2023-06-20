@@ -117,7 +117,7 @@ nav {
     opacity: 1;
 }
 
-/* when nav-right hovered, show background hover element */
+/* when parent container hovered, show background hover element */
 #nav-right:hover .navbutton .card-border,
 #appearance-drop-down:hover .card-border,
 #navbutton-home:hover .card-border,
@@ -340,7 +340,7 @@ nav {
     z-index: 101;
 }
 
-/* Foreground hover element and background hover element */
+/* allow click-through */
 #appearance-drop-down::after,
 #appearance-drop-down .card-border {
     pointer-events: none;
