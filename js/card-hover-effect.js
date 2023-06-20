@@ -80,7 +80,7 @@ if (navbuttonHome !== null) {
     }    
 }
 
-// Apply hover effect to navbuttons in post pages
+// Apply hover effect to navbutton-appearance in post pages
 const navbuttonAppearance = document.getElementById('navbutton-appearance');
 if (navbuttonAppearance !== null) {
     navbuttonAppearance.onmousemove = event => {
@@ -89,5 +89,17 @@ if (navbuttonAppearance !== null) {
         const y = event.clientY - rect.top;
         navbuttonAppearance.style.setProperty('--mouseX', `${x}px`);
         navbuttonAppearance.style.setProperty('--mouseY', `${y}px`);
+    }    
+}
+
+// Apply hover effect to navbutton-back in post pages
+const navButtonBack = document.getElementById('navbutton-back');
+if (navButtonBack !== null) {
+    navButtonBack.onmousemove = event => {
+        const rect = navButtonBack.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        navButtonBack.style.setProperty('--mouseX', `${x}px`);
+        navButtonBack.style.setProperty('--mouseY', `${y}px`);
     }    
 }

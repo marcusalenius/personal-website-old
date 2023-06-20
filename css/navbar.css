@@ -114,7 +114,8 @@ nav {
 #nav-right:hover .navbutton .card-border,
 #appearance-drop-down:hover .card-border,
 #navbutton-home:hover .card-border,
-#navbutton-appearance:hover .card-border {
+#navbutton-appearance:hover .card-border,
+#navbutton-back:hover .card-border {
     opacity: 1;
 }
 
