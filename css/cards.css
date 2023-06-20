@@ -23,7 +23,7 @@
 
 .light-mode .card:hover {
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25), 0px 0px 32px rgba(0, 0, 0, 0.25);
-    transform: scale(1.0005);
+    scale: 1.0005;
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
@@ -32,6 +32,13 @@
     background: var(--darkCardRim);
     box-shadow: 0px 0px 17px #000000;
     position: relative;
+    transition: scale 2000ms ease, box-shadow 2000ms ease;
+}
+
+.dark-mode .card:hover {
+    box-shadow: 0px 0px 22px #000000;
+    scale: 1.001;
+    transition: scale 2000ms ease, box-shadow 2000ms ease;
 }
 
 /* Foreground card */
@@ -152,7 +159,7 @@
 
 .light-mode .contact-card:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
-    transform: scale(1.00005);
+    scale: 1.00005;
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
