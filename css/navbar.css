@@ -23,19 +23,37 @@ nav {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 
 .light-mode .navbutton {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+    transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
+.light-mode .navbutton:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
+    scale: 1.00005;
+    transition: scale 200ms ease, box-shadow 200ms ease;
+}
+
+/* Background card */
 .dark-mode .navbutton {
     background-color: var(--darkCardRim);
     box-shadow: 0px 0px 8px #000000;
     position: relative;
+    transition: scale 200ms ease, box-shadow 200ms ease;
+
 }
 
+.dark-mode .navbutton:hover {
+    box-shadow: 0px 0px 13px #000000;
+    scale: 1.0001;
+    transition: scale 200ms ease, box-shadow 200ms ease;
+}
+
+/* Foreground card */
 .dark-mode .navbutton::before {
     background-color: var(--darkCard);
     content: '';
@@ -45,6 +63,80 @@ nav {
     height: calc(100% - 2px);
     border-radius: 44px;
     z-index: 101;
+}
+
+/* Foreground hover element and background hover element */
+.navbutton::after,
+.navbutton .card-border,
+#appearance-drop-down::after,
+#appearance-drop-down .card-border,
+#navbutton-home::after,
+#navbutton-home .card-border,
+#navmenu-mobile::after,
+#navmenu-mobile .card-border {
+    opacity: 0;
+    transition: opacity 500ms;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+/* Foreground hover element, dark mode */
+.dark-mode .navbutton::after {
+    background: radial-gradient(
+        circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
+        transparent 40%
+    );
+    z-index: 120;
+}
+
+/* Foreground hover element, light mode */
+.light-mode .navbutton::after {
+    background: radial-gradient(
+        circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
+        transparent 40%
+    );
+    z-index: 120;
+}
+
+/* Background hover element, only in dark mode */
+.dark-mode .navbutton .card-border,
+.dark-mode #navbutton-home .card-border {
+    background: radial-gradient(
+        circle 100px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
+        transparent 40%
+    );
+    z-index: 100;
+}
+
+/* Background hover element, hide in light mode */
+.light-mode .navbutton .card-border,
+.light-mode #appearance-drop-down .card-border,
+.light-mode #navbutton-home .card-border,
+.light-mode #navmenu-mobile .card-border {
+    display: none;
+}
+
+/* when card hovered, show foreground hover element */
+.navbutton:hover::after,
+#appearance-drop-down:hover::after,
+#navbutton-home:hover::after,
+#navmenu-mobile:hover::after {
+    opacity: 1;
+}
+
+/* when parent container hovered, show background hover element */
+#nav-right:hover .navbutton .card-border,
+#appearance-drop-down:hover .card-border,
+#navbutton-home:hover .card-border,
+#navbutton-appearance:hover .card-border,
+#navbutton-back:hover .card-border,
+#navmenu-mobile:hover .card-border {
+    opacity: 1;
 }
 
 .navbutton .button-text {
@@ -63,14 +155,6 @@ nav {
     width: 135px;
 }
 
-#navbutton-home {
-    position: relative;
-    width: 64px;
-    height: 64px;
-    border-radius: 45px;
-    cursor: pointer;
-}
-
 #navbutton-back {
     width: 118px;
     display: flex;
@@ -79,24 +163,69 @@ nav {
 
 /* Home button */
 
+#navbutton-home {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
 .light-mode #navbutton-home {
     background: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
+    transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
+.light-mode #navbutton-home:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
+    scale: 1.0005;
+    transition: scale 200ms ease, box-shadow 200ms ease;
+}
+
+/* Background card */
 .dark-mode #navbutton-home {
     background: var(--darkCardRim);
     box-shadow: 0px 0px 8px #000000;
+    transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
-.dark-mode #navbutton-home::after {
+.dark-mode #navbutton-home:hover {
+    box-shadow: 0px 0px 13px #000000;
+    scale: 1.0005;
+    transition: scale 200ms ease, box-shadow 200ms ease;
+
+}
+
+/* Foreground card */
+.dark-mode #navbutton-home::before {
     background: var(--darkCard);
+    position: relative;
     content: '';
     display: inline-block;
     margin: 1px;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     border-radius: 45px;
+    z-index: 101;
+}
+
+/* Foreground hover element, dark mode */
+.dark-mode #navbutton-home::after {
+    background: radial-gradient(
+        circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.1), 
+        transparent 40%
+    );
+    z-index: 120;
+}
+
+/* Foreground hover element, light mode */
+.light-mode #navbutton-home::after {
+    background: radial-gradient(
+        circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.02), 
+        transparent 40%
+    );
+    z-index: 120;
 }
 
 #navbar-headshot {
@@ -105,6 +234,7 @@ nav {
     height: 56px;
     left: 4px;
     top: 4px;
+    z-index: 102;
 }
 
 /* Back button */
@@ -122,7 +252,6 @@ nav {
     display: none;
 }
 
-
 /* Appearance button */
 
 #navbutton-appearance {
@@ -133,42 +262,25 @@ nav {
     cursor: pointer;
 }
 
-.light-mode #navbutton-appearance {
-    background: var(--lightCard);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
-}
-
-.dark-mode #navbutton-appearance {
-    background: var(--darkCardRim);
-    box-shadow: 0px 0px 8px #000000;
-}
-
-.dark-mode #navbutton-appearance::before {
-    background: var(--darkCard);
-    content: '';
-    display: inline-block;
-    margin: 1px;
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    border-radius: 45px;
-}
-
 #appearance-icon-light-mode {
     position: absolute;
     left: 9px;
     top: 9px;
+    z-index: 102;
 }
 
 #appearance-icon-dark-mode {
     position: absolute;
     left: 11px;
     top: 10px;
+    z-index: 102;
 }
 
 .appearance-cross-icon {
     position: absolute;
     left: 14px;
     top: 14px;
+    z-index: 102;
 }
 
 .drop-down-hidden .appearance-icon {
@@ -220,14 +332,31 @@ nav {
 .light-mode #appearance-drop-down {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
+    transition: 200ms ease-out;
 }
 
+.light-mode #appearance-drop-down:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
+    scale: 1.0005;
+    transition: 200ms ease-out;
+}
+
+/* Background card */
 .dark-mode #appearance-drop-down {
     background-color: var(--darkCardRim);
     box-shadow: 0px 0px 10px #000000;
     display: inline;
+    transition: 200ms ease-out;
 }
 
+.dark-mode #appearance-drop-down:hover {
+    box-shadow: 0px 0px 15px #000000;
+    scale: 1.0005;
+    transition: 200ms ease-out;
+
+}
+
+/* Foreground card */
 .dark-mode #appearance-drop-down::before {
     background: var(--darkCard);
     content: '';
@@ -237,7 +366,40 @@ nav {
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     border-radius: 19px;
-    z-index: 11;
+    z-index: 101;
+}
+
+/* allow click-through */
+#appearance-drop-down::after,
+#appearance-drop-down .card-border {
+    pointer-events: none;
+}
+
+/* Foreground hover element, dark mode */
+.dark-mode #appearance-drop-down::after {
+    background: radial-gradient(
+        circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
+        transparent 40%
+    );
+    z-index: 120;
+}
+
+/* Foreground hover element, light mode */
+.light-mode #appearance-drop-down::after {
+    background: radial-gradient(
+        circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
+        transparent 40%
+    );
+    z-index: 120;
+}
+
+/* Background hover element, only in dark mode */
+.dark-mode #appearance-drop-down .card-border {
+    background: radial-gradient(
+        circle 150px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
+        transparent 40%
+    );
+    z-index: 100;
 }
 
 .appearance-drop-down-item {
@@ -249,7 +411,7 @@ nav {
     width: 172px;
     height: 48px;
     border-radius: 12px;
-    z-index: 12;
+    z-index: 102;
     cursor: pointer;
 }
 
@@ -357,6 +519,7 @@ nav {
     }
 
     #navbutton-appearance {
+        display: block;
         width: 44px;
         height: 44px;
     }
@@ -403,13 +566,29 @@ nav {
     .light-mode #navmenu-mobile {
         background-color: var(--lightCard);
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
+        transition: 200ms ease;
     }
 
+    .light-mode #navmenu-mobile:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
+        scale: 1.0005;
+        transition: 200ms ease;
+    }
+
+    /* Background card */
     .dark-mode #navmenu-mobile {
         background-color: var(--darkCardRim);
         box-shadow: 0px 0px 10px #000000;
+        transition: 200ms ease;
     }
 
+    .dark-mode #navmenu-mobile:hover {
+        box-shadow: 0px 0px 15px #000000;
+        scale: 1.0005;
+        transition: 200ms ease;
+    }
+
+    /* Foreground card */
     .dark-mode #navmenu-mobile::before {
         background: var(--darkCard);
         content: '';
@@ -419,8 +598,42 @@ nav {
         width: calc(100% - 2px);
         height: calc(100% - 2px);
         border-radius: 19px;
-        z-index: 11;
+        z-index: 101;
         transition: 200ms ease;
+    }
+
+    /* allow click-through */
+    #navmenu-mobile::after,
+    #navmenu-mobile .card-border {
+        pointer-events: none;
+    }
+
+
+    /* Foreground hover element, dark mode */
+    .dark-mode #navmenu-mobile::after {
+        background: radial-gradient(
+            circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
+            transparent 40%
+        );
+        z-index: 120;
+    }
+
+    /* Foreground hover element, light mode */
+    .light-mode #navmenu-mobile::after {
+        background: radial-gradient(
+            circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
+            transparent 40%
+        );
+        z-index: 120;
+    }
+
+    /* Background hover element, only in dark mode */
+    .dark-mode #navmenu-mobile .card-border {
+        background: radial-gradient(
+            circle 150px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
+            transparent 40%
+        );
+        z-index: 100;
     }
 
     #navmenu-mobile.hidden {
@@ -449,15 +662,11 @@ nav {
         width: 172px;
         height: 48px;
         border-radius: 12px;
-        z-index: 12;
+        z-index: 102;
         cursor: pointer;
     }
 
     .navmenu-item.selected {
-        /* transition: background 250ms ease,
-                    border-radius 250ms ease,
-                    width 250ms ease,
-                    height 250ms ease; */
         transition: 250ms ease;
     }
 

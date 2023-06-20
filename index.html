@@ -21,9 +21,11 @@
   <body class="light-mode">
     <nav>
       <div id="navbutton-home" onclick="scrollToTop()">
+        <div class="card-border"></div>
         <img src="images/navbar-headshot.png" alt="small image of Marcus Alenius" draggable="false" id="navbar-headshot">
       </div>
       <div class="hidden" id="navmenu-mobile">
+        <div class="card-border"></div>
         <div class="navmenu-item selected" id="navmenu-item-about-me" onclick="handleAboutMeClick()">
           <div class="button-text">About Me</div>
         </div>
@@ -39,21 +41,26 @@
       </div>
       <div id="nav-right">
         <div class="navbutton" id="navbutton-projects" onclick="scrollToProjects()">
+          <div class="card-border"></div>
           <div class="button-text">Projects</div>
         </div>
         <div class="navbutton" id="navbutton-work" onclick="scrollToWork()">
+          <div class="card-border"></div>
           <div class="button-text">Work</div>
         </div>
         <div class="navbutton" id="navbutton-contact" onclick="scrollToContact()">
+          <div class="card-border"></div>
           <div class="button-text">Contact</div>
         </div>
-        <div class="drop-down-hidden" id="navbutton-appearance" onclick="toggleAppearanceDropdown()">
+        <div class="navbutton drop-down-hidden" id="navbutton-appearance" onclick="toggleAppearanceDropdown()">
+          <div class="card-border"></div>
           <img src="icons/appearance-icon-light-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-light-mode">
           <img src="icons/appearance-icon-dark-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-dark-mode">
           <img src="icons/appearance-cross-icon-light-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-light-mode">
           <img src="icons/appearance-cross-icon-dark-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-dark-mode">
         </div>
         <div class="hidden" id="appearance-drop-down">
+          <div class="card-border"></div>
           <div class="appearance-drop-down-item selected" id="appearance-drop-down-item-system" onclick="buttonClickToSetSystemAppearance()">
             <img src="icons/appearance-drop-down-icon-system-light-mode.svg" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
             <img src="icons/appearance-drop-down-icon-system-dark-mode.png" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
@@ -96,6 +103,7 @@
         </div>
         <div id="hero-right">
           <div class="card" id="hero-card">
+            <div class="card-border"></div>
             <img src="images/hero-image-desktop.png" alt="large image of Marcus Alenius" draggable="false" class="hero-image" id="hero-image-desktop">
             <img src="images/hero-image-tablet.png" alt="large image of Marcus Alenius" draggable="false" class="hero-image" id="hero-image-tablet">
             <img src="images/hero-image-medium-skinny.png" alt="large image of Marcus Alenius" draggable="false" class="hero-image" id="hero-image-medium-skinny">
@@ -106,9 +114,10 @@
         </div>
       </div>
       <div id="projects">
-        <h2>Selected Projects</h2>
+        <h2>Select Projects</h2>
         <div class="card-layout">
           <div class="card" id="kenboard-card">
+            <div class="card-border"></div>
             <h3>Kenboard</h3>
             <p class="paragraph-small">Python Kivy app with a custom intelligent typing error correction system</p>
             <div class="card-images">
@@ -119,10 +128,12 @@
             </div>
           </div>
           <div class="card" id="personal-website-card">
+            <div class="card-border"></div>
             <h3>Personal Website</h3>
             <p class="paragraph-small">This website – built using pure HTML, CSS, and JavaScript</p>
           </div>
           <div class="card" id="happy-day-card">
+            <div class="card-border"></div>
             <h3>Happy Day Dessert<br>Factory Website</h3>
             <p class="paragraph-small">Redesign of local ice cream shop’s website</p>
             <div class="card-images">
@@ -136,11 +147,13 @@
         <h2>Work Experience</h2>
         <div class="card-layout">
           <div class="card" id="hcii-reu-card">
+            <div class="card-border"></div>
             <h3>HCII REU Research Intern</h3>
             <p class="paragraph-small">Research Intern at CMU’s Human Computer Interaction Institute</p>
           </div>
           <div class="card" id="ta-card">
             <h3>15-112 Teaching Assistant</h3>
+            <div class="card-border"></div>
             <p class="paragraph-small">Teaching assistant for Carnegie Mellon’s renowned introductory CS course</p>
           </div>
         </div>
@@ -150,6 +163,7 @@
         <div class="contact-card-layout">
           <a href="mailto:alenius@cmu.edu" target="_blank">
             <div class="contact-card" id="email-card">
+              <div class="card-border"></div>
               <img src="icons/email-icon-light-mode.svg" alt="email icon" draggable="false" class="contact-icon-light-mode email-icon">
               <img src="icons/email-icon-dark-mode.svg" alt="email icon" draggable="false" class="contact-icon-dark-mode email-icon">
               <div class="button-text">alenius@cmu.edu</div>
@@ -157,6 +171,7 @@
           </a>
           <a href="https://www.linkedin.com/in/marcusalenius/" target="_blank">
             <div class="contact-card" id="linkedin-card">
+              <div class="card-border"></div>
               <img src="icons/linkedin-icon-light-mode.svg" alt="linkedin icon" draggable="false" class="contact-icon-light-mode linkedin-icon">
               <img src="icons/linkedin-icon-dark-mode.svg" alt="linkedin icon" draggable="false" class="contact-icon-dark-mode linkedin-icon">
               <div class="button-text">/marcusalenius</div>
@@ -164,6 +179,7 @@
           </a>
           <a href="https://github.com/marcusalenius" target="_blank">
             <div class="contact-card" id="github-card">
+              <div class="card-border"></div>
               <img src="icons/github-icon-light-mode.svg" alt="github icon" draggable="false" class="contact-icon-light-mode github-icon">
               <img src="icons/github-icon-dark-mode.svg" alt="github icon" draggable="false" class="contact-icon-dark-mode github-icon">
               <div class="button-text">/marcusalenius</div>
@@ -178,5 +194,6 @@
     <script src="js/navbar-and-appearance.js"></script>
     <script src="js/locations.js"></script>
     <script src="js/navmenu-mobile.js"></script>
+    <script src="js/card-hover-effect.js"></script>
   </body>
 </html>

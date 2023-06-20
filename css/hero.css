@@ -24,12 +24,14 @@
     position: relative;
     width: 355px;
     height: 430px;
+    cursor: auto;
 }
 
 .hero-image {
     position: absolute;
     left: 8px;
     top: 8px;
+    z-index: 12;
 }
 
 #hero-image-desktop {
