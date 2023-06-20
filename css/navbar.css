@@ -29,13 +29,13 @@ nav {
 .light-mode .navbutton {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
-    transition: 300ms ease;
+    transition: scale 300ms ease, box-shadow 300ms ease;
 }
 
 .light-mode .navbutton:hover {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
     transform: scale(1.0005);
-    transition: 300ms ease;
+    transition: scale 300ms ease, box-shadow 300ms ease;
 }
 
 /* Background card */
@@ -161,13 +161,13 @@ nav {
 .light-mode #navbutton-home {
     background: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
-    transition: 300ms ease;
+    transition: scale 300ms ease, box-shadow 300ms ease;
 }
 
 .light-mode #navbutton-home:hover {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
     transform: scale(1.005);
-    transition: 300ms ease;
+    transition: scale 300ms ease, box-shadow 300ms ease;
 }
 
 /* Background card */
@@ -311,13 +311,13 @@ nav {
 .light-mode #appearance-drop-down {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
-    transition: 300ms ease;
+    transition: scale 300ms ease, box-shadow 300ms ease;
 }
 
 .light-mode #appearance-drop-down:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
     transform: scale(1.0005);
-    transition: 300ms ease;
+    transition: scale 300ms ease, box-shadow 300ms ease;
 }
 
 /* Background card */
@@ -587,10 +587,6 @@ nav {
     }
 
     .navmenu-item.selected {
-        /* transition: background 250ms ease,
-                    border-radius 250ms ease,
-                    width 250ms ease,
-                    height 250ms ease; */
         transition: 250ms ease;
     }
 
