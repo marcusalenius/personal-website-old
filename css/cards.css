@@ -18,13 +18,13 @@
 .light-mode .card {
     background: var(--lightCard);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
-    transition: scale 300ms ease, box-shadow 300ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
 .light-mode .card:hover {
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25), 0px 0px 32px rgba(0, 0, 0, 0.25);
-    transform: scale(1.001);
-    transition: scale 300ms ease, box-shadow 300ms ease;
+    transform: scale(1.0005);
+    transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
 /* Background card */
@@ -147,13 +147,13 @@
 .light-mode .contact-card {
     background: var(--lightCard);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
-    transition: scale 300ms ease, box-shadow 300ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
 .light-mode .contact-card:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
-    transform: scale(1.0005);
-    transition: scale 300ms ease, box-shadow 300ms ease;
+    transform: scale(1.00005);
+    transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
 /* Background contact-card */
@@ -225,7 +225,6 @@
     /* to fix safari border radius overflow hidden issue: */
     transform: translateZ(0);
 }
-
 
 .contact-card .button-text { 
     position: relative; 
