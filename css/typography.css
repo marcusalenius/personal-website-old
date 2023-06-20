@@ -59,6 +59,7 @@ p.paragraph-small {
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
+    white-space: nowrap;
 }
 
 .light-mode .location-text { color: var(--lightText); }
