@@ -103,3 +103,16 @@ if (navButtonBack !== null) {
         navButtonBack.style.setProperty('--mouseY', `${y}px`);
     }    
 }
+
+// Apply hover effect to navmenu-mobile
+const navmenuMobile = document.getElementById('navmenu-mobile');
+if (navmenuMobile !== null) {
+    navmenuMobile.onmousemove = event => {
+        const rect = navmenuMobile.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        navmenuMobile.style.setProperty('--mouseX', `${x}px`);
+        navmenuMobile.style.setProperty('--mouseY', `${y}px`);
+    }    
+
+}
