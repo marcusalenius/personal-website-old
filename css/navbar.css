@@ -515,7 +515,7 @@ nav {
 @media (max-width: 740px) {
 
     nav {
-        width: 414px;
+        width: 408px;
         top: 6px;
     }
 
@@ -740,6 +740,6 @@ nav {
 /* iPhone 14 */
 @media (max-width: 424px) {
 
-    nav { width: 374px; }
+    nav { width: 366px; }
 
 }
