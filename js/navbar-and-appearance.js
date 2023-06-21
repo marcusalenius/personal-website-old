@@ -191,7 +191,7 @@ function scrollToProjects() {
     const yOffset = window.matchMedia("(max-width: 740px)").matches 
         ? -85
         : -120;
-    const y = projectsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const y = projectsSection.getBoundingClientRect().top + window.scrollY + yOffset;
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
@@ -201,11 +201,16 @@ function scrollToWork() {
     const yOffset = window.matchMedia("(max-width: 740px)").matches 
         ? -85
         : -120;
-    const y = workSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const y = workSection.getBoundingClientRect().top + window.scrollY + yOffset;
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
 // Scrolls to contact i.e. the bottom
 function scrollToContact() {
-    window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+    const contactSection = document.getElementById('contact');
+    const yOffset = window.matchMedia("(max-width: 740px)").matches 
+        ? -85
+        : -120;
+    const y = contactSection.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
 }
