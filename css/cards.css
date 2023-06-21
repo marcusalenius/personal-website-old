@@ -21,10 +21,12 @@
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
-.light-mode .card:hover {
-    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25), 0px 0px 32px rgba(0, 0, 0, 0.25);
-    scale: 1.0005;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+@media (hover: hover) {
+    .light-mode .card:hover {
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25), 0px 0px 32px rgba(0, 0, 0, 0.25);
+        scale: 1.0005;
+        transition: scale 200ms ease, box-shadow 200ms ease;
+    }
 }
 
 /* Background card */
@@ -35,10 +37,12 @@
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
-.dark-mode .card:hover {
-    box-shadow: 0px 0px 22px #000000;
-    scale: 1.001;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+@media (hover: hover) {
+    .dark-mode .card:hover {
+        box-shadow: 0px 0px 22px #000000;
+        scale: 1.001;
+        transition: scale 200ms ease, box-shadow 200ms ease;
+    }
 }
 
 /* Foreground card */
@@ -121,20 +125,27 @@
 }
 
 /* when card hovered, show foreground hover element */
-.card:hover::after,
-.contact-card:hover::after {
-    opacity: 1;
+@media (hover: hover) {
+    .card:hover::after,
+    .contact-card:hover::after {
+        opacity: 1;
+    }
 }
 
+
 /* when card-layout hovered, show background hover element */
-.card-layout:hover .card .card-border,
-.contact-card-layout:hover .contact-card .card-border {
-    opacity: 1;
+@media (hover: hover) {
+    .card-layout:hover .card .card-border,
+    .contact-card-layout:hover .contact-card .card-border {
+        opacity: 1;
+    }
 }
 
 /* when hero-card hovered, show background hover element */
-#hero-card:hover .card-border {
-    opacity: 1;
+@media (hover: hover) {
+    #hero-card:hover .card-border {
+        opacity: 1;
+    }    
 }
 
 .contact-card-layout {
@@ -157,10 +168,12 @@
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
-.light-mode .contact-card:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
-    scale: 1.00005;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+@media (hover: hover) {
+    .light-mode .contact-card:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
+        scale: 1.00005;
+        transition: scale 200ms ease, box-shadow 200ms ease;
+    }    
 }
 
 /* Background contact-card */
@@ -171,11 +184,13 @@
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
-.dark-mode .contact-card:hover {
-    box-shadow: 0px 0px 15px #000000;
-    scale: 1.0005;
-    transition: scale 200ms ease, box-shadow 200ms ease;
-
+@media (hover: hover) {
+    .dark-mode .contact-card:hover {
+        box-shadow: 0px 0px 15px #000000;
+        scale: 1.0005;
+        transition: scale 200ms ease, box-shadow 200ms ease;
+    
+    }    
 }
 
 /* Foreground contact-card */
