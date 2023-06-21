@@ -32,10 +32,12 @@ nav {
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
-.light-mode .navbutton:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
-    scale: 1.00005;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+@media (hover: hover) {
+    .light-mode .navbutton:hover {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
+        scale: 1.00005;
+        transition: scale 200ms ease, box-shadow 200ms ease;
+    }    
 }
 
 /* Background card */
@@ -47,10 +49,12 @@ nav {
 
 }
 
-.dark-mode .navbutton:hover {
-    box-shadow: 0px 0px 13px #000000;
-    scale: 1.0001;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+@media (hover: hover) {
+    .dark-mode .navbutton:hover {
+        box-shadow: 0px 0px 13px #000000;
+        scale: 1.0001;
+        transition: scale 200ms ease, box-shadow 200ms ease;
+    }    
 }
 
 /* Foreground card */
@@ -122,21 +126,25 @@ nav {
 }
 
 /* when card hovered, show foreground hover element */
-.navbutton:hover::after,
-#appearance-drop-down:hover::after,
-#navbutton-home:hover::after,
-#navmenu-mobile:hover::after {
-    opacity: 1;
+@media (hover: hover) {
+    .navbutton:hover::after,
+    #appearance-drop-down:hover::after,
+    #navbutton-home:hover::after,
+    #navmenu-mobile:hover::after {
+        opacity: 1;
+    }
 }
 
 /* when parent container hovered, show background hover element */
-#nav-right:hover .navbutton .card-border,
-#appearance-drop-down:hover .card-border,
-#navbutton-home:hover .card-border,
-#navbutton-appearance:hover .card-border,
-#navbutton-back:hover .card-border,
-#navmenu-mobile:hover .card-border {
-    opacity: 1;
+@media (hover: hover) {
+    #nav-right:hover .navbutton .card-border,
+    #appearance-drop-down:hover .card-border,
+    #navbutton-home:hover .card-border,
+    #navbutton-appearance:hover .card-border,
+    #navbutton-back:hover .card-border,
+    #navmenu-mobile:hover .card-border {
+        opacity: 1;
+    }
 }
 
 .navbutton .button-text {
@@ -177,10 +185,12 @@ nav {
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
-.light-mode #navbutton-home:hover {
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
-    scale: 1.0005;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+@media (hover: hover) {
+    .light-mode #navbutton-home:hover {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25), 0px 0px 26px rgba(0, 0, 0, 0.25);
+        scale: 1.0005;
+        transition: scale 200ms ease, box-shadow 200ms ease;
+    }    
 }
 
 /* Background card */
@@ -190,11 +200,13 @@ nav {
     transition: scale 200ms ease, box-shadow 200ms ease;
 }
 
-.dark-mode #navbutton-home:hover {
-    box-shadow: 0px 0px 13px #000000;
-    scale: 1.0005;
-    transition: scale 200ms ease, box-shadow 200ms ease;
-
+@media (hover: hover) {
+    .dark-mode #navbutton-home:hover {
+        box-shadow: 0px 0px 13px #000000;
+        scale: 1.0005;
+        transition: scale 200ms ease, box-shadow 200ms ease;
+    
+    }    
 }
 
 /* Foreground card */
@@ -335,10 +347,12 @@ nav {
     transition: 200ms ease-out;
 }
 
-.light-mode #appearance-drop-down:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
-    scale: 1.0005;
-    transition: 200ms ease-out;
+@media (hover: hover) {
+    .light-mode #appearance-drop-down:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
+        scale: 1.0005;
+        transition: 200ms ease-out;
+    }    
 }
 
 /* Background card */
@@ -349,11 +363,13 @@ nav {
     transition: 200ms ease-out;
 }
 
-.dark-mode #appearance-drop-down:hover {
-    box-shadow: 0px 0px 15px #000000;
-    scale: 1.0005;
-    transition: 200ms ease-out;
-
+@media (hover: hover) {
+    .dark-mode #appearance-drop-down:hover {
+        box-shadow: 0px 0px 15px #000000;
+        scale: 1.0005;
+        transition: 200ms ease-out;
+    
+    }    
 }
 
 /* Foreground card */
@@ -423,12 +439,14 @@ nav {
     background-color: var(--darkSelected);
 }
 
-.light-mode .appearance-drop-down-item:hover:not(.selected) {
-    background-color: var(--lightHover);
-}
-
-.dark-mode .appearance-drop-down-item:hover:not(.selected) {
-    background-color: var(--darkHover);
+@media (hover: hover) {
+    .light-mode .appearance-drop-down-item:hover:not(.selected) {
+        background-color: var(--lightHover);
+    }
+    
+    .dark-mode .appearance-drop-down-item:hover:not(.selected) {
+        background-color: var(--darkHover);
+    }    
 }
 
 .appearance-drop-down-icon {
@@ -569,10 +587,12 @@ nav {
         transition: 200ms ease;
     }
 
-    .light-mode #navmenu-mobile:hover {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
-        scale: 1.0005;
-        transition: 200ms ease;
+    @media (hover: hover) {
+        .light-mode #navmenu-mobile:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 30px rgba(0, 0, 0, 0.25);
+            scale: 1.0005;
+            transition: 200ms ease;
+        }    
     }
 
     /* Background card */
@@ -582,10 +602,12 @@ nav {
         transition: 200ms ease;
     }
 
-    .dark-mode #navmenu-mobile:hover {
-        box-shadow: 0px 0px 15px #000000;
-        scale: 1.0005;
-        transition: 200ms ease;
+    @media (hover: hover) {
+        .dark-mode #navmenu-mobile:hover {
+            box-shadow: 0px 0px 15px #000000;
+            scale: 1.0005;
+            transition: 200ms ease;
+        }    
     }
 
     /* Foreground card */
@@ -679,12 +701,14 @@ nav {
         background-color: var(--darkSelected);
     }
 
-    .light-mode .navmenu-item:hover:not(.selected) {
-        background-color: var(--lightHover);
-    }
-    
-    .dark-mode .navmenu-item:hover:not(.selected) {
-        background-color: var(--darkHover);
+    @media (hover: hover) {
+        .light-mode .navmenu-item:hover:not(.selected) {
+            background-color: var(--lightHover);
+        }
+        
+        .dark-mode .navmenu-item:hover:not(.selected) {
+            background-color: var(--darkHover);
+        }    
     }
     
     .navmenu-item.hidden {
