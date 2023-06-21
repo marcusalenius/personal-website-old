@@ -205,7 +205,7 @@ function scrollToWork() {
     window.scrollTo({top: y, behavior: 'smooth'});
 }
 
-// Scrolls to contact i.e. the bottom
+// Scrolls to contact
 function scrollToContact() {
     const contactSection = document.getElementById('contact');
     const yOffset = window.matchMedia("(max-width: 740px)").matches 
