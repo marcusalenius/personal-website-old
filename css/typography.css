@@ -17,7 +17,7 @@ h2 {
 }
 
 h2:hover {
-    color: red;
+    background-color: red;
 }
 
 .light-mode h2 { color: var(--lightText); }
