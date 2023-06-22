@@ -9,6 +9,10 @@ nav {
     align-items: center;
 }
 
+.post-page nav {
+    top: 28px;
+}
+
 #nav-right {
     display: flex;
     gap: 35px;
@@ -517,6 +521,10 @@ nav {
     nav {
         width: 408px;
         top: 6px;
+    }
+
+    .post-page nav {
+        top: 9px;
     }
 
     .navbutton {
