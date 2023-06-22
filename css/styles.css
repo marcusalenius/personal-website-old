@@ -27,22 +27,16 @@
     padding: 0;
 }
 
+@media (hover: none) {
+    body {
+        cursor: pointer;
+    }
+}
+
 body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
-    /* animation: fadeInAnimation ease 200ms;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; */
 }
-
-/* @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-} */
 
 body.light-mode {
     background-color: var(--lightBackground);
