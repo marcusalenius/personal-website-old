@@ -16,10 +16,6 @@ h2 {
     line-height: 51px;
 }
 
-h2:hover {
-    background-color: red;
-}
-
 .light-mode h2 { color: var(--lightText); }
 
 .dark-mode h2 { color: var(--darkText); }
