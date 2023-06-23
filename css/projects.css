@@ -1,3 +1,5 @@
+/* Kenboard */
+
 #kenboard-card {
     grid-column: span 2;
     position: relative;
@@ -10,7 +12,16 @@
     width: 324px;
     left: 28px;
     top: 164px;
-    filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.4));
+}
+
+.light-mode #kenboard-demo-image {
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode #kenboard-demo-image {
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.7));
     /* to fix safari filter drop-shadow rendering issue: */
     transform: translateZ(0);
 }
@@ -27,9 +38,6 @@
     width: 180px;
     left: 596px;
     top: 90px;
-    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
-    /* to fix safari filter drop-shadow rendering issue: */
-    transform: translateZ(0);
 }
 
 #kenboard-debug {
@@ -37,10 +45,22 @@
     width: 180px;
     left: 741px;
     top: 13px;
-    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+}
+
+.light-mode #kenboard-splash,
+.light-mode #kenboard-debug {
+    filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.4));
     /* to fix safari filter drop-shadow rendering issue: */
     transform: translateZ(0);
 }
+
+.dark-mode #kenboard-splash,
+.dark-mode #kenboard-debug {
+    filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.8));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
 
 .dark-mode #kenboard-card .card-images {
     width: calc(100% - 1px);
@@ -48,7 +68,71 @@
     border-radius: 29px;
 }
 
+/* Personal website */
+
 #personal-website-card p { width: 393px; }
+
+.personal-website-safari {
+    position: absolute;
+    width: 350px;
+    left: 40px;
+    top: 165px;
+}
+
+.light-mode .personal-website-safari {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode .personal-website-safari {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.light-mode #personal-website-safari-dark-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-safari-light-mode {
+    display: none;
+}
+
+.personal-website-iphone {
+    position: absolute;
+    width: 106px;
+    left: 372px;
+    top: 190px;
+}
+
+.light-mode .personal-website-iphone {
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.4));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode .personal-website-iphone {
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.7));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.light-mode #personal-website-iphone-dark-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-iphone-light-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-card .card-images {
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    border-radius: 29px;
+}
+
+/* Happy day */
 
 #happy-day-card { position: relative; }
 
@@ -57,9 +141,6 @@
     width: 326px;
     top: 173px;
     left: 182px;
-    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
-    /* to fix safari filter drop-shadow rendering issue: */
-    transform: translateZ(0);
 }
 
 #happy-day-menu {
@@ -67,7 +148,18 @@
     width: 348px;
     left: 40px;
     top: 220px;
+}
+
+.light-mode #happy-day-home,
+.light-mode #happy-day-menu {
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode #happy-day-home,
+.dark-mode #happy-day-menu {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
     /* to fix safari filter drop-shadow rendering issue: */
     transform: translateZ(0);
 }

@@ -132,7 +132,6 @@
     }
 }
 
-
 /* when card-layout hovered, show background hover element */
 @media (hover: hover) {
     .card-layout:hover .card .card-border,
