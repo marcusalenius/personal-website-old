@@ -292,6 +292,88 @@ iframe {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
+/* Personal website post */
+
+.personal-website-safari-full {
+    position: absolute;
+    width: 416px;
+    bottom: 0;
+}
+
+.light-mode .personal-website-safari-full {
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.3));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode .personal-website-safari-full {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.light-mode #personal-website-safari-full-dark-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-safari-full-light-mode {
+    display: none;
+}
+
+.personal-website-ipad {
+    position: absolute;
+    width: 235px;
+    left: 328px;
+    bottom: -3px;
+}
+
+.light-mode .personal-website-ipad {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode .personal-website-ipad {
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.8));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.light-mode #personal-website-ipad-dark-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-ipad-light-mode {
+    display: none;
+}
+
+.personal-website-iphone-full {
+    position: absolute;
+    width: 106px;
+    left: 497px;
+    bottom: -2px;
+}
+
+.light-mode .personal-website-iphone-full {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode .personal-website-iphone-full {
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.9));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.light-mode #personal-website-iphone-full-dark-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-iphone-full-light-mode {
+    display: none;
+}
+
 /* Happy Day post */
 
 #happy-day-post .info-items {
@@ -333,24 +415,30 @@ iframe {
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
-    .post { 
-        width: 100%; 
-    }
+    .post {  width: 100%;  }
 
-    #kenboard-demo-image-full-length { left: 14px; }
-    
-    #kenboard-demo-video { left: 62px; }
-    
     p.info-item-header {
         font-size: 12px;
         line-height: 15px;
     }
-    
+
     .info-item-desktop { display: none; }
 
     .info-item-mobile { display: inline-flex; }
 
     .body-image .footer-text { width: 360px; }
+
+    #code-desktop { display: none; }
+
+    #code-mobile { display: block; }
+
+    #code-mobile-small { display: none; }
+
+    hr { width: 30%; }
+
+    #kenboard-demo-image-full-length { left: 14px; }
+    
+    #kenboard-demo-video { left: 62px; }
     
     #kenboard-splash-full-length,
     #kenboard-debug-full-length { display: none; }
@@ -368,13 +456,13 @@ iframe {
     #kenboard-letter-combinations,
     #kenboard-pattern-skew { width: 380px; }
 
-    #code-desktop { display: none; }
+    #personal-website-post .post-image { height: 250px; }
 
-    #code-mobile { display: block; }
+    .personal-website-ipad { display: none; }
 
-    #code-mobile-small { display: none; }
+    .personal-website-safari-full { width: 369px; }
 
-    hr { width: 30%; }
+    .personal-website-iphone-full { left: 291px; }
     
 }
 
@@ -383,11 +471,15 @@ iframe {
 
     .post { width: 340px; }
 
+    .body-image .footer-text { width: 324px; }
+
+    #code-mobile { display: none; }
+
+    #code-mobile-small { display: block; }
+
     #kenboard-demo-image-full-length { left: -14px; }
 
     #kenboard-demo-video { left: 34px; }
-
-    .body-image .footer-text { width: 324px; }
 
     #kenboard-proof-of-concept-video { left: 83px; }
 
@@ -396,11 +488,11 @@ iframe {
     #kenboard-letter-combinations,
     #kenboard-pattern-skew { width: 334px; }
 
-    #code-mobile { display: none; }
+    #personal-website-post .post-image { height: 230px; }
 
-    #code-mobile-small { display: block; }
+    .personal-website-safari-full { width: 100% }
 
-
+    .personal-website-iphone-full { display: none; }
 
 }
 
