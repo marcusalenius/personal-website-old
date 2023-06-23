@@ -190,7 +190,16 @@ hr {
     width: 366px;
     left: -32px;
     top: -42px;
+}
+
+.light-mode #kenboard-demo-image-full-length {
     filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.4));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode #kenboard-demo-image-full-length {
+    filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.7));
     /* to fix safari filter drop-shadow rendering issue: */
     transform: translateZ(0);
 }
@@ -207,9 +216,6 @@ hr {
     width: 180px;
     left: 346px;
     top: -3px;
-    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
-    /* to fix safari filter drop-shadow rendering issue: */
-    transform: translateZ(0);
 }
 
 #kenboard-debug-full-length {
@@ -217,7 +223,18 @@ hr {
     width: 180px;
     left: 426px;
     top: -3px;
+}
+
+.light-mode #kenboard-splash-full-length,
+.light-mode #kenboard-debug-full-length {
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode #kenboard-splash-full-length,
+.dark-mode #kenboard-debug-full-length {
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.8));
     /* to fix safari filter drop-shadow rendering issue: */
     transform: translateZ(0);
 }
@@ -230,7 +247,16 @@ iframe {
 
 #kenboard-proof-of-concept {
     width: 235px;
+}
+
+.light-mode #kenboard-proof-of-concept {
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+    /* to fix safari filter drop-shadow rendering issue: */
+    transform: translateZ(0);
+}
+
+.dark-mode #kenboard-proof-of-concept {
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.8));
     /* to fix safari filter drop-shadow rendering issue: */
     transform: translateZ(0);
 }
@@ -244,19 +270,27 @@ iframe {
 
 #kenboard-naive-approach {
     width: 360px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
 }
 
 #kenboard-letter-combinations {
     width: 500px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
 }
 
 #kenboard-pattern-skew {
     width: 560px;
+}
+
+.light-mode #kenboard-naive-approach,
+.light-mode #kenboard-letter-combinations,
+.light-mode #kenboard-pattern-skew {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
 }
 
+.dark-mode #kenboard-naive-approach,
+.dark-mode #kenboard-letter-combinations,
+.dark-mode #kenboard-pattern-skew {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
 
 /* Happy Day post */
 
