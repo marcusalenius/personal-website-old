@@ -20,7 +20,7 @@
   </head>
   <body class="light-mode home-page">
     <nav>
-      <div id="navbutton-home" onclick="scrollToTop()">
+      <div id="navbutton-home" tabindex="0" onclick="scrollToTop()">
         <div class="card-border"></div>
         <img src="images/navbar-headshot.png" alt="small image of Marcus Alenius" draggable="false" id="navbar-headshot">
       </div>
@@ -40,19 +40,19 @@
         </div>
       </div>
       <div id="nav-right">
-        <div class="navbutton" id="navbutton-projects" onclick="scrollToProjects()">
+        <div class="navbutton" id="navbutton-projects" tabindex="0" onclick="scrollToProjects()">
           <div class="card-border"></div>
           <div class="button-text">Projects</div>
         </div>
-        <div class="navbutton" id="navbutton-work" onclick="scrollToWork()">
+        <div class="navbutton" id="navbutton-work" tabindex="0" onclick="scrollToWork()">
           <div class="card-border"></div>
           <div class="button-text">Work</div>
         </div>
-        <div class="navbutton" id="navbutton-contact" onclick="scrollToContact()">
+        <div class="navbutton" id="navbutton-contact" tabindex="0" onclick="scrollToContact()">
           <div class="card-border"></div>
           <div class="button-text">Contact</div>
         </div>
-        <div class="navbutton drop-down-hidden" id="navbutton-appearance" onclick="toggleAppearanceDropdown()">
+        <div class="navbutton drop-down-hidden" id="navbutton-appearance" tabindex="0" onclick="toggleAppearanceDropdown()">
           <div class="card-border"></div>
           <img src="icons/appearance-icon-light-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-light-mode">
           <img src="icons/appearance-icon-dark-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-dark-mode">
