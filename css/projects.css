@@ -102,7 +102,7 @@
 .personal-website-iphone {
     position: absolute;
     width: 106px;
-    left: 372px;
+    left: 370px;
     top: 190px;
 }
 
@@ -177,6 +177,8 @@
 
     #kenboard-debug { left: 721px; }
 
+    .personal-website-iphone { left: 344px; }
+    
     #happy-day-home { left: 161px; }
 
 }
@@ -192,8 +194,15 @@
 
     #personal-website-card p { width: 341px; }
 
+    .personal-website-safari { 
+        width: 330px; 
+        top: 178px;
+    }
+    
+    .personal-website-iphone { left: 294px; }
+
     #happy-day-home {
-        left: 104px;
+        left: 124px;
         top: 189px;
     }
     
@@ -204,6 +213,10 @@
 /* iPad Pro 11" Portrait */
 @media (max-width: 970px) {
 
+    #kenboard-demo-image { left: 25px; }
+
+    #kenboard-demo-video { left: 54px; }
+
     #kenboard-splash {
         top: 122px;
         left: 399px;
@@ -211,6 +224,14 @@
 
     #kenboard-debug { left: 544px; }
 
+    .personal-website-safari {
+        width: 350px;
+        top: 165px;
+        left: 33px;
+    }
+
+    .personal-website-iphone { display: none; }
+    
     #happy-day-card p { width: 300px; }
 
     #happy-day-home {
@@ -218,7 +239,10 @@
         top: 187px;
     }
     
-    #happy-day-menu { top: 222px; }
+    #happy-day-menu { 
+        left: 33px;
+        top: 222px; 
+    }
 
 }
 
@@ -226,12 +250,12 @@
 @media (max-width: 830px) {
 
     #kenboard-demo-image {
-        left: 17px;
+        left: 13px;
         top: 164px;
     }
     
     #kenboard-demo-video {
-        left: 46px;
+        left: 42px;
         top: 257px;
     }
     
@@ -241,6 +265,8 @@
     }
 
     #kenboard-debug { left: 502px; }
+
+    .personal-website-safari { left: 22px; }
 
     #happy-day-home {
         left: 77px;
@@ -277,6 +303,12 @@
 
     #personal-website-card p { width: 335px; }
 
+    .personal-website-safari { 
+        width: 340px;
+        left: 28px; 
+        top: 128px;
+    }
+
     #happy-day-home {
         width: 263px;
         left: 131px;
@@ -297,6 +329,8 @@
     #kenboard-demo-image { left: 11px; }
 
     #personal-website-card p { width: 283px; }
+
+    .personal-website-safari {  width: 300px; }
 
     #happy-day-home {
         left: 118px;
