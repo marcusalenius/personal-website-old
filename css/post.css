@@ -2,6 +2,7 @@
     width: 600px;
     margin: 0 auto;
     margin-top: 30px;
+    margin-bottom: 90px;
 }
 
 .post-image {
@@ -164,10 +165,6 @@ p.code {
 
 #code-mobile-small { 
     display: none; 
-}
-
-#post-footnotes {
-    margin-bottom: 70px;
 }
 
 #post-footnotes a {
@@ -461,7 +458,7 @@ iframe {
     #kenboard-letter-combinations,
     #kenboard-pattern-skew { width: 380px; }
 
-    #personal-website-post .post-image { height: 250px; }
+    #personal-website-post .post-image { height: 290px; }
 
     .personal-website-ipad { display: none; }
 
