@@ -374,6 +374,11 @@ iframe {
     display: none;
 }
 
+#personal-website-post .info-items {
+    justify-content: left;
+    gap: 80px;
+}
+
 /* Happy Day post */
 
 #happy-day-post .info-items {
@@ -463,6 +468,11 @@ iframe {
     .personal-website-safari-full { width: 369px; }
 
     .personal-website-iphone-full { left: 291px; }
+
+    #personal-website-post .info-items {
+        justify-content: space-between;
+    }
+    
     
 }
 
