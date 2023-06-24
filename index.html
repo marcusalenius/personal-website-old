@@ -26,16 +26,16 @@
       </div>
       <div class="hidden" id="navmenu-mobile">
         <div class="card-border"></div>
-        <div class="navmenu-item selected" id="navmenu-item-about-me" onclick="handleAboutMeClick()">
+        <div class="navmenu-item selected" id="navmenu-item-about-me" tabindex="0" onclick="handleAboutMeClick()">
           <div class="button-text">About Me</div>
         </div>
-        <div class="navmenu-item hidden" id="navmenu-item-projects" onclick="handleProjectsClick()">
+        <div class="navmenu-item hidden" id="navmenu-item-projects" tabindex="0" onclick="handleProjectsClick()">
           <div class="button-text">Projects</div>
         </div>
-        <div class="navmenu-item hidden" id="navmenu-item-work" onclick="handleWorkClick()">
+        <div class="navmenu-item hidden" id="navmenu-item-work" tabindex="0" onclick="handleWorkClick()">
           <div class="button-text">Work</div>
         </div>
-        <div class="navmenu-item hidden" id="navmenu-item-contact" onclick="handleContactClick()">
+        <div class="navmenu-item hidden" id="navmenu-item-contact" tabindex="0" onclick="handleContactClick()">
           <div class="button-text">Contact</div>
         </div>
       </div>
@@ -61,17 +61,17 @@
         </div>
         <div class="hidden" id="appearance-drop-down">
           <div class="card-border"></div>
-          <div class="appearance-drop-down-item selected" id="appearance-drop-down-item-system" onclick="buttonClickToSetSystemAppearance()">
+          <div class="appearance-drop-down-item selected" id="appearance-drop-down-item-system" tabindex="0" onclick="buttonClickToSetSystemAppearance()">
             <img src="icons/appearance-drop-down-icon-system-light-mode.svg" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
             <img src="icons/appearance-drop-down-icon-system-dark-mode.png" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
             <div class="button-text">System</div>
           </div>
-          <div class="appearance-drop-down-item" id="appearance-drop-down-item-light" onclick="buttonClickToSetLightMode()">
+          <div class="appearance-drop-down-item" id="appearance-drop-down-item-light" tabindex="0" onclick="buttonClickToSetLightMode()">
             <img src="icons/appearance-drop-down-icon-light-light-mode.svg" alt="sun icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
             <img src="icons/appearance-drop-down-icon-light-dark-mode.svg" alt="sun icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
             <div class="button-text">Light</div>
           </div>
-          <div class="appearance-drop-down-item" id="appearance-drop-down-item-dark" onclick="buttonClickToSetDarkMode()">
+          <div class="appearance-drop-down-item" id="appearance-drop-down-item-dark" tabindex="0" onclick="buttonClickToSetDarkMode()">
             <img src="icons/appearance-drop-down-icon-dark-light-mode.svg" alt="moon icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
             <img src="icons/appearance-drop-down-icon-dark-dark-mode.svg" alt="moon icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
             <div class="button-text">Dark</div>
@@ -116,7 +116,7 @@
       <div id="projects">
         <h2>Select Projects</h2>
         <div class="card-layout">
-          <div class="card" id="kenboard-card" onclick="window.location.href='kenboard.html'">
+          <div class="card" id="kenboard-card" tabindex="0" onclick="window.location.href='kenboard.html'">
             <div class="card-border"></div>
             <h3>Kenboard</h3>
             <p class="paragraph-small">Python Kivy app with a custom typing error correction system</p>
@@ -127,7 +127,7 @@
               <img src="images/kenboard-debug.png" alt="screenshot of Kenboard's typing experience in debug mode" draggable="false" id="kenboard-debug">  
             </div>
           </div>
-          <div class="card" id="personal-website-card" onclick="window.location.href='personal-website.html'">
+          <div class="card" id="personal-website-card" tabindex="0" onclick="window.location.href='personal-website.html'">
             <div class="card-border"></div>
             <h3>Personal Website</h3>
             <p class="paragraph-small">This website – built using pure HTML, CSS, and JavaScript</p>
@@ -138,7 +138,7 @@
               <img src="images/personal-website-iphone-dark-mode.png" alt="screenshot of this website on an iPhone" draggable="false" class="personal-website-iphone" id="personal-website-iphone-dark-mode">
             </div>
           </div>
-          <div class="card" id="happy-day-card" onclick="window.location.href='happy-day.html'">
+          <div class="card" id="happy-day-card" tabindex="0" onclick="window.location.href='happy-day.html'">
             <div class="card-border"></div>
             <h3>Happy Day Dessert<br>Factory Website</h3>
             <p class="paragraph-small">Redesign of local ice cream shop’s website</p>
@@ -152,12 +152,12 @@
       <div id="work">
         <h2>Work Experience</h2>
         <div class="card-layout">
-          <div class="card" id="hcii-reu-card">
+          <div class="card" id="hcii-reu-card" tabindex="0">
             <div class="card-border"></div>
             <h3>HCII REU Research Intern</h3>
             <p class="paragraph-small">Research Intern at CMU’s Human Computer Interaction Institute</p>
           </div>
-          <div class="card" id="ta-card">
+          <div class="card" id="ta-card" tabindex="0">
             <h3>15-112 Teaching Assistant</h3>
             <div class="card-border"></div>
             <p class="paragraph-small">Teaching assistant for Carnegie Mellon’s renowned introductory CS course</p>
@@ -201,5 +201,6 @@
     <script src="js/locations.js"></script>
     <script src="js/navmenu-mobile.js"></script>
     <script src="js/card-hover-effect.js"></script>
+    <script src="js/accessibility.js"></script>
   </body>
 </html>
