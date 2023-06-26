@@ -437,6 +437,7 @@ iframe {
 .post-image .footer-text {
     text-align: center;
     margin-top: 4px;
+    width: 100%;
 }
 
 #hcii-reu-post-logos {
@@ -535,6 +536,21 @@ iframe {
     #personal-website-post .info-items {
         justify-content: space-between;
         gap: 0;
+    }
+
+    #hcii-reu-cmu-logo-light-mode,
+    #hcii-reu-cmu-logo-dark-mode {
+        width: 95px;
+    }
+
+    #hcii-reu-hcii-logo-light-mode,
+    #hcii-reu-hcii-logo-dark-mode {
+        width: 127px;
+    }
+
+    #hcii-reu-mclearn-logo-light-mode,
+    #hcii-reu-mclearn-logo-dark-mode {
+        width: 72px;
     }
     
 }
