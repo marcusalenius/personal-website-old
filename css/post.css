@@ -10,6 +10,7 @@
     height: 347px;
     margin-bottom: 45px;
     z-index: 10;
+    /* border: 2px solid red; */
 }
 
 .post h2 {
@@ -412,6 +413,72 @@ iframe {
 #happy-day-post .post-image {
     margin-bottom: 10px;
 }
+
+/* HCII REU post */
+
+#hcii-reu-post .post-image {
+    height: fit-content;
+    margin-top: 70px;
+    margin-bottom: 35px;
+}
+
+#hcii-reu-landscape {
+    width: 100%;
+}
+
+.light-mode #hcii-reu-landscape {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #hcii-reu-landscape {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.post-image .footer-text {
+    text-align: center;
+    margin-top: 4px;
+}
+
+#hcii-reu-post-logos {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.light-mode #hcii-reu-cmu-logo-dark-mode {
+    display: none;
+}
+
+.dark-mode #hcii-reu-cmu-logo-light-mode {
+    display: none;
+}
+
+#hcii-reu-hcii-logo-light-mode,
+#hcii-reu-hcii-logo-dark-mode {
+    width: 208px;
+}
+
+.light-mode #hcii-reu-hcii-logo-dark-mode {
+    display: none;
+}
+
+.dark-mode #hcii-reu-hcii-logo-light-mode {
+    display: none;
+}
+
+.light-mode #hcii-reu-mclearn-logo-dark-mode {
+    display: none;
+}
+
+.dark-mode #hcii-reu-mclearn-logo-light-mode {
+    display: none;
+}
+
+
+
+
+
 
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
