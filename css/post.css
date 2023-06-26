@@ -41,7 +41,6 @@
 
 .info-item-mobile { display: none; }
 
-
 p.info-item-header {
     font-style: normal;
     font-weight: 600;
@@ -458,7 +457,7 @@ iframe {
     #kenboard-letter-combinations,
     #kenboard-pattern-skew { width: 380px; }
 
-    #personal-website-post .post-image { height: 290px; }
+    #personal-website-post .post-image { height: 280px; }
 
     .personal-website-ipad { display: none; }
 
@@ -468,8 +467,8 @@ iframe {
 
     #personal-website-post .info-items {
         justify-content: space-between;
+        gap: 0;
     }
-    
     
 }
 
@@ -495,7 +494,7 @@ iframe {
     #kenboard-letter-combinations,
     #kenboard-pattern-skew { width: 334px; }
 
-    #personal-website-post .post-image { height: 230px; }
+    #personal-website-post .post-image { height: 260px; }
 
     .personal-website-safari-full { width: 100% }
 
