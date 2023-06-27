@@ -1,13 +1,14 @@
 .post {
     width: 600px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 90px;
 }
 
 .post-image {
     position: relative;
     height: 347px;
+    margin-top: 20px;
     margin-bottom: 45px;
     z-index: 10;
     /* border: 2px solid red; */
@@ -417,8 +418,6 @@ iframe {
     transform: translateZ(0);
 }
 
-#happy-day-post .info-items { width: 526px; }
-
 
 /* HCII REU post */
 
@@ -541,6 +540,19 @@ iframe {
         gap: 0;
     }
 
+    #happy-day-post .post-image { height: 250px; }
+
+    #happy-day-home-full { width: 340px; }
+    
+    #happy-day-menu-full {
+        width: 314px;
+        left: 80px;
+        top: 9px;
+    }
+    
+    #happy-day-location-full { display: none; }
+    
+
     #hcii-reu-cmu-logo-light-mode,
     #hcii-reu-cmu-logo-dark-mode {
         width: 95px;
@@ -585,6 +597,16 @@ iframe {
     .personal-website-safari-full { width: 100% }
 
     .personal-website-iphone-full { display: none; }
+
+    #happy-day-post .post-image { height: 215px; }
+
+    #happy-day-home-full { width: 294px; }
+    
+    #happy-day-menu-full {
+        width: 271px;
+        left: 69px;
+        top: 8px;
+    }
 
 }
 
