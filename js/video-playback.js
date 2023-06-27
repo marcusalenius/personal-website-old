@@ -9,7 +9,7 @@ function setVideoPlayback() {
         // console.log('viewportTop:', viewportTop, 'viewportBottom:', viewportBottom);
         // console.log('videoTop:', videoTop, 'videoBottom:', videoBottom);
         // video (at least partly) in viewport
-        if ((videoTop > viewportTop) && (videoBottom < viewportBottom)) {
+        if ((videoTop < viewportBottom) && (videoBottom > viewportTop)) {
             // console.log('in viewport');
             video.play();
         }
