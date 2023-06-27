@@ -90,6 +90,7 @@ sup {
     position: relative;
     width: fit-content;
     margin: 40px auto;
+    /* border: 2px solid red; */
 }
 
 .body-image img {
@@ -376,6 +377,48 @@ iframe {
     justify-content: left;
     gap: 80px;
 }
+
+
+#personal-website-responsive-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#personal-website-responsive-desktop-light-mode {
+    height: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+#personal-website-responsive-desktop-dark-mode {
+    height: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+#personal-website-responsive-mobile-light-mode {
+    height: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+#personal-website-responsive-mobile-dark-mode {
+    height: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.light-mode #personal-website-responsive-desktop-dark-mode,
+.light-mode #personal-website-responsive-mobile-dark-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-responsive-desktop-light-mode,
+.dark-mode #personal-website-responsive-mobile-light-mode {
+    display: none;
+}
+
+
+
+
+
 
 /* Happy Day post */
 
