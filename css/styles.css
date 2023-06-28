@@ -4,7 +4,8 @@
     --lightBackground: #FDFDFD;
     --lightCard: #FFFFFF;
     --lightText: #444444;
-    --lightBodyText: #6B6B6B;
+    --lightBodyText: #525252;
+    --lightFooterText: #6B6B6B;
     --lightFooter: #F5F5F5;
     --lightHover: #F5F5F5;
     --lightSelected: #ECECEC;
@@ -14,7 +15,8 @@
     --darkCard: #323232;
     --darkCardRim: #555555;
     --darkText: #FAFAFA;
-    --darkBodyText: #C9C9C9;
+    --darkBodyText: #E6E6E6;
+    --darkFooterText: #B3B3B3;
     --darkFooter: #2E2E2E;
     --darkHover: #414141;
     --darkSelected: #4D4D4D;

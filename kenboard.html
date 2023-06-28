@@ -152,7 +152,7 @@
           <div class="body-image">
             <img src="images/kenboard-proof-of-concept.png" alt="screenshot of proof of concept demo" id="kenboard-proof-of-concept">
             <video src="images/kenboard-proof-of-concept-video.mp4" playsinline muted loop id="kenboard-proof-of-concept-video"></video>
-            <div class="footer-text">Proof of concept demo</div>
+            <div class="image-text">Proof of concept demo</div>
           </div>
 
           <h3>The Naive Approach</h3>
@@ -164,7 +164,7 @@
           </p>
           <div class="body-image">
             <img src="images/kenboard-naive-approach.png" alt="sketch of dynamically changing hit regions" id="kenboard-naive-approach">
-            <div class="footer-text">Sketch of dynamically changing hit regions. For example, after typing ‘t’, it is likely that ‘h’ is the next letter since ‘the’ is a common word. Another ‘t’ is unlikely.</div>
+            <div class="image-text">Sketch of dynamically changing hit regions. For example, after typing ‘t’, it is likely that ‘h’ is the next letter since ‘the’ is a common word. Another ‘t’ is unlikely.</div>
           </div>
           <p>
             To do this I planned to represent common English words in a <a href="https://en.wikipedia.org/wiki/Trie" target="_blank">trie</a>. That way, after a key is tapped, I can look at which next key has a subtree making up more common words and make that key’s touch target larger.
@@ -207,14 +207,14 @@
           </p>
           <div class="body-image">
             <img src="images/kenboard-letter-combinations.png" alt="sketch of how the letter combinations are generated" id="kenboard-letter-combinations">
-            <div class="footer-text">Sketch of how the letter combinations are generated. For example, when trying to type 'the' but actually tapping the 'y', 'j', and 'r' keys, the letter combinations generated form their neighboring keys include 'the'.</div>
+            <div class="image-text">Sketch of how the letter combinations are generated. For example, when trying to type 'the' but actually tapping the 'y', 'j', and 'r' keys, the letter combinations generated form their neighboring keys include 'the'.</div>
           </div>
           <p>
             Two parameters are used to determine which word to suggest: pattern skew and usage frequency. Every time a key is pressed, the algorithm records the coordinates of the tap. This means that each typed word has a corresponding typed pattern on the keyboard (what Kocienda calls constellations). Each dictionary word also has an ideal constellation, which represents a tap in the center of each key. The difference between the tapped constellation and the ideal constellation for a given word is what Kocienda calls pattern skew. A smaller pattern skew means that a word is a better match.
           </p>
           <div class="body-image">
             <img src="images/kenboard-pattern-skew.png" alt="sketch of pattern skew" id="kenboard-pattern-skew">
-            <div class="footer-text">Sketch of pattern skew. Here, the tapped constellation (in blue) is closer to the ideal constellation for 'the' than the ideal constellation for 'hit'.</div>
+            <div class="image-text">Sketch of pattern skew. Here, the tapped constellation (in blue) is closer to the ideal constellation for 'the' than the ideal constellation for 'hit'.</div>
           </div>
           <p>
             Usage frequency represents how often a word is used in the English language. This data was included in the data set I used. Here, a higher usage frequency makes a word more probable. Finding the right balance between pattern skew and usage frequency required some testing, but I ultimately settled on the following formula:

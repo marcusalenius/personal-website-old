@@ -87,13 +87,25 @@ p.paragraph-small {
     line-height: 19px;
 }
 
-.light-mode .footer-text { color: var(--lightBodyText); }
+.light-mode .footer-text { color: var(--lightFooterText); }
 
-.dark-mode .footer-text { color: var(--darkBodyText); }
+.dark-mode .footer-text { color: var(--darkFooterText); }
 
-.light-mode a { color: var(--lightText); }
+.image-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
 
-.dark-mode a { color: var(--darkText); }
+.light-mode .image-text { color: var(--lightBodyText); }
+
+.dark-mode .image-text { color: var(--darkBodyText); }
+
+
+.light-mode a { color: var(--lightFooterText); }
+
+.dark-mode a { color: var(--darkFooterText); }
 
 .post-body p {
     font-style: normal;
