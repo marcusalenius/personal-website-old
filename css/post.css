@@ -31,6 +31,10 @@
 
 .post-intro { margin-top: 12px; }
 
+.post-intro p.paragraph-small {
+    line-height: 26px;
+}
+
 .light-mode .post-intro p.paragraph-small {
     color: var(--lightText);
 }
