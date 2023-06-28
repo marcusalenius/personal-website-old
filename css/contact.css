@@ -5,12 +5,10 @@
     justify-content: center;
 }
 
-.contact-icon-light-mode { z-index: 12; }
-
+.contact-icon-light-mode,
 .contact-icon-dark-mode { z-index: 12; }
 
-.light-mode .contact-icon-dark-mode { display: none; }
-
+.light-mode .contact-icon-dark-mode, 
 .dark-mode .contact-icon-light-mode { display: none; }
 
 /* iPad Pro 11" Portrait */
@@ -31,12 +29,7 @@
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
-    .contact-card {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        justify-content: left;
-    }
+    .contact-card { justify-content: left; }
 
     .email-icon { margin-left: 38px; }
 
