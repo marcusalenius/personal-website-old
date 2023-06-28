@@ -99,8 +99,8 @@ sup {
     gap: 20px;
 }
 
-
-.body-image img {
+.body-image img,
+.body-image video {
     margin: 0 auto;
     display: block;
 }
@@ -385,7 +385,6 @@ iframe {
     gap: 80px;
 }
 
-
 #personal-website-responsive-desktop-light-mode {
     height: 300px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
@@ -437,7 +436,41 @@ iframe {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
+#personal-website-collapse-light-mode,
+#personal-website-collapse-dark-mode {
+    width: 360px;
+}
 
+.light-mode #personal-website-collapse-dark-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-collapse-light-mode {
+    display: none;
+}
+
+#personal-website-collapse-light-mode, 
+#personal-website-navmenu-mobile-light-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+#personal-website-collapse-dark-mode,
+#personal-website-navmenu-mobile-dark-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+#personal-website-navmenu-mobile-light-mode,
+#personal-website-navmenu-mobile-dark-mode {
+    width: 260px;
+}
+
+.light-mode #personal-website-navmenu-mobile-dark-mode {
+    display: none;
+}
+
+.dark-mode #personal-website-navmenu-mobile-light-mode {
+    display: none;
+}
 
 
 /* Happy Day post */
@@ -603,6 +636,31 @@ iframe {
         gap: 0;
     }
 
+    #personal-website-responsive-desktop-light-mode,
+    #personal-website-responsive-desktop-dark-mode,
+    #personal-website-responsive-mobile-light-mode,
+    #personal-website-responsive-mobile-dark-mode {
+        height: 214px;
+    }
+
+    #body-image-hover { flex-direction: column; }
+
+    #personal-website-hover-dark-mode,
+    #personal-website-hover-light-mode {
+        width: 240px;
+    }
+
+    #personal-website-navmenu-mobile-light-mode,
+    #personal-website-navmenu-mobile-dark-mode {
+        width: 240px;
+    }
+
+
+    #personal-website-collapse-light-mode,
+    #personal-website-collapse-dark-mode {
+        width: 300px;
+    }
+
     #happy-day-post .post-image { height: 250px; }
 
     #happy-day-home-full { width: 340px; }
@@ -660,6 +718,13 @@ iframe {
     .personal-website-safari-full { width: 100% }
 
     .personal-website-iphone-full { display: none; }
+
+    #personal-website-responsive-desktop-light-mode,
+    #personal-website-responsive-desktop-dark-mode,
+    #personal-website-responsive-mobile-light-mode,
+    #personal-website-responsive-mobile-dark-mode {
+        height: 198px;
+    }
 
     #happy-day-post .post-image { height: 215px; }
 
