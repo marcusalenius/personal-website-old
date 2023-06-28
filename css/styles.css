@@ -47,9 +47,7 @@ body.dark-mode {
     margin: 0 auto;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
 /* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
