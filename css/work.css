@@ -1,15 +1,9 @@
 /* hide TA card for now */
-#ta-card {
-    display: none;
-}
+#ta-card { display: none; }
 
-#hcii-reu-card {
-    grid-column: span 2;
-}
+#hcii-reu-card { grid-column: span 2; }
 
-#hcii-reu-card p {
-    width: 412px;
-}
+#hcii-reu-card p { width: 412px; }
 
 #hcii-reu-cmu-logo-light-mode,
 #hcii-reu-cmu-logo-dark-mode {
@@ -19,13 +13,8 @@
     z-index: 11;
 }
 
-.light-mode #hcii-reu-cmu-logo-dark-mode {
-    display: none;
-}
-
-.dark-mode #hcii-reu-cmu-logo-light-mode {
-    display: none;
-}
+.light-mode #hcii-reu-cmu-logo-dark-mode,
+.dark-mode #hcii-reu-cmu-logo-light-mode { display: none; }
 
 #hcii-reu-hcii-logo-light-mode,
 #hcii-reu-hcii-logo-dark-mode {
@@ -36,13 +25,8 @@
     z-index: 11;
 }
 
-.light-mode #hcii-reu-hcii-logo-dark-mode {
-    display: none;
-}
-
-.dark-mode #hcii-reu-hcii-logo-light-mode {
-    display: none;
-}
+.light-mode #hcii-reu-hcii-logo-dark-mode,
+.dark-mode #hcii-reu-hcii-logo-light-mode { display: none; }
 
 #hcii-reu-landscape-faded {
     position: absolute;
