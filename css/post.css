@@ -20,6 +20,8 @@
     width: 100%;
 }
 
+.post-image a { text-decoration: underline; }
+
 .post h2 {
     position: relative;
     z-index: 11;
