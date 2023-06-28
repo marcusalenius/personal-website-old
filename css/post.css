@@ -177,6 +177,8 @@ hr {
 
 .dark-mode hr { border: 0.5px solid var(--darkBodyText); }
 
+.footnote-number { text-decoration: none !important;}
+
 /* Kenboard post */
 
 #kenboard-demo-image-full-length {
