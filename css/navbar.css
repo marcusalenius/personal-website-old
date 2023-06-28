@@ -33,7 +33,7 @@ nav {
 .light-mode .navbutton {
     background-color: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
-    transition: scale 200ms ease, box-shadow 200ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease; /* transition for hover */
 }
 
 @media (hover: hover) {
@@ -44,12 +44,12 @@ nav {
     }    
 }
 
-/* Background card */
+/* background card */
 .dark-mode .navbutton {
     background-color: var(--darkCardRim);
     box-shadow: 0px 0px 8px #000000;
     position: relative;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease; /* transition for hover */
 
 }
 
@@ -61,7 +61,7 @@ nav {
     }    
 }
 
-/* Foreground card */
+/* foreground card */
 .dark-mode .navbutton::before {
     background-color: var(--darkCard);
     content: '';
@@ -73,7 +73,7 @@ nav {
     z-index: 101;
 }
 
-/* Foreground hover element and background hover element */
+/* foreground hover element and background hover element */
 .navbutton::after,
 .navbutton .card-border,
 #appearance-drop-down::after,
@@ -93,7 +93,7 @@ nav {
     border-radius: inherit;
 }
 
-/* Foreground hover element, dark mode */
+/* foreground hover element, dark mode */
 .dark-mode .navbutton::after {
     background: radial-gradient(
         circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
@@ -102,7 +102,7 @@ nav {
     z-index: 120;
 }
 
-/* Foreground hover element, light mode */
+/* foreground hover element, light mode */
 .light-mode .navbutton::after {
     background: radial-gradient(
         circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
@@ -111,7 +111,7 @@ nav {
     z-index: 120;
 }
 
-/* Background hover element, only in dark mode */
+/* background hover element, only in dark mode */
 .dark-mode .navbutton .card-border,
 .dark-mode #navbutton-home .card-border {
     background: radial-gradient(
@@ -121,7 +121,7 @@ nav {
     z-index: 100;
 }
 
-/* Background hover element, hide in light mode */
+/* background hover element, hide in light mode */
 .light-mode .navbutton .card-border,
 .light-mode #appearance-drop-down .card-border,
 .light-mode #navbutton-home .card-border,
@@ -151,21 +151,13 @@ nav {
     }
 }
 
-.navbutton .button-text {
-    z-index: 102;
-}
+.navbutton .button-text { z-index: 102; }
 
-#navbutton-projects {
-    width: 139px;
-}
+#navbutton-projects { width: 139px; }
 
-#navbutton-work {
-    width: 113px;
-}
+#navbutton-work { width: 113px; }
 
-#navbutton-contact {
-    width: 135px;
-}
+#navbutton-contact { width: 135px; }
 
 #navbutton-back {
     width: 118px;
@@ -186,7 +178,7 @@ nav {
 .light-mode #navbutton-home {
     background: var(--lightCard);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px rgba(0, 0, 0, 0.25);
-    transition: scale 200ms ease, box-shadow 200ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease; /* transition for hover */
 }
 
 @media (hover: hover) {
@@ -197,11 +189,11 @@ nav {
     }    
 }
 
-/* Background card */
+/* background card */
 .dark-mode #navbutton-home {
     background: var(--darkCardRim);
     box-shadow: 0px 0px 8px #000000;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease; /* transition for hover */
 }
 
 @media (hover: hover) {
@@ -213,7 +205,7 @@ nav {
     }    
 }
 
-/* Foreground card */
+/* foreground card */
 .dark-mode #navbutton-home::before {
     background: var(--darkCard);
     position: relative;
@@ -226,7 +218,7 @@ nav {
     z-index: 101;
 }
 
-/* Foreground hover element, dark mode */
+/* foreground hover element, dark mode */
 .dark-mode #navbutton-home::after {
     background: radial-gradient(
         circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.1), 
@@ -235,7 +227,7 @@ nav {
     z-index: 120;
 }
 
-/* Foreground hover element, light mode */
+/* foreground hover element, light mode */
 .light-mode #navbutton-home::after {
     background: radial-gradient(
         circle 200px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.02), 
@@ -256,17 +248,10 @@ nav {
 /* Back button */
 
 #back-icon-dark-mode,
-#back-icon-light-mode {
-    z-index: 102;
-}
+#back-icon-light-mode { z-index: 102; }
 
-.light-mode #back-icon-dark-mode {
-    display: none;
-}
-
-.dark-mode #back-icon-light-mode {
-    display: none;
-}
+.light-mode #back-icon-dark-mode,
+.dark-mode #back-icon-light-mode { display: none; }
 
 /* Appearance button */
 
@@ -299,17 +284,7 @@ nav {
     z-index: 102;
 }
 
-.drop-down-hidden .appearance-icon {
-    display: inline;
-    transform: scale(1);
-    transform-origin: center center;
-    transition: transform 150ms ease;
-}
-
-.drop-down-hidden .appearance-cross-icon { transform: scale(0); }
-
-.drop-down-visible .appearance-icon { transform: scale(0); }
-
+.drop-down-hidden .appearance-icon,
 .drop-down-visible .appearance-cross-icon {
     display: inline;
     transform: scale(1);
@@ -317,12 +292,13 @@ nav {
     transition: transform 150ms ease;
 }
 
-.light-mode #appearance-icon-dark-mode { transform: scale(0); }
+.drop-down-hidden .appearance-cross-icon, 
+.drop-down-visible .appearance-icon { transform: scale(0); }
 
-.light-mode #appearance-cross-icon-dark-mode { transform: scale(0); }
 
-.dark-mode #appearance-icon-light-mode { transform: scale(0); }
-
+.light-mode #appearance-icon-dark-mode,
+.light-mode #appearance-cross-icon-dark-mode,
+.dark-mode #appearance-icon-light-mode,
 .dark-mode #appearance-cross-icon-light-mode { transform: scale(0); }
 
 /* Appearance dropdown */
@@ -345,9 +321,7 @@ nav {
     transition: transform 200ms ease-out;
 }
 
-.post-page #appearance-drop-down {
-    top: 62px;
-}
+.post-page #appearance-drop-down { top: 62px; }
 
 .light-mode #appearance-drop-down {
     background-color: var(--lightCard);
@@ -363,7 +337,7 @@ nav {
     }    
 }
 
-/* Background card */
+/* background card */
 .dark-mode #appearance-drop-down {
     background-color: var(--darkCardRim);
     box-shadow: 0px 0px 10px #000000;
@@ -380,7 +354,7 @@ nav {
     }    
 }
 
-/* Foreground card */
+/* foreground card */
 .dark-mode #appearance-drop-down::before {
     background: var(--darkCard);
     content: '';
@@ -399,7 +373,7 @@ nav {
     pointer-events: none;
 }
 
-/* Foreground hover element, dark mode */
+/* foreground hover element, dark mode */
 .dark-mode #appearance-drop-down::after {
     background: radial-gradient(
         circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
@@ -408,7 +382,7 @@ nav {
     z-index: 120;
 }
 
-/* Foreground hover element, light mode */
+/* foreground hover element, light mode */
 .light-mode #appearance-drop-down::after {
     background: radial-gradient(
         circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
@@ -417,7 +391,7 @@ nav {
     z-index: 120;
 }
 
-/* Background hover element, only in dark mode */
+/* background hover element, only in dark mode */
 .dark-mode #appearance-drop-down .card-border {
     background: radial-gradient(
         circle 150px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
@@ -440,7 +414,7 @@ nav {
 }
 
 .light-mode .appearance-drop-down-item.selected {
-    background-color: var(--lightSelected);
+ background-color: var(--lightSelected);
 }
 
 .dark-mode .appearance-drop-down-item.selected {
@@ -457,13 +431,9 @@ nav {
     }    
 }
 
-.appearance-drop-down-icon {
-    margin-left: 12px;
-}
+.appearance-drop-down-icon { margin-left: 12px; }
 
-#appearance-drop-down-item-system {
-    margin-top: 8px;
-}
+#appearance-drop-down-item-system { margin-top: 8px; }
 
 #appearance-drop-down-item-system .appearance-drop-down-icon-dark-mode {
     width: 24px;
@@ -474,17 +444,10 @@ nav {
     margin-left: 16px;
 }
 
-.light-mode .appearance-drop-down-icon-dark-mode {
-    display: none;
-}
+.light-mode .appearance-drop-down-icon-dark-mode, 
+.dark-mode .appearance-drop-down-icon-light-mode { display: none; }
 
-.dark-mode .appearance-drop-down-icon-light-mode {
-    display: none;
-}
-
-#navmenu-mobile {
-    display: none;
-}
+#navmenu-mobile { display: none; }
 
 
 /* iPad Pro 11" Landscape */
@@ -527,17 +490,11 @@ nav {
         top: 6px;
     }
 
-    .post-page nav {
-        top: 9px;
-    }
+    .post-page nav { top: 9px; }
 
-    .navbutton {
-        display: none;
-    }
+    .navbutton { display: none; }
 
-    #navbutton-back {
-        height: 44px;
-    }
+    #navbutton-back { height: 44px; }
         
     #navbutton-home {
         width: 50px;
@@ -579,14 +536,9 @@ nav {
         top: 13px;
     }
 
-    #appearance-drop-down {
-        top: 60px;
-    }
+    #appearance-drop-down { top: 60px; }
 
-    .post-page #appearance-drop-down {
-        top: 57px;
-    }
-
+    .post-page #appearance-drop-down { top: 57px; }
 
     /* Navmenu mobile */
 
@@ -616,7 +568,7 @@ nav {
         }    
     }
 
-    /* Background card */
+    /* background card */
     .dark-mode #navmenu-mobile {
         background-color: var(--darkCardRim);
         box-shadow: 0px 0px 10px #000000;
@@ -631,7 +583,7 @@ nav {
         }    
     }
 
-    /* Foreground card */
+    /* foreground card */
     .dark-mode #navmenu-mobile::before {
         background: var(--darkCard);
         content: '';
@@ -651,8 +603,7 @@ nav {
         pointer-events: none;
     }
 
-
-    /* Foreground hover element, dark mode */
+    /* foreground hover element, dark mode */
     .dark-mode #navmenu-mobile::after {
         background: radial-gradient(
             circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
@@ -661,7 +612,7 @@ nav {
         z-index: 120;
     }
 
-    /* Foreground hover element, light mode */
+    /* foreground hover element, light mode */
     .light-mode #navmenu-mobile::after {
         background: radial-gradient(
             circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
@@ -670,7 +621,7 @@ nav {
         z-index: 120;
     }
 
-    /* Background hover element, only in dark mode */
+    /* background hover element, only in dark mode */
     .dark-mode #navmenu-mobile .card-border {
         background: radial-gradient(
             circle 150px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
@@ -691,9 +642,7 @@ nav {
         transform: translateX(-50%);
     }
 
-    .dark-mode #navmenu-mobile.hidden::before {
-        border-radius: 44px;
-    }
+    .dark-mode #navmenu-mobile.hidden::before { border-radius: 44px; }
 
     .navmenu-item {
         display: flex;
@@ -709,13 +658,10 @@ nav {
         cursor: pointer;
     }
 
-    .navmenu-item.selected {
-        transition: 250ms ease;
-    }
+    .navmenu-item.selected { transition: 250ms ease; }
 
     .light-mode .navmenu-item.selected {
         background-color: var(--lightSelected);
-        
     }
 
     .dark-mode .navmenu-item.selected {
@@ -732,17 +678,11 @@ nav {
         }    
     }
     
-    .navmenu-item.hidden {
-        display: none;
-    }
+    .navmenu-item.hidden { display: none; }
 
-    #navmenu-item-about-me {
-        margin-top: 8px;
-    }
+    #navmenu-item-about-me { margin-top: 8px; }
 
-    .hidden #navmenu-item-about-me {
-        margin-top: 0px;
-    }
+    .hidden #navmenu-item-about-me { margin-top: 0px; }
 
     .hidden .navmenu-item {
         width: 100%;
