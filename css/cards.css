@@ -11,14 +11,36 @@
     border-radius: 30px;
     height: 374px;
     cursor: pointer;
-    /* to fix safari border radius overflow hidden issue: */
-    transform: translateZ(0);
+    transform: translateZ(0); /* to fix safari border radius overflow hidden issue */
+}
+
+.card h3 {
+    padding-left: 40px;
+    padding-top: 39px;
+    position: relative;
+}
+
+.card p {
+    margin-left: 40px;
+    margin-top: 12px;
+    position: relative;
+}
+
+.card-images {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 11;
+    transform: translateZ(0); /* to fix safari border radius overflow hidden issue */
 }
 
 .light-mode .card {
     background: var(--lightCard);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
-    transition: scale 200ms ease, box-shadow 200ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease; /* transition for hover */
 }
 
 @media (hover: hover) {
@@ -29,12 +51,12 @@
     }
 }
 
-/* Background card */
+/* background card */
 .dark-mode .card {
     background: var(--darkCardRim);
     box-shadow: 0px 0px 17px #000000;
     position: relative;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease; /* transition for hover */
 }
 
 @media (hover: hover) {
@@ -45,7 +67,7 @@
     }
 }
 
-/* Foreground card */
+/* foreground card */
 .dark-mode .card::before {
     background-color: var(--darkCard);
     content: '';
@@ -57,7 +79,7 @@
     z-index: 10;
 }
 
-/* Foreground hover element and background hover element */
+/* foreground hover element and background hover element */
 .card::after,
 .card .card-border,
 .contact-card::after,
@@ -73,7 +95,7 @@
     border-radius: inherit;
 }
 
-/* Foreground hover element, dark mode */
+/* foreground hover element, dark mode */
 .dark-mode .card::after {
     background: radial-gradient(
         circle 800px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
@@ -82,7 +104,7 @@
     z-index: 20;
 }
 
-/* Foreground hover element, light mode */
+/* foreground hover element, light mode */
 .light-mode .card::after {
     background: radial-gradient(
         circle 800px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.3), 
@@ -91,7 +113,7 @@
     z-index: 20;
 }
 
-/* Hero card hover element, dark mode */
+/* hero card hover element, dark mode */
 .dark-mode #hero-card::after {
     background: radial-gradient(
         circle 800px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.1), 
@@ -100,7 +122,7 @@
     z-index: 20;
 }
 
-/* Hero card hover element, light mode */
+/* hero card hover element, light mode */
 .light-mode #hero-card::after {
     background: radial-gradient(
         circle 800px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.18), 
@@ -109,7 +131,7 @@
     z-index: 20;
 }
 
-/* Background hover element, only in dark mode, o */
+/* background hover element, only in dark mode, o */
 .dark-mode .card .card-border {
     background: radial-gradient(
         circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
@@ -118,7 +140,7 @@
     z-index: 9;
 }
 
-/* Background hover element, hide in light mode */
+/* background hover element, hide in light mode */
 .light-mode .card .card-border,
 .light-mode .contact-card .card-border {
     display: none;
@@ -161,10 +183,15 @@
     position: relative;
 }
 
+.contact-card .button-text { 
+    position: relative; 
+    z-index: 11;
+}
+
 .light-mode .contact-card {
     background: var(--lightCard);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 16px rgba(0, 0, 0, 0.25);
-    transition: scale 200ms ease, box-shadow 200ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease; /* transition for hover */
 }
 
 @media (hover: hover) {
@@ -175,12 +202,12 @@
     }    
 }
 
-/* Background contact-card */
+/* background contact-card */
 .dark-mode .contact-card {
     background: var(--darkCardRim);
     box-shadow: 0px 0px 10px #000000;
     position: relative;
-    transition: scale 200ms ease, box-shadow 200ms ease;
+    transition: scale 200ms ease, box-shadow 200ms ease; /* transition for hover */
 }
 
 @media (hover: hover) {
@@ -192,7 +219,7 @@
     }    
 }
 
-/* Foreground contact-card */
+/* foreground contact-card */
 .dark-mode .contact-card::before {
     background-color: var(--darkCard);
     content: '';
@@ -204,7 +231,7 @@
     z-index: 10;
 }
 
-/* Foreground hover element, dark mode */
+/* foreground hover element, dark mode */
 .dark-mode .contact-card::after {
     background: radial-gradient(
         circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.04), 
@@ -213,7 +240,7 @@
     z-index: 20;
 }
 
-/* Foreground hover element, light mode */
+/* foreground hover element, light mode */
 .light-mode .contact-card::after {
     background: radial-gradient(
         circle 400px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.2), 
@@ -222,7 +249,7 @@
     z-index: 20;
 }
 
-/* Background hover element, only in dark mode */
+/* background hover element, only in dark mode */
 .dark-mode .contact-card .card-border {
     background: radial-gradient(
         circle 150px at var(--mouseX) var(--mouseY), rgba(255, 255, 255, 0.7), 
@@ -231,34 +258,6 @@
     z-index: 9;
 }
 
-.card h3 {
-    padding-left: 40px;
-    padding-top: 39px;
-    position: relative;
-}
-
-.card p {
-    margin-left: 40px;
-    margin-top: 12px;
-    position: relative;
-}
-
-.card-images {
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 11;
-    /* to fix safari border radius overflow hidden issue: */
-    transform: translateZ(0);
-}
-
-.contact-card .button-text { 
-    position: relative; 
-    z-index: 11;
-}
 
 /* iPad Pro 11" Portrait */
 @media (max-width: 970px) {
