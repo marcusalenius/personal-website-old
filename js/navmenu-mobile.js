@@ -98,6 +98,7 @@ function getMostInView(itemSectionMap) {
     return mostInView;
 }
 
+
 let isNavmenuScrollListenerRunning = false;
 let yUnhideNavmenu;
 
@@ -162,9 +163,6 @@ function navmenuScrollListener() {
     }
 }
 
-
-
-
 // Handle navmenu item clicks
 
 function handleAboutMeClick() {
@@ -203,6 +201,3 @@ function handleContactClick() {
         hideNavmenu();
     }
 }
-
-
-
