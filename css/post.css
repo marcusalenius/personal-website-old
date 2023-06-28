@@ -88,7 +88,9 @@ blockquote {
     border-left: 1px solid var(--darkBodyText);
 }
 
-sup { line-height: 0; }
+sup {  line-height: 0; }
+
+sup a {  text-decoration: none !important; }
 
 .body-image {
     position: relative;
