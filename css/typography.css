@@ -141,7 +141,6 @@ p.code {
 }
 
 
-
 /* tablet */
 @media (max-width: 1200px) {
     
@@ -160,9 +159,7 @@ p.code {
         line-height: 30px;
     }
 
-    .location-text {
-        font-size: 20px;
-    }
+    .location-text { font-size: 20px; }
         
 }
 
@@ -194,9 +191,7 @@ p.code {
         line-height: 21px;
     }
 
-    .location-text {
-        font-size: 18px;
-    }
+    .location-text { font-size: 18px; }
     
     .button-text {
         font-size: 18px;
