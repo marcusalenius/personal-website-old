@@ -587,6 +587,7 @@ iframe {
     #hcii-reu-mclearn-logo-light-mode,
     #hcii-reu-mclearn-logo-dark-mode {
         width: 72px;
+        transform: translateZ(0); /* to fix safari making svg blurry */
     }
     
 }
