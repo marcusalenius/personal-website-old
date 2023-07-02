@@ -478,7 +478,10 @@ iframe {
 .dark-mode #hcii-reu-hcii-logo-light-mode { display: none; }
 
 .light-mode #hcii-reu-mclearn-logo-dark-mode,
-.dark-mode #hcii-reu-mclearn-logo-light-mode { display: none; }
+.dark-mode #hcii-reu-mclearn-logo-light-mode { 
+    display: none; 
+    transform: translateZ(0); /* to fix safari making svg blurry */
+}
 
 
 /* iPhone 14 Plus */
@@ -587,7 +590,6 @@ iframe {
     #hcii-reu-mclearn-logo-light-mode,
     #hcii-reu-mclearn-logo-dark-mode {
         width: 72px;
-        transform: translateZ(0); /* to fix safari making svg blurry */
     }
     
 }
