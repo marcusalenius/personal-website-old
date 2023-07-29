@@ -1,8 +1,8 @@
 #hero {
     display: flex;
     justify-content: space-between;
-    height: 95lvh;
-    min-height: 561px;
+    height: 87lvh;
+    min-height: 580px;
     max-height: 700px;
     align-items: center;
     transform: translateY(-30px);
