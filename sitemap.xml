@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- Home -->
+<url>
+  <loc>https://alenius.io/</loc>
+</url>
+
+<!-- Kenboard -->
+<url>
+  <loc>https://alenius.io/kenboard</loc>
+</url>
+
+<!-- Personal website -->
+<url>
+  <loc>https://alenius.io/personal-website</loc>
+</url>
+
+<!-- Happy day -->
+<url>
+  <loc>https://alenius.io/happy-day</loc>
+</url>
+
+<!-- HCII REU -->
+<url>
+  <loc>https://alenius.io/hcii-reu</loc>
+</url>
+
+</urlset>
