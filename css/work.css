@@ -1,65 +1,44 @@
-/* hide TA card for now */
-#ta-card { display: none; }
-
-#hcii-reu-card { grid-column: span 2; }
+/* HCII REU */
 
 #hcii-reu-card p { width: 412px; }
 
-#hcii-reu-cmu-logo-light-mode,
-#hcii-reu-cmu-logo-dark-mode {
-    position: absolute;
-    left: 40px;
-    top: 197px;
-    z-index: 11;
-}
-
-.light-mode #hcii-reu-cmu-logo-dark-mode,
-.dark-mode #hcii-reu-cmu-logo-light-mode { display: none; }
-
-#hcii-reu-hcii-logo-light-mode,
-#hcii-reu-hcii-logo-dark-mode {
-    position: absolute;
-    width: 208px;
-    left: 244px;
-    top: 188px;
-    z-index: 11;
-}
-
-.light-mode #hcii-reu-hcii-logo-dark-mode,
-.dark-mode #hcii-reu-hcii-logo-light-mode { display: none; }
-
 #hcii-reu-landscape-faded {
     position: absolute;
-    width: 562px;
-    right: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
 }
 
 .dark-mode #hcii-reu-card .card-images {
-    height: calc(100% - 2px);
-    width: calc(100%-1px);
-    top: 1px;
-    left: -1px;
+    height: calc(100% - 1px);
+    width: calc(100% - 2px);
     border-radius: 29px;
+    left: 1px;
+    bottom: 1px;
 }
 
 /* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
-    #hcii-reu-landscape-faded { right: -36px; }    
+    #hcii-reu-landscape-faded {  width: 105%; }    
 
 }
 
 /* iPad Pro 12.9" Portrait */
 @media (max-width: 1120px) {
 
-    #hcii-reu-landscape-faded { right: -150px; }    
+    #hcii-reu-landscape-faded {  width: 110%; }   
+    
+    #hcii-reu-card p { width: 350px;}
 
 }
 
 /* iPad Pro 11" Portrait */
 @media (max-width: 970px) {
 
-    #hcii-reu-landscape-faded { right: -250px; }    
+    #hcii-reu-landscape-faded {  width: 130%; }  
+    
+    #hcii-reu-card p { width: 300px;}
 
     #ta-card p { width: 300px; }
 
@@ -70,33 +49,21 @@
 
     #hcii-reu-card p { width: 300px; }
 
-    #hcii-reu-landscape-faded { right: -310px; }    
+    #hcii-reu-landscape-faded { width: 140%; }  
 
     #ta-card p { width: 300px; }
 
 }
 
-
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
-    #hcii-reu-card p { width: 320px; }
+    #hcii-reu-card p { width: 330px; }
 
-    #hcii-reu-cmu-logo-light-mode,
-    #hcii-reu-cmu-logo-dark-mode {
-        width: 126px;
-        left: 28px;
-        top: 162px;
-    }
-
-    #hcii-reu-hcii-logo-light-mode,
-    #hcii-reu-hcii-logo-dark-mode {
-        width: 170px;
-        left: 195px;
-        top: 154px;
-    }
-
-    #hcii-reu-landscape-faded { display: none; }
+    #hcii-reu-landscape-faded { 
+        width: 100%; 
+        bottom: -15px;
+    }  
 
     #ta-card p { width: 335px; }
     
@@ -107,10 +74,7 @@
 
     #hcii-reu-card p { width: 300px; }
 
-    #hcii-reu-hcii-logo-light-mode,
-    #hcii-reu-hcii-logo-dark-mode {
-        left: 170px;
-    }
+    #hcii-reu-landscape-faded {  bottom: -7px; }  
 
     #ta-card h3 { width: 265px; }
 
