@@ -483,6 +483,36 @@ iframe {
 .light-mode #hcii-reu-mclearn-logo-dark-mode,
 .dark-mode #hcii-reu-mclearn-logo-light-mode {  display: none; }
 
+#hcii-reu-interns {
+    width: 340px;
+}
+
+#hcii-reu-lab-group {
+    width: 460px;
+}
+
+.light-mode #hcii-reu-interns,
+.light-mode #hcii-reu-lab-group {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #hcii-reu-interns,
+.dark-mode #hcii-reu-lab-group {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#hcii-reu-poster-image {
+    width: 460px;
+}
+
+.light-mode #hcii-reu-poster-image {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode #hcii-reu-poster-image {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
 
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
@@ -591,6 +621,12 @@ iframe {
     #hcii-reu-mclearn-logo-dark-mode {
         width: 72px;
     }
+
+    #hcii-reu-interns { width: 280px }
+
+    #hcii-reu-lab-group { width: 350px }
+
+    #hcii-reu-poster-image { width: 350px } 
     
 }
 
@@ -636,5 +672,11 @@ iframe {
         left: 69px;
         top: 8px;
     }
+
+    #hcii-reu-interns { width: 260px }
+
+    #hcii-reu-lab-group { width: 320px }
+
+    #hcii-reu-poster-image { width: 320px } 
 
 }
