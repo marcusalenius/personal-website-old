@@ -17,11 +17,44 @@
     bottom: 1px;
 }
 
+/* TA 112 */
+
+.ta-112-dragon-large {
+    position: absolute;
+    width: 135px;
+    left: 47px;
+    top: 169px;
+}
+
+.ta-112-dragon-medium {
+    position: absolute;
+    width: 109px;
+    left: 207px;
+    top: 184px;
+}
+
+.ta-112-dragon-small {
+    position: absolute;
+    width: 112px;
+    left: 321px;
+    top: 134px;
+}
+
+.light-mode .ta-112-dragon-dark-mode,
+.dark-mode .ta-112-dragon-light-mode { display: none; }
+
+
 /* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
-    #hcii-reu-landscape-faded {  width: 105%; }    
+    #hcii-reu-landscape-faded {  width: 105%; }
 
+    .ta-112-dragon-large { left: 39px; }
+    
+    .ta-112-dragon-medium { left: 199px; }
+    
+    .ta-112-dragon-small { left: 313px; }
+    
 }
 
 /* iPad Pro 12.9" Portrait */
@@ -31,6 +64,26 @@
     
     #hcii-reu-card p { width: 350px;}
 
+    .ta-112-dragon-large {
+        width: 108px;
+        left: 30px;
+        top: 214px;
+    }
+    
+    .ta-112-dragon-medium {
+        width: 87px;
+        left: 164px;
+        top: 224px;
+    }
+    
+    /* .ta-112-dragon-small {
+        width: 89px;
+        left: 270px;
+        top: 189px;
+    } */
+
+    .ta-112-dragon-small { display: none; }
+    
 }
 
 /* iPad Pro 11" Portrait */
@@ -41,6 +94,20 @@
     #hcii-reu-card p { width: 300px;}
 
     #ta-card p { width: 300px; }
+
+    .ta-112-dragon-large {
+        width: 135px;
+        left: 20px;
+        top: 220px;
+    }
+    
+    .ta-112-dragon-medium {
+        width: 87px;
+        left: 150px;
+        top: 224px;
+    }
+    
+    .ta-112-dragon-small { display: none; }
 
 }
 
