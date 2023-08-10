@@ -522,8 +522,15 @@ iframe {
 }
 
 #ta-112-post-image-light-mode,
-#ta-112-post-image-dark-mode {
+#ta-112-post-image-dark-mode,
+#ta-112-post-image-light-mode-mobile,
+#ta-112-post-image-dark-mode-mobile {
     width: 100%;
+}
+
+#ta-112-post-image-light-mode-mobile,
+#ta-112-post-image-dark-mode-mobile {
+    display: none;
 }
 
 #ta-112-post-image-light-mode {
@@ -547,13 +554,15 @@ iframe {
 }
 
 .light-mode #ta-112-post-image-dark-mode,
+.light-mode #ta-112-post-image-dark-mode-mobile,
 .light-mode #ta-112-scs-logo-dark-mode {
- display: none;
+    display: none;
 }
 
 .dark-mode #ta-112-post-image-light-mode,
+.dark-mode #ta-112-post-image-light-mode-mobile,
 .dark-mode #ta-112-scs-logo-light-mode {
- display: none;
+    display: none;
 }
 
 
@@ -670,7 +679,24 @@ iframe {
     #hcii-reu-lab-group { width: 350px }
 
     #hcii-reu-poster-image { width: 350px } 
-    
+
+    #ta-112-post-image-light-mode,
+    #ta-112-post-image-dark-mode {
+        display: none;
+    }
+
+    #ta-112-post-image-light-mode-mobile,
+    #ta-112-post-image-dark-mode-mobile {
+        display: block;
+    }
+
+    #ta-112-post .info-items { gap: 50px; }
+
+    #ta-112-scs-logo-light-mode,
+    #ta-112-scs-logo-dark-mode {
+        width: 300px;
+    }
+
 }
 
 /* iPhone 14 */
@@ -721,5 +747,11 @@ iframe {
     #hcii-reu-lab-group { width: 320px }
 
     #hcii-reu-poster-image { width: 320px } 
+
+    #ta-112-post .info-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
 
 }
