@@ -1,0 +1,84 @@
+/* TA 112 post */
+
+#ta-112-post .post-image {
+    height: fit-content;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+#ta-112-post-image-light-mode,
+#ta-112-post-image-dark-mode,
+#ta-112-post-image-light-mode-mobile,
+#ta-112-post-image-dark-mode-mobile {
+    width: 100%;
+}
+
+#ta-112-post-image-light-mode-mobile,
+#ta-112-post-image-dark-mode-mobile {
+    display: none;
+}
+
+#ta-112-post-image-light-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+}
+
+#ta-112-post-image-dark-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+}
+
+#ta-112-post .info-items {
+    justify-content: left;
+    gap: 80px;
+}
+
+#ta-112-post-logos { margin-top: 30px; }
+
+#ta-112-scs-logo-light-mode,
+#ta-112-scs-logo-dark-mode {
+    width: 382px;
+}
+
+.light-mode #ta-112-post-image-dark-mode,
+.light-mode #ta-112-post-image-dark-mode-mobile,
+.light-mode #ta-112-scs-logo-dark-mode {
+    display: none;
+}
+
+.dark-mode #ta-112-post-image-light-mode,
+.dark-mode #ta-112-post-image-light-mode-mobile,
+.dark-mode #ta-112-scs-logo-light-mode {
+    display: none;
+}
+
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #ta-112-post-image-light-mode,
+    #ta-112-post-image-dark-mode {
+        display: none;
+    }
+
+    #ta-112-post-image-light-mode-mobile,
+    #ta-112-post-image-dark-mode-mobile {
+        display: block;
+    }
+
+    #ta-112-post .info-items { gap: 50px; }
+
+    #ta-112-scs-logo-light-mode,
+    #ta-112-scs-logo-dark-mode {
+        width: 300px;
+    }
+
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #ta-112-post .info-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}

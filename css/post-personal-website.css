@@ -1,0 +1,186 @@
+/* Personal website post */
+
+.personal-website-safari-full {
+    position: absolute;
+    width: 416px;
+    bottom: 0;
+}
+
+.light-mode .personal-website-safari-full {
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.3));
+    transform: translateZ(0); /* to fix safari drop-shadow rendering issue */
+}
+
+.dark-mode .personal-website-safari-full {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+    transform: translateZ(0); /* to fix safari drop-shadow rendering issue */
+}
+
+.light-mode #personal-website-safari-full-dark-mode,
+.dark-mode #personal-website-safari-full-light-mode { display: none; }
+
+.personal-website-ipad {
+    position: absolute;
+    width: 235px;
+    left: 328px;
+    bottom: -3px;
+}
+
+.light-mode .personal-website-ipad {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    transform: translateZ(0); /* to fix safari drop-shadow rendering issue */
+}
+
+.dark-mode .personal-website-ipad {
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.8));
+    transform: translateZ(0); /* to fix safari drop-shadow rendering issue */
+}
+
+.light-mode #personal-website-ipad-dark-mode,
+.dark-mode #personal-website-ipad-light-mode { display: none; }
+
+.personal-website-iphone-full {
+    position: absolute;
+    width: 106px;
+    left: 497px;
+    bottom: -2px;
+}
+
+.light-mode .personal-website-iphone-full {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6));
+    transform: translateZ(0); /* to fix safari drop-shadow rendering issue */
+}
+
+.dark-mode .personal-website-iphone-full {
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.9));
+    transform: translateZ(0); /* to fix safari drop-shadow rendering issue */
+}
+
+.light-mode #personal-website-iphone-full-dark-mode,
+.dark-mode #personal-website-iphone-full-light-mode {
+    display: none;
+}
+
+#personal-website-post .info-items {
+    justify-content: left;
+    gap: 80px;
+}
+
+#personal-website-responsive-desktop-light-mode,
+#personal-website-responsive-mobile-light-mode {
+    height: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+#personal-website-responsive-desktop-dark-mode,
+#personal-website-responsive-mobile-dark-mode {
+    height: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.light-mode #personal-website-responsive-desktop-dark-mode,
+.light-mode #personal-website-responsive-mobile-dark-mode,
+.dark-mode #personal-website-responsive-desktop-light-mode,
+.dark-mode #personal-website-responsive-mobile-light-mode { display: none; }
+
+#personal-website-hover-dark-mode,
+#personal-website-hover-light-mode { width: 280px; }
+
+.light-mode #personal-website-hover-light-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+.light-mode #personal-website-hover-dark-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode #personal-website-hover-light-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode #personal-website-hover-dark-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+#personal-website-navmenu-mobile-light-mode,
+#personal-website-navmenu-mobile-dark-mode { width: 260px; }
+
+.light-mode #personal-website-navmenu-mobile-dark-mode,
+.dark-mode #personal-website-navmenu-mobile-light-mode { display: none; }
+
+#personal-website-collapse-light-mode,
+#personal-website-collapse-dark-mode { width: 360px; }
+
+.light-mode #personal-website-collapse-dark-mode,
+.dark-mode #personal-website-collapse-light-mode { display: none; }
+
+#personal-website-collapse-light-mode, 
+#personal-website-navmenu-mobile-light-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+#personal-website-collapse-dark-mode,
+#personal-website-navmenu-mobile-dark-mode {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #personal-website-post .post-image { height: 240px; }
+
+    .personal-website-ipad { display: none; }
+
+    .personal-website-safari-full { width: 369px; }
+
+    .personal-website-iphone-full { left: 291px; }
+
+    #personal-website-post .info-items { gap: 50px; }
+    
+    #personal-website-responsive-desktop-light-mode,
+    #personal-website-responsive-desktop-dark-mode,
+    #personal-website-responsive-mobile-light-mode,
+    #personal-website-responsive-mobile-dark-mode {
+        height: 214px;
+    }
+
+    #body-image-hover { flex-direction: column; }
+
+    #personal-website-hover-dark-mode,
+    #personal-website-hover-light-mode {
+        width: 240px;
+    }
+
+    #personal-website-navmenu-mobile-light-mode,
+    #personal-website-navmenu-mobile-dark-mode {
+        width: 240px;
+    }
+
+    #personal-website-collapse-light-mode,
+    #personal-website-collapse-dark-mode {
+        width: 300px;
+    }
+
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #personal-website-post .post-image { height: 220px; }
+
+    .personal-website-safari-full { width: 100% }
+
+    .personal-website-iphone-full { display: none; }
+
+    #personal-website-responsive-desktop-light-mode,
+    #personal-website-responsive-desktop-dark-mode,
+    #personal-website-responsive-mobile-light-mode,
+    #personal-website-responsive-mobile-dark-mode { height: 198px; }
+
+    #personal-website-post .info-items {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+}
