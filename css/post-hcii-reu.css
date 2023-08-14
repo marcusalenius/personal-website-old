@@ -89,9 +89,11 @@
 
     #hcii-reu-interns { width: 280px }
 
-    #hcii-reu-lab-group { width: 350px }
-
-    #hcii-reu-poster-image { width: 350px } 
+    #hcii-reu-poster-image,
+    #hcii-reu-presenting,
+    #hcii-reu-lab-group { 
+        width: 350px 
+    }
 
 }
 
@@ -100,8 +102,10 @@
 
     #hcii-reu-interns { width: 260px }
 
-    #hcii-reu-lab-group { width: 320px }
-
-    #hcii-reu-poster-image { width: 320px } 
+    #hcii-reu-poster-image,
+    #hcii-reu-presenting,
+    #hcii-reu-lab-group { 
+        width: 320px 
+    }
 
 }
