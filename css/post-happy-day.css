@@ -1,0 +1,71 @@
+/* Happy Day post */
+
+#happy-day-post .post-image {
+    margin-bottom: 10px;
+}
+
+#happy-day-home-full {
+    position: absolute;
+    width: 474px;
+}
+
+#happy-day-menu-full {
+    position: absolute;
+    width: 439px;
+    left: 110px;
+    top: 12px;
+}
+
+#happy-day-location-full {
+    position: absolute;
+    width: 399px;
+    left: 201px;
+    top: 22px;
+}
+
+.light-mode #happy-day-home-full,
+.light-mode #happy-day-menu-full,
+.light-mode #happy-day-location-full {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    transform: translateZ(0); /* to fix safari drop-shadow rendering issue */
+}
+
+.dark-mode #happy-day-home-full,
+.dark-mode #happy-day-menu-full,
+.dark-mode #happy-day-location-full {
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
+    transform: translateZ(0); /* to fix safari drop-shadow rendering issue */
+}
+
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #happy-day-post .post-image { height: 250px; }
+
+    #happy-day-home-full { width: 340px; }
+    
+    #happy-day-menu-full {
+        width: 314px;
+        left: 80px;
+        top: 9px;
+    }
+    
+    #happy-day-location-full { display: none; }
+
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #happy-day-post .post-image { height: 215px; }
+
+    #happy-day-home-full { width: 294px; }
+    
+    #happy-day-menu-full {
+        width: 271px;
+        left: 69px;
+        top: 8px;
+    }
+
+}
