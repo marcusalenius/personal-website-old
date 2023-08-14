@@ -42,22 +42,22 @@
     width: 340px;
 }
 
-#hcii-reu-lab-group {
+#hcii-reu-lab-group,
+#hcii-reu-presenting,
+#hcii-reu-poster-image {
     width: 460px;
 }
 
 .light-mode #hcii-reu-interns,
-.light-mode #hcii-reu-lab-group {
+.light-mode #hcii-reu-lab-group,
+.light-mode #hcii-reu-presenting {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode #hcii-reu-interns,
-.dark-mode #hcii-reu-lab-group {
+.dark-mode #hcii-reu-lab-group,
+.dark-mode #hcii-reu-presenting {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-#hcii-reu-poster-image {
-    width: 460px;
 }
 
 .light-mode #hcii-reu-poster-image {
