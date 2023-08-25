@@ -83,7 +83,7 @@
         <h2>Actordentify</h2>
         <div class="post-intro">
           <p class="paragraph-small">
-            This website. Designed in Figma and built using pure HTML, CSS, and JavaScript. A fully responsive design with a carefully crafted light and dark appearance.
+            A Netflix Chrome extension overlaying information about actors on screen. Uses Amazon Rekognition and TMDB APIs to identify actors and provide details.
           </p>
           <div class="info-items">
             <div>
@@ -104,7 +104,86 @@
           </div>
           <div class="post-body">
             <h3>Motivation</h3>
-            <pre><p class="code code-block"><span class="keyword">function</span> <span class="func">placeCards</span><span class="paren">(</span>unplacedInfoCards<span class="paren">,</span> placedInfoCards<span class="paren">) {</span>
+            <p>
+              This project is a collaboration between me and my friend Raymond Welgosh, a fellow CMU student. We had an idea of how we could improve the experience of watching movies and TV shows and decided to give our best shot at making our vision a reality.
+            </p>
+            <p>
+              How many times have you watched a movie or TV show and wondered who’s playing a character? You look up the movie or the show and scroll through all the actors that come up trying to find the one that looks like the person you saw on screen. If it’s a minor role, or worse yet, a guest appearance on a TV show, you might not find the actor at all.
+            </p>
+            <p>
+              We thought this experience could be made a whole lot better. What if it would just tell you who the actor is without you ever having to leave the movie or the TV show? What if you could overlay an actor’s name and other useful information right on top of the content? This would be so much less obtrusive and disorienting.
+            </p>
+            <p>
+              How could we bring this experience to your favorite movies and TV shows? We need something that can work with existing streaming services — that can extend the way they present content. A Chrome extension seemed like the best bet. We chose to focus our efforts on creating an extension optimized for Netflix.
+            </p>
+
+            <h3>Identifying Actors and Getting Details</h3>
+
+            <h3>Presenting the Information</h3>
+            <p>
+              Through calls to the Amazon Rekognition API and the TMDB API, we have all the information we need to provide details about the actors on-screen. Now, we just shove this into the extension popup, right? While this would certainly be an improvement over having to go to a search engine to compile this information yourself, we thought we could do better.
+            </p>
+            <p>
+              The most seamless experience would be if the name of the actor appeared right next to their face. That way there is no hunting down the character in a list tucked away by the toolbar — just look at their face, and the name of the actor will be right there.
+            </p>
+            <p>
+              Fortunately, the Amazon Rekognition API provides the location of the face on the given source image. Still, there was a big technical challenge. There might be one face, or there may be many faces. The faces can be of any size and anywhere on the screen. Where should we place the cards containing the actor information so that it doesn’t cover any faces or other cards? There are way too many possibilities to consider. We needed to come up with an algorithm that could find the best placements of the cards.
+            </p>
+
+
+            <p>
+              It turns out that finding the best card placements is very similar to solving a puzzle, where the solution is placing the cards such that they don’t overlap with any faces, other cards, or go off the screen. What algorithm is great for solving puzzles? Backtracking.
+            </p>
+
+            <h3>Backtracking Algorithm</h3>
+            <p>
+              Starting off with all cards being unplaced, we call a recursive backtracking function that looks like this:
+            </p>
+            <ol>
+              <li>
+                <p>
+                  If there are no unplaced cards, we are done. This is the base case.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Otherwise, we set aside an unplaced card and loop through all possible placements. That is placing the card to the right, to the left, above, or below the corresponding face. For every placement:
+                </p>
+                <ol type="a">
+                  <li>
+                    <p>
+                      We check if we can place the card without any overlapping. If not, we ignore it and move on to the next placement.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      If we can, we place it, and recursively try to place all other cards from this state.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      If all cards can be placed, we have solved the puzzle.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      If not, it means that the current placement of the set aside card leads to other cards not being able to be placed, so we undo this placement and continue to the next one.
+                    </p>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <p>
+                  If no placement leads to a solution, it means that the puzzle cannot be solved from the current state.
+                </p>
+              </li>
+            </ol>
+            <p>
+              Note the key feature of backtracking: we do not continue trying to solve the puzzle from an illegal state. Doing so would mean trying all possible placements, which would be far too slow. Instead, when we hit an illegal state, we backtrack, undo the erroneous placement and try the next one.
+            </p>
+
+            <pre>
+              <p class="code code-block"><span class="keyword">function</span> <span class="func">placeCards</span><span class="paren">(</span>unplacedInfoCards<span class="paren">,</span> placedInfoCards<span class="paren">) {</span>
 
     <span class="comment">// base case - all info cards have been placed</span>
     <span class="keyword">if</span> <span class="paren">(</span>unplacedInfoCards<span class="paren">.</span>length <span class="operator">===</span> <span class="keyword">0</span><span class="paren">) {</span>
@@ -142,7 +221,31 @@
         <span class="paren">}</span>
     <span class="paren">}</span>
     <span class="keyword">return null</span><span class="paren">;</span>
-<span class="paren">}</span></p></pre>
+<span class="paren">}</span></p>
+            </pre>
+
+            <p>
+              What if the actors’ faces are in positions such that not all cards can be placed, for example, all bunched up in a small area of the screen? The backtracking would say “Sorry, there was no way to place all cards, so I didn’t place any cards.” This is clearly not what we want. If <em>all</em> cards can’t be placed, we want at least <em>some</em> cards placed.
+            </p>
+            <p>
+              To allow for this, we keep track of the best non-perfect placements throughout the backtracking algorithm. These are the placements that have the most cards placed and on preferred sides (for example, we prefer placing a card to the right of the face over below the face since that may cover parts of the actor’s body). If the backtracking concludes that there is no way to place all cards, we fall back on these placements.
+            </p>
+
+            <h3>Design</h3>
+            <p>
+              Placing the actor information on top of the content did not only present a technical challenge but also a design challenge. How do we present the information in the cards such that it doesn’t cover up too much of the content?
+            </p>
+            <p>
+              We were inspired by the design of windows in visionOS, which were designed in response to a similar question: how should windows placed in your physical space appear such that they don’t obstruct what’s around you? Like windows in visionOS, we gave the cards a translucent, glassy material that lets the background come through. It works great with dark backgrounds, as well as with light backgrounds, allowing consistency and familiarity in their appearance.
+            </p>
+
+
+            <p>
+              Another key to not obstructing the content was to present a condensed version of the card that can be expanded to show details. Initially, only the name of the actor and their character are displayed. This may be all the information the user wanted — maybe they just couldn’t remember the name of an actor. If more information is desired, the card can be expanded to reveal a short biography and other movies and TV shows the actor has appeared in. If the user wants to learn even more, the card links to the actor’s full biography.
+            </p>
+            
+
+
           </div>
         </div>
       </div>
