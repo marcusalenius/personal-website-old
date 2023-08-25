@@ -1,0 +1,44 @@
+p.code {
+    font-family: 'Source Code Pro', monospace;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 6px;
+}
+
+p.code.code-block {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 20px;
+}
+
+.light-mode p.code { 
+    color: var(--lightBodyText); 
+    background-color: var(--lightFooter);
+}
+
+.dark-mode p.code { 
+    color: var(--darkBodyText); 
+    background-color: var(--darkFooter);
+}
+
+.dark-mode .code .comment { color: #938068; }
+.light-mode .code .comment { color: #83919F; }
+
+.dark-mode .code .string { color: #C0DB65; }
+.light-mode .code .string { color: #728F2A; }
+
+.dark-mode .code .keyword { color: #CE93A1; }
+.light-mode .code .keyword { color: #2A79A7; }
+
+.dark-mode .code .operator { color: #E9B445; }
+.light-mode .code .operator { color: #8E7053; }
+
+.dark-mode .code .paren { color: #A0A0A0; }
+.light-mode .code .paren { color: #9B9A98; }
+
+.dark-mode .code .func { color: #D77272; }
+.light-mode .code .func { color: #D64D6E; }
