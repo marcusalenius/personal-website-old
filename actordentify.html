@@ -79,6 +79,7 @@
     <div id="container">
       <div class="post" id="personal-website-post">
         <div class="post-image">
+          <video src="images/actordentify-hero.mp4" playsinline muted loop id="actordentify-hero"></video>
         </div>
         <h2>Actordentify</h2>
         <div class="post-intro">
@@ -129,8 +130,10 @@
             <p>
               Fortunately, the Amazon Rekognition API provides the location of the face on the given source image. Still, there was a big technical challenge. There might be one face, or there may be many faces. The faces can be of any size and anywhere on the screen. Where should we place the cards containing the actor information so that it doesn’t cover any faces or other cards? There are way too many possibilities to consider. We needed to come up with an algorithm that could find the best placements of the cards.
             </p>
-
-
+            <div class="body-image">
+              <video src="images/actordentify-slideshow.mp4" playsinline muted loop id="actordentify-slideshow"></video>
+              <div class="image-text">We wanted to place the actor's name by their face</div>
+            </div>
             <p>
               It turns out that finding the best card placements is very similar to solving a puzzle, where the solution is placing the cards such that they don’t overlap with any faces, other cards, or go off the screen. What algorithm is great for solving puzzles? Backtracking.
             </p>
@@ -238,11 +241,17 @@
             <p>
               We were inspired by the design of windows in visionOS, which were designed in response to a similar question: how should windows placed in your physical space appear such that they don’t obstruct what’s around you? Like windows in visionOS, we gave the cards a translucent, glassy material that lets the background come through. It works great with dark backgrounds, as well as with light backgrounds, allowing consistency and familiarity in their appearance.
             </p>
-
-
+            <div class="body-image">
+              <img src="images/actordentify-card-background.jpeg" alt="Card background letting the background come through" id="actordentify-card-background">
+              <div class="image-text">Cards allow the background to come through</div>
+            </div>
             <p>
               Another key to not obstructing the content was to present a condensed version of the card that can be expanded to show details. Initially, only the name of the actor and their character are displayed. This may be all the information the user wanted — maybe they just couldn’t remember the name of an actor. If more information is desired, the card can be expanded to reveal a short biography and other movies and TV shows the actor has appeared in. If the user wants to learn even more, the card links to the actor’s full biography.
             </p>
+            <div class="body-image">
+              <video src="images/actordentify-expand.mp4" playsinline muted loop id="actordentify-expand"></video>
+              <div class="image-text">Cards expand to reveal more information</div>
+            </div>
             
 
 

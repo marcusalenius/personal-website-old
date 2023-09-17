@@ -3,6 +3,7 @@
 #kenboard-card {
     grid-column: span 2;
     position: relative;
+    order: 3;
 }
 
 #kenboard-card p { width: 502px; }
@@ -65,6 +66,8 @@
 
 /* Personal website */
 
+#personal-website-card { order: 1; }
+
 #personal-website-card p { width: 393px; }
 
 .personal-website-safari {
@@ -115,7 +118,10 @@
 
 /* Happy day */
 
-#happy-day-card { position: relative; }
+#happy-day-card { 
+    position: relative; 
+    order: 2;
+}
 
 #happy-day-home {
     position: absolute;
@@ -149,6 +155,50 @@
     border-radius: 29px;
 }
 
+/* Actordentify */
+
+#actordentify-card {
+    grid-column: span 2;
+    position: relative;
+    order: 0;
+}
+
+#actordentify-card p.paragraph-small-mobile { display: none;}
+
+#actordentify-card p { width: 400px; }
+
+.dark-mode #actordentify-card .card-images {
+    height: calc(100% - 2px);
+    top: 1px;
+    border-radius: 29px;
+    transform: translateX(-1px)
+}
+
+#actordentify-hero-image {
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+#actordentify-hero-image-mobile { display: none; }
+
+#actordentify-fade {
+    position: absolute;
+    height: 100%;
+    width: 97px;
+    left: 430px;
+    top: 0;
+}
+
+.light-mode #actordentify-fade {
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.14) 11.34%, rgba(255, 255, 255, 0.78) 65.14%, rgba(255, 255, 255, 0.86) 73.27%, rgba(255, 255, 255, 0.96) 87.39%, #FFF 100%);
+}
+
+.dark-mode #actordentify-fade {
+    background: linear-gradient(270deg, rgba(50, 50, 50, 0.00) 0%, rgba(50, 50, 50, 0.14) 11.34%, rgba(50, 50, 50, 0.78) 65.14%, rgba(50, 50, 50, 0.86) 73.27%, rgba(50, 50, 50, 0.96) 87.39%, #323232 100%);
+}
+
+
 /* iPad Pro 11" Landscape */
 @media (max-width: 1200px) {
 
@@ -159,6 +209,10 @@
     .personal-website-iphone { left: 344px; }
     
     #happy-day-home { left: 161px; }
+
+    #actordentify-hero-image { right: -20px;}
+
+    #actordentify-fade { left: 400px; }
 
 }
 
@@ -186,6 +240,12 @@
     }
     
     #happy-day-menu { top: 224px; }
+
+    #actordentify-hero-image { right: -50px;}
+
+    #actordentify-fade { left: 302px; }
+
+    #actordentify-card p {width: 300px;}
     
 }
 
@@ -223,6 +283,15 @@
         top: 222px; 
     }
 
+    #actordentify-hero-image { right: -70px;}
+
+    #actordentify-fade { 
+        width: 150px;
+        left: 212px; 
+    }
+
+    #actordentify-card p {width: 240px;}
+
 }
 
 /* iPad Mini Portrait */
@@ -257,12 +326,24 @@
         top: 222px;
     }
 
+    #actordentify-hero-image { right: -80px;}
+
+    #actordentify-fade { 
+        width: 170px;
+        left: 170px; 
+    }
+
+    #actordentify-card p {width: 210px;}
+
 }
 
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
-    #kenboard-card { grid-column: span 1; }
+    #kenboard-card { 
+        grid-column: span 1; 
+        order: 1;
+    }
 
     #kenboard-card p { width: 320px; }
 
@@ -300,6 +381,37 @@
         top: 164px;
     }
 
+    #actordentify-card { grid-column: span 1; }
+
+    #actordentify-card p.paragraph-small-mobile { display: block;}
+    
+    #actordentify-card p:not(.paragraph-small-mobile) { display: none;}
+
+    #actordentify-card p { width: 380px; }
+
+    #actordentify-hero-image-mobile { 
+        display: block; 
+        position: absolute;
+        width: 100%;
+        top: 95px;
+    }
+
+    #actordentify-hero-image { display: none; }
+
+    .dark-mode #actordentify-card .card-images {
+        height: 100%;
+        width: calc(100% - 2px);
+        border-radius: 29px;
+        transform: translateX(1px) translateY(-2px);
+    }
+
+    #actordentify-fade {
+        height: 150%;
+        width: 40px;
+        top: -100px;
+        rotate: 90deg;
+    }    
+
 }
 
 /* iPhone 14 */
@@ -320,5 +432,7 @@
         left: 28px;
         top: 164px;
     }
+
+    #actordentify-card p { width: 330px; }
 
 }
