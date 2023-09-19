@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcus Alenius — Personal Website</title>
-    <meta name="description" content="This website. Designed in Figma and built using pure HTML, CSS, and JavaScript. A fully responsive design with a carefully crafted light and dark appearance.">
+    <title>Marcus Alenius — Actordentify</title>
+    <meta name="description" content="A Netflix Chrome extension overlaying information about the actors on screen. Uses Amazon Rekognition and TMDB APIs to identify actors and provide details.">
     <meta name="author" content="Marcus Alenius">
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,19 +14,19 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
     <!-- Open Graph meta data -->
-    <meta property="og:url" content="https://alenius.io/personal-website">
+    <meta property="og:url" content="https://alenius.io/actordentify">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Marcus Alenius — Personal Website">
-    <meta property="og:title" content="Marcus Alenius — Personal Website">
-    <meta property="og:description" content="This website. Designed in Figma and built using pure HTML, CSS, and JavaScript. A fully responsive design with a carefully crafted light and dark appearance.">
-    <meta property="og:image" content="https://alenius.io/url-thumbnails/personal-website-thumbnail.png">
+    <meta property="og:site_name" content="Marcus Alenius — Actordentify">
+    <meta property="og:title" content="Marcus Alenius — Actordentify">
+    <meta property="og:description" content="A Netflix Chrome extension overlaying information about the actors on screen. Uses Amazon Rekognition and TMDB APIs to identify actors and provide details.">
+    <meta property="og:image" content="https://alenius.io/url-thumbnails/actordentify-thumbnail.png">
     <!-- Twitter meta data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="alenius.io">
-    <meta property="twitter:url" content="https://alenius.io/personal-website">
-    <meta name="twitter:title" content="Marcus Alenius — Personal Website">
-    <meta name="twitter:description" content="This website. Designed in Figma and built using pure HTML, CSS, and JavaScript. A fully responsive design with a carefully crafted light and dark appearance.">
-    <meta name="twitter:image" content="https://alenius.io/url-thumbnails/personal-website-thumbnail.png">
+    <meta property="twitter:url" content="https://alenius.io/actordentify">
+    <meta name="twitter:title" content="Marcus Alenius — Actordentify">
+    <meta name="twitter:description" content="A Netflix Chrome extension overlaying information about the actors on screen. Uses Amazon Rekognition and TMDB APIs to identify actors and provide details.">
+    <meta name="twitter:image" content="https://alenius.io/url-thumbnails/actordentify-thumbnail.png">
     <!-- Font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,14 +77,14 @@
       </div>
     </nav>
     <div id="container">
-      <div class="post" id="personal-website-post">
+      <div class="post" id="actordentify-post">
         <div class="post-image">
           <video src="images/actordentify-hero.mp4" playsinline muted loop id="actordentify-hero"></video>
         </div>
         <h2>Actordentify</h2>
         <div class="post-intro">
           <p class="paragraph-small">
-            A Netflix Chrome extension overlaying information about actors on screen. Uses Amazon Rekognition and TMDB APIs to identify actors and provide details.
+            A Netflix Chrome extension overlaying information about the actors on screen. Uses Amazon Rekognition and TMDB APIs to identify actors and provide details.
           </p>
           <div class="info-items">
             <div>
@@ -97,7 +97,7 @@
               <p class="paragraph-small info-item-desktop">Raymond Welgosh</p>
               <p class="paragraph-small info-item-mobile">R. Welgosh</p>
             </a>
-            <a href="https://www.linkedin.com/in/raymond-welgosh-47b44117b/" target="_blank">
+            <a href="https://github.com/rwelgosh/ActorRecognizer" target="_blank">
               <p class="info-item-header">GITHUB</p>
               <p class="paragraph-small info-item-desktop">Actordentify</p>
               <p class="paragraph-small info-item-mobile">Actordentify</p>
@@ -115,14 +115,20 @@
               We thought this experience could be made a whole lot better. What if it would just tell you who the actor is without you ever having to leave the movie or the TV show? What if you could overlay an actor’s name and other useful information right on top of the content? This would be so much less obtrusive and disorienting.
             </p>
             <p>
-              How could we bring this experience to your favorite movies and TV shows? We need something that can work with existing streaming services — that can extend the way they present content. A Chrome extension seemed like the best bet. We chose to focus our efforts on creating an extension optimized for Netflix.
+              How could we bring this experience to your favorite movies and TV shows? We needed something that can work with existing streaming services — that can extend the way they present content. A Chrome extension seemed like the best bet. We chose to focus our efforts on creating an extension optimized for Netflix.
             </p>
 
             <h3>Identifying Actors and Getting Details</h3>
+            <p>
+              The first step in enabling our envisioned experience is to figure out what actors are currently on screen. Amazon provides an <a href="https://docs.aws.amazon.com/rekognition/latest/dg/celebrities-procedure-image.html" target="_blank">API</a> that recognizes celebrity faces, which, of course, includes actors. So, when the user presses the button to identify actors, we capture the content of the Netflix video player and run the Amazon celebrity recognition on this image. The call returns the names of the celebrities in the image.
+            </p>
+            <p>
+              Once we know what actors are on the user’s screen, we can gather information about them. For this, we use <a href="https://www.themoviedb.org/?language=en-US" target="_blank">The Movie Database</a> (TMDB), which is a community-built movie and TV database, similar to IMDB. We make calls to the <a href="https://developer.themoviedb.org/docs" target="_blank">TMDB API</a> to get information like who the actor is playing in this particular movie or TV show, the actor’s biography, and an image of the actor. We also query other movies and TV shows the actor has starred in. We try to be smart about how we display these. The top four productions are displayed according to TMDB’s <a href="https://developer.themoviedb.org/docs/popularity-and-trending" target="_blank">popularity score</a>, which is continuously updated to reflect what’s currently trending. We also discard any sequels, so that the user gets to see a wider range of movies the actor has appeared in.
+            </p>
 
             <h3>Presenting the Information</h3>
             <p>
-              Through calls to the Amazon Rekognition API and the TMDB API, we have all the information we need to provide details about the actors on-screen. Now, we just shove this into the extension popup, right? While this would certainly be an improvement over having to go to a search engine to compile this information yourself, we thought we could do better.
+              Through calls to the Amazon Rekognition API and the TMDB API, we have all the information we need to provide details about the actors on screen. Now, we just shove this into the extension popup, right? While this would certainly be an improvement over having to go to a search engine to compile this information yourself, we thought we could do better.
             </p>
             <p>
               The most seamless experience would be if the name of the actor appeared right next to their face. That way there is no hunting down the character in a list tucked away by the toolbar — just look at their face, and the name of the actor will be right there.
@@ -135,7 +141,7 @@
               <div class="image-text">We wanted to place the actor's name by their face</div>
             </div>
             <p>
-              It turns out that finding the best card placements is very similar to solving a puzzle, where the solution is placing the cards such that they don’t overlap with any faces, other cards, or go off the screen. What algorithm is great for solving puzzles? Backtracking.
+              It turns out that finding the best card placements is very similar to solving a puzzle, where the solution is placing the cards such that they don’t overlap with any faces, other cards, or go off the screen. What algorithm is great for solving puzzles? <a href="https://en.wikipedia.org/wiki/Backtracking" target="_blank">Backtracking</a>.
             </p>
 
             <h3>Backtracking Algorithm</h3>
@@ -188,7 +194,7 @@
             <pre>
               <p class="code code-block"><span class="keyword">function</span> <span class="func">placeCards</span><span class="paren">(</span>unplacedInfoCards<span class="paren">,</span> placedInfoCards<span class="paren">) {</span>
 
-    <span class="comment">// base case - all info cards have been placed</span>
+    <span class="comment">// base case -- all cards have been placed</span>
     <span class="keyword">if</span> <span class="paren">(</span>unplacedInfoCards<span class="paren">.</span>length <span class="operator">===</span> <span class="keyword">0</span><span class="paren">) {</span>
         <span class="keyword">return</span> placedInfoCards<span class="paren">;</span>
     <span class="paren">}</span>
@@ -201,10 +207,10 @@
     <span class="keyword">for</span> <span class="paren">(</span><span class="keyword">const</span> placement <span class="keyword">of</span> <span class="paren">[</span><span class="string">'right'</span><span class="paren">,</span> <span class="string">'left'</span><span class="paren">,</span> <span class="string">'above'</span><span class="paren">,</span> <span class="string">'below'</span><span class="paren">]) {</span>
 
         <span class="comment">// check if can place the card given the already placed cards</span>
-        <span class="keyword">if</span> <span class="paren">(</span><span class="func">canPlaceThisCard</span><span class="paren">(</span>tryCard<span class="paren">,</span> placement<span class="paren">,</span> placedInfoCards<span class="paren">)) {</span>
+        <span class="keyword">if</span> <span class="paren">(</span><span class="func">canPlaceTryCard</span><span class="paren">(</span>tryCard<span class="paren">,</span> placement<span class="paren">,</span> placedInfoCards<span class="paren">)) {</span>
             
             <span class="comment">// if yes, place it</span>
-            <span class="func">placeThisCard</span><span class="paren">(</span>tryCard<span class="paren">,</span> placement<span class="paren">);</span>
+            <span class="func">placeTryCard</span><span class="paren">(</span>tryCard<span class="paren">,</span> placement<span class="paren">);</span>
             placedInfoCards<span class="paren">.</span><span class="func">push</span><span class="paren">(</span>tryCard<span class="paren">);</span>
             unplacedInfoCards<span class="paren">.</span><span class="func">pop</span><span class="paren">();</span>
         
@@ -217,7 +223,7 @@
             <span class="paren">}</span> 
             
             <span class="keyword">else</span> <span class="paren">{</span>
-                <span class="comment">// did not lead to a solution - undo move</span>
+                <span class="comment">// did not lead to a solution -- undo move</span>
                 placedInfoCards<span class="paren">.</span><span class="func">pop</span><span class="paren">();</span>
                 unplacedInfoCards<span class="paren">.</span><span class="func">push</span><span class="paren">(</span>tryCard<span class="paren">);</span>
             <span class="paren">}</span>
@@ -236,10 +242,10 @@
 
             <h3>Design</h3>
             <p>
-              Placing the actor information on top of the content did not only present a technical challenge but also a design challenge. How do we present the information in the cards such that it doesn’t cover up too much of the content?
+              Placing the actor information on top of the content did not only present a technical challenge but also a design challenge. How do we present the information in the cards so that it doesn’t cover up too much of the content?
             </p>
             <p>
-              We were inspired by the design of windows in visionOS, which were designed in response to a similar question: how should windows placed in your physical space appear such that they don’t obstruct what’s around you? Like windows in visionOS, we gave the cards a translucent, glassy material that lets the background come through. It works great with dark backgrounds, as well as with light backgrounds, allowing consistency and familiarity in their appearance.
+              We were inspired by the design of <a href="https://developer.apple.com/videos/play/wwdc2023/10076" target="_blank">windows in visionOS</a>, which were designed in response to a similar question: how should windows placed in your physical space appear so that they don’t obstruct what’s around you? Like a windows in visionOS, we gave the cards a translucent, glassy material that lets the background come through. It works great with dark backgrounds, as well as with light backgrounds, allowing consistency and familiarity in their appearance.
             </p>
             <div class="body-image">
               <img src="images/actordentify-card-background.jpeg" alt="Card background letting the background come through" id="actordentify-card-background">
@@ -252,9 +258,6 @@
               <video src="images/actordentify-expand.mp4" playsinline muted loop id="actordentify-expand"></video>
               <div class="image-text">Cards expand to reveal more information</div>
             </div>
-            
-
-
           </div>
         </div>
       </div>
