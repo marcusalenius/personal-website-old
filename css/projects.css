@@ -435,4 +435,8 @@
 
     #actordentify-card p { width: 330px; }
 
+    #actordentify-hero-image-mobile {
+        top: 100px;
+    }
+
 }
