@@ -11,7 +11,6 @@
     margin-top: 20px;
     margin-bottom: 45px;
     z-index: 10;
-    /* border: 2px solid red; */
 }
 
 .post-image .image-text {
@@ -163,6 +162,10 @@ sup {  line-height: 0; }
 .post li p { margin-top: 6px; }
 
 .post li:first-child { margin-top: 18px; }
+
+.post ol[type="a"] li:first-child {margin-top: 12px;}
+
+.post ol[type="a"] li:last-child {margin-bottom: 16px;}
 
 p.code {
     display: block;

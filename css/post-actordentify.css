@@ -1,0 +1,44 @@
+p.code {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+#actordentify-hero {
+    width: 100%;
+}
+
+#actordentify-card-background, 
+#actordentify-expand,
+#actordentify-slideshow {
+    width: 96%;
+}
+
+.light-mode #actordentify-hero,
+.light-mode #actordentify-card-background,
+.light-mode #actordentify-expand,
+.light-mode #actordentify-slideshow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode #actordentify-hero,
+.dark-mode #actordentify-card-background,
+.dark-mode #actordentify-expand,
+.dark-mode #actordentify-slideshow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #actordentify-post .post-image { height: 223px; }
+    
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #actordentify-post .post-image { height: 195px; }
+    
+}
+
