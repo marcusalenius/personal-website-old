@@ -81,7 +81,7 @@
         <h2>C0 Virtual Machine</h2>
         <div class="post-intro">
           <p class="paragraph-small">
-            A virtual machine for C0 — a safe subset of the C language — implemented in C. This stack machine, which is influenced by the JVM, runs arbitrary C0 code compiled to byte code.
+            A virtual machine for C0 — a safe subset of the C language — implemented in C. This stack machine, which is influenced by the JVM, runs arbitrary C0 code that has been compiled to byte code.
           </p>
           <div class="info-items">
             <div>
@@ -103,7 +103,7 @@
           <div class="post-body">
             <h3>Implementation</h3>
             <p>
-              The virtual machine can run any <a href="https://c0.cs.cmu.edu/docs/c0-reference.pdf" target="_blank">C0</a> code compiled to C0 byte code. It is implemented using an operand stack, call stack, local variable array, program counter, and constant and function pools. In addition to supporting all C0 instructions, including memory allocation on the heap, the VM provides dynamic checks for safety, a cornerstone of the C0 language, which forbids out-of-bound array accesses and dereferencing the NULL pointer, among other unsafe behaviors.
+              The virtual machine can run any <a href="https://c0.cs.cmu.edu/docs/c0-reference.pdf" target="_blank">C0</a> code that has been compiled to C0 byte code. It is implemented using an operand stack, call stack, local variable array, program counter, and constant and function pools. In addition to supporting all C0 instructions, including memory allocation on the heap, the VM provides dynamic checks for safety, a cornerstone of the C0 language, which forbids out-of-bound array accesses and dereferencing the NULL pointer, among other unsafe behaviors.
             </p>
             <p>
               As most computer science courses at Carnegie Mellon make their course notes available for free online, a more detailed description of the C0VM can be found <a href="https://www.cs.cmu.edu/~15122/handouts/lectures/22-c0vm.pdf" target="_blank">here</a>.
@@ -114,7 +114,7 @@
               Beyond full support for C0 code in the virtual machine, I extended it with support for the C1 language, which adds generic tagged pointers and function pointers. Just as with the C0 instructions, it includes dynamic safety checks that prohibit unsafe casts.
             </p>
             <p>
-              With this extension, the virtual machine can run all C0/C1 programs, as demonstrated by running all my past assignments written in these languages.
+              With this extension, the virtual machine can run all C0/C1 programs, like my past 15-122 assignments.
             </p>
           </div>
         </div>
