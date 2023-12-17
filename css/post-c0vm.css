@@ -38,16 +38,20 @@
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
-    #personal-website-post .info-items { gap: 50px; }
+    #c0vm-post .info-items { gap: 50px; }
+
+    #c0vm-post .post-image p { font-size: 24px; }
     
 }
 
 /* iPhone 14 */
 @media (max-width: 424px) {
 
-    #personal-website-post .info-items {
+    #c0vm-post .info-items {
         justify-content: space-between;
         gap: 0;
     }
+
+    #c0vm-post .post-image p { font-size: 22px; }
 
 }
