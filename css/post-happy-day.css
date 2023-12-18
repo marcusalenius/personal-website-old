@@ -1,5 +1,10 @@
 /* Happy Day post */
 
+#happy-day-post .info-items {
+    justify-content: left;
+    gap: 60px;
+}
+
 #happy-day-post .post-image {
     margin-bottom: 10px;
 }
@@ -41,6 +46,8 @@
 /* iPhone 14 Plus */
 @media (max-width: 740px) {
 
+    #happy-day-post .info-items { gap: 50px; }
+
     #happy-day-post .post-image { height: 250px; }
 
     #happy-day-home-full { width: 340px; }
@@ -57,6 +64,11 @@
 
 /* iPhone 14 */
 @media (max-width: 424px) {
+
+    #happy-day-post .info-items {
+        justify-content: space-between;
+        gap: 0;
+    }
 
     #happy-day-post .post-image { height: 215px; }
 
