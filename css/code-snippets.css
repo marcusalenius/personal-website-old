@@ -1,8 +1,8 @@
 p.code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Inconsolata', monospace;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     width: fit-content;
     padding: 2px 10px;
@@ -10,7 +10,7 @@ p.code {
 }
 
 p.code.code-block {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     padding: 20px;
 }

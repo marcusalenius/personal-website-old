@@ -11,8 +11,8 @@
 
 #c0vm-post .post-image p {
     line-break: anywhere;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 32px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 38px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -40,7 +40,7 @@
 
     #c0vm-post .info-items { gap: 50px; }
 
-    #c0vm-post .post-image p { font-size: 24px; }
+    #c0vm-post .post-image p { font-size: 28px; }
     
 }
 
@@ -52,6 +52,6 @@
         gap: 0;
     }
 
-    #c0vm-post .post-image p { font-size: 22px; }
+    #c0vm-post .post-image p { font-size: 27px; }
 
 }

@@ -205,11 +205,11 @@
 #c0vm-card p { width: 393px; }
 
 #c0vm-card .card-images p {
-    top: 153px;
-    width: 430px;
+    top: 155px;
+    width: 440px;
     line-break: anywhere;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 28px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -286,7 +286,7 @@
     #c0vm-card .card-images p { 
         top: 166px;
         width: 350px; 
-        font-size: 26px;
+        font-size: 30px;
     }
     
 }
@@ -337,9 +337,9 @@
     #c0vm-card p {width: 305px;}
 
     #c0vm-card .card-images p { 
-        top: 154px;
+        top: 150px;
         width: 310px; 
-        font-size: 25px;
+        font-size: 29px;
     }
 
 }
@@ -382,6 +382,9 @@
         width: 170px;
         left: 170px; 
     }
+
+    #c0vm-card .card-images p { width: 300px; }
+
 
 }
 
@@ -461,9 +464,9 @@
     }
 
     #c0vm-card .card-images p {
-        top: 142px;
+        top: 138px;
         width: 340px;
-        font-size: 24px;
+        font-size: 28px;
     }
 
 }
@@ -494,10 +497,9 @@
     }
 
     #c0vm-card .card-images p {
-        top: 140px;
+        top: 134px;
         width: 310px;
-        font-size: 22px;
+        font-size: 26px;
     }
-
 
 }
