@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus Alenius — C0 Virtual Machine</title>
+    <meta name="description" content="A virtual machine for C0 — a safe subset of the C language — implemented in C. This stack machine, which is influenced by the JVM, runs arbitrary C0 code that has been compiled to byte code.">
+    <meta name="author" content="Marcus Alenius">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <!-- Open Graph meta data -->
+    <meta property="og:url" content="https://alenius.io/c0vm">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Marcus Alenius — C0 Virtual Machine">
+    <meta property="og:title" content="Marcus Alenius — C0 Virtual Machine">
+    <meta property="og:description" content="A virtual machine for C0 — a safe subset of the C language — implemented in C. This stack machine, which is influenced by the JVM, runs arbitrary C0 code that has been compiled to byte code.">
+    <meta property="og:image" content="https://alenius.io/url-thumbnails/c0vm-thumbnail.png">
+    <!-- Twitter meta data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="alenius.io">
+    <meta property="twitter:url" content="https://alenius.io/c0vm">
+    <meta name="twitter:title" content="Marcus Alenius — C0 Virtual Machine">
+    <meta name="twitter:description" content="A virtual machine for C0 — a safe subset of the C language — implemented in C. This stack machine, which is influenced by the JVM, runs arbitrary C0 code that has been compiled to byte code.">
+    <meta name="twitter:image" content="https://alenius.io/url-thumbnails/c0vm-thumbnail.png">
+    <!-- Font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/post-c0vm.css">
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body class="light-mode post-page">
+    <nav>
+      <div class="navbutton" id="navbutton-back" tabindex="0" onclick="window.location.href='https://alenius.io'">
+        <div class="card-border"></div>
+        <img src="icons/back-icon-light-mode.svg" alt="left-arrow" draggable="false" id="back-icon-light-mode">
+        <img src="icons/back-icon-dark-mode.svg" alt="left-arrow" draggable="false" id="back-icon-dark-mode">
+        <div class="button-text">Home</div>
+      </div>
+      <div class="navbutton drop-down-hidden" id="navbutton-appearance" tabindex="0" onclick="toggleAppearanceDropdown()">
+        <div class="card-border"></div>
+        <img src="icons/appearance-icon-light-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-light-mode">
+        <img src="icons/appearance-icon-dark-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-dark-mode">
+        <img src="icons/appearance-cross-icon-light-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-light-mode">
+        <img src="icons/appearance-cross-icon-dark-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-dark-mode">
+      </div>
+      <div class="hidden" id="appearance-drop-down">
+        <div class="card-border"></div>
+        <div class="appearance-drop-down-item selected" id="appearance-drop-down-item-system" tabindex="0" onclick="buttonClickToSetSystemAppearance()">
+          <img src="icons/appearance-drop-down-icon-system-light-mode.svg" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-system-dark-mode.png" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">System</div>
+        </div>
+        <div class="appearance-drop-down-item" id="appearance-drop-down-item-light" tabindex="0" onclick="buttonClickToSetLightMode()">
+          <img src="icons/appearance-drop-down-icon-light-light-mode.svg" alt="sun icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-light-dark-mode.svg" alt="sun icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">Light</div>
+        </div>
+        <div class="appearance-drop-down-item" id="appearance-drop-down-item-dark" tabindex="0" onclick="buttonClickToSetDarkMode()">
+          <img src="icons/appearance-drop-down-icon-dark-light-mode.svg" alt="moon icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-dark-dark-mode.svg" alt="moon icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">Dark</div>
+        </div>
+      </div>
+    </nav>
+    <div id="container">
+      <div class="post" id="c0vm-post">
+        <div class="post-image">
+          <p>C0C0FFEE00170001000003E800154265737420434D5520435320636F75727365210A00000200020017100F360010703601140000B700005715001501B80001B0020300121500130000683602150215016036021502B0000100010006</p>
+        </div>
+        <h2>C0 Virtual Machine</h2>
+        <div class="post-intro">
+          <p class="paragraph-small">
+            A virtual machine for C0 — a safe subset of the C language — implemented in C. This stack machine, which is influenced by the JVM, runs arbitrary C0 code that has been compiled to byte code.
+          </p>
+          <div class="info-items">
+            <div>
+              <p class="info-item-header">TIMELINE</p>
+              <p class="paragraph-small info-item-desktop">December 2023</p>
+              <p class="paragraph-small info-item-mobile">12/2023</p>
+            </div>
+            <a href="http://www.cs.cmu.edu/~15122/about.shtml" target="_blank">
+              <p class="info-item-header">COURSE</p>
+              <p class="paragraph-small info-item-desktop">15-122</p>
+              <p class="paragraph-small info-item-mobile">15-122</p>
+            </a>
+            <a href="https://www.cs.cmu.edu/~dilsun/" target="_blank">
+              <p class="info-item-header">PROFESSOR</p>
+              <p class="paragraph-small info-item-desktop">Zeliha Dilsun Kaynar</p>
+              <p class="paragraph-small info-item-mobile">D. Kaynar</p>
+            </a>
+          </div>
+          <div class="post-body">
+            <h3>Implementation</h3>
+            <p>
+              The virtual machine can run any <a href="https://c0.cs.cmu.edu/docs/c0-reference.pdf" target="_blank">C0</a> code that has been compiled to C0 byte code. It is implemented using an operand stack, call stack, local variable array, program counter, and constant and function pools. In addition to supporting all C0 instructions, including memory allocation on the heap, the VM provides dynamic checks for safety, a cornerstone of the C0 language, which forbids out-of-bound array accesses and dereferencing the NULL pointer, among other unsafe behaviors.
+            </p>
+            <p>
+              As most computer science courses at Carnegie Mellon make their course notes available for free online, a more detailed description of the C0VM can be found <a href="https://www.cs.cmu.edu/~15122/handouts/lectures/22-c0vm.pdf" target="_blank">here</a>.
+            </p>
+
+            <h3>Extension</h3>
+            <p>
+              Beyond full support for C0 code in the virtual machine, I extended it with support for the C1 language, which adds generic tagged pointers and function pointers. Just as with the C0 instructions, it includes dynamic safety checks that prohibit unsafe casts.
+            </p>
+            <p>
+              With this extension, the virtual machine can run all C0/C1 programs, like my past 15-122 assignments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <footer>
+      <div class="footer-text">Copyright &copy; 2023 Marcus Alenius. All rights reserved.</div>
+    </footer>
+    <script src="js/navbar-and-appearance.js"></script>
+    <script src="js/card-hover-effect.js"></script>
+    <script src="js/accessibility.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+/* c0vm post */
+
+#c0vm-post .info-items {
+    justify-content: left;
+    gap: 60px;
+}
+
+#c0vm-post .post-image {
+    height: min-content;
+}
+
+#c0vm-post .post-image p {
+    line-break: anywhere;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    user-select: none;
+}
+
+.light-mode #c0vm-post .post-image p {
+    background: linear-gradient(170deg, #444 -12.45%, rgba(68, 68, 68, 0.00) 126.84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark-mode #c0vm-post .post-image p {
+    background: linear-gradient(170deg, #FAFAFA -12.45%, rgba(250, 250, 250, 0.00) 126.84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #c0vm-post .info-items { gap: 50px; }
+
+    #c0vm-post .post-image p { font-size: 24px; }
+    
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #c0vm-post .info-items {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    #c0vm-post .post-image p { font-size: 22px; }
+
+}
