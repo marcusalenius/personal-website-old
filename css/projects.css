@@ -205,7 +205,7 @@
 #c0vm-card p { width: 393px; }
 
 #c0vm-card .card-images p {
-    top: 155px;
+    top: 158px;
     width: 440px;
     line-break: anywhere;
     font-family: 'Inconsolata', monospace;
@@ -228,6 +228,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.dark-mode #c0vm-card .card-images {
+    height: calc(100% - 1px);
+    border-radius: 29px;
+}
+
 
 
 
