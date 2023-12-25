@@ -7,7 +7,6 @@ h1 {
 }
 
 .light-mode h1 { color: var(--lightText); }
-
 .dark-mode h1 { color: var(--darkText); }
 
 h2 {
@@ -19,7 +18,6 @@ h2 {
 }
 
 .light-mode h2 { color: var(--lightText); }
-
 .dark-mode h2 { color: var(--darkText); }
 
 h3 {
@@ -32,7 +30,6 @@ h3 {
 }
 
 .light-mode h3 { color: var(--lightText); }
-
 .dark-mode h3 { color: var(--darkText); }
 
 p.paragraph-large {
@@ -43,7 +40,6 @@ p.paragraph-large {
 }
 
 .light-mode p.paragraph-large { color: var(--lightText); }
-
 .dark-mode p.paragraph-large { color: var(--darkText); }
 
 p.paragraph-small {
@@ -55,7 +51,6 @@ p.paragraph-small {
 }
 
 .light-mode p.paragraph-small { color: var(--lightBodyText); }
-
 .dark-mode p.paragraph-small { color: var(--darkBodyText); }
 
 .location-text {
@@ -66,7 +61,6 @@ p.paragraph-small {
 }
 
 .light-mode .location-text { color: var(--lightText); }
-
 .dark-mode .location-text { color: var(--darkText); }
 
 .button-text {
@@ -77,7 +71,6 @@ p.paragraph-small {
 }
 
 .light-mode .button-text { color: var(--lightText); }
-
 .dark-mode .button-text { color: var(--darkText); }
 
 .footer-text {
@@ -88,7 +81,6 @@ p.paragraph-small {
 }
 
 .light-mode .footer-text { color: var(--lightFooterText); }
-
 .dark-mode .footer-text { color: var(--darkFooterText); }
 
 .image-text {
@@ -99,12 +91,9 @@ p.paragraph-small {
 }
 
 .light-mode .image-text { color: var(--lightBodyText); }
-
 .dark-mode .image-text { color: var(--darkBodyText); }
 
-
 .light-mode a { color: var(--lightFooterText); }
-
 .dark-mode a { color: var(--darkFooterText); }
 
 .post-body p {
@@ -116,7 +105,6 @@ p.paragraph-small {
 }
 
 .light-mode .post-body p { color: var(--lightBodyText); }
-
 .dark-mode .post-body p { color: var(--darkBodyText); }
 
 .post-body ol {
@@ -128,8 +116,25 @@ p.paragraph-small {
 }
 
 .light-mode .post-body ol { color: var(--lightBodyText); }
-
 .dark-mode .post-body ol { color: var(--darkBodyText); }
+
+p.url-card-header {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.light-mode p.url-card-header { color: var(--lightText); }
+.dark-mode p.url-card-header { color: var(--darkText); }
+
+p.url-card-website {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.light-mode p.url-card-website { color: var(--lightBodyText); }
+.dark-mode p.url-card-website { color: var(--darkBodyText); }
 
 
 /* tablet */
