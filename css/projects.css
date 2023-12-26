@@ -36,13 +36,13 @@
     position: absolute;
     width: 180px;
     left: 596px;
-    top: 90px;
+    top: 13px;
 }
 
 #kenboard-debug {
     position: absolute;
     width: 180px;
-    left: 741px;
+    left: 733px;
     top: 13px;
 }
 
@@ -242,7 +242,7 @@
 
     #kenboard-splash { left: 576px; }
 
-    #kenboard-debug { left: 721px; }
+    #kenboard-debug { left: 712px; }
 
     .personal-website-iphone { left: 344px; }
     
@@ -261,7 +261,7 @@
 
     #kenboard-card p { width: 409px; }
 
-    #kenboard-splash { left: 483px; }
+    #kenboard-splash { left: 493px; }
 
     #kenboard-debug { left: 628px; }
 
@@ -304,12 +304,11 @@
 
     #kenboard-demo-video { left: 54px; }
 
-    #kenboard-splash {
-        top: 122px;
-        left: 399px;
-    }
+    #kenboard-splash { left: 408px; }
 
     #kenboard-debug { left: 544px; }
+
+    #kenboard-card p.paragraph-small { width: 400px; }
 
     .personal-website-safari {
         width: 350px;
@@ -363,10 +362,7 @@
         top: 257px;
     }
     
-    #kenboard-splash {
-        top: 122px;
-        left: 369px;
-    }
+    #kenboard-splash { left: 394px; }
 
     #kenboard-debug { left: 502px; }
 
