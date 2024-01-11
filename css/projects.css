@@ -66,7 +66,7 @@
 
 /* Personal website */
 
-#personal-website-card { order: 1; }
+#personal-website-card { order: 4; }
 
 #personal-website-card p { width: 393px; }
 
@@ -120,7 +120,7 @@
 
 #happy-day-card { 
     position: relative; 
-    order: 2;
+    order: 5;
 }
 
 #happy-day-home {
@@ -200,7 +200,7 @@
 
 /* C0VM */
 
-#c0vm-card { order: 1; }
+#c0vm-card { order: 2; }
 
 #c0vm-card p { width: 393px; }
 
@@ -234,6 +234,34 @@
     border-radius: 29px;
 }
 
+/* Handwriting NN */
+
+#handwriting-nn-card { order: 1; }
+
+#handwriting-nn-card p { width: 408px; }
+
+#handwriting-nn-nn-regular-light-mode,
+#handwriting-nn-nn-regular-dark-mode {
+    position: absolute;
+    width: 420px;
+    top: 155px;
+    left: 40px;
+}
+
+.light-mode #handwriting-nn-nn-regular-dark-mode,
+.dark-mode #handwriting-nn-nn-regular-light-mode { display: none; }
+
+#handwriting-nn-nn-narrow-light-mode,
+#handwriting-nn-nn-narrow-dark-mode { display: none; }
+
+.light-mode #handwriting-nn-nn-narrow-dark-mode,
+.dark-mode #handwriting-nn-nn-narrow-light-mode { display: none; }
+
+#handwriting-nn-nn-wide-light-mode,
+#handwriting-nn-nn-wide-dark-mode { display: none; }
+
+.light-mode #handwriting-nn-nn-wide-dark-mode,
+.dark-mode #handwriting-nn-nn-wide-light-mode { display: none; }
 
 
 
@@ -253,6 +281,18 @@
     #actordentify-fade { left: 400px; }
 
     #c0vm-card .card-images p { width: 410px; }
+
+    #handwriting-nn-nn-regular-light-mode,
+    #handwriting-nn-nn-regular-dark-mode { display: none; }
+
+    #handwriting-nn-nn-narrow-light-mode,
+    #handwriting-nn-nn-narrow-dark-mode {
+        display: block;
+        position: absolute;
+        width: 402px;
+        top: 155px;
+        left: 40px;
+    }
 
 }
 
@@ -294,7 +334,23 @@
         width: 350px; 
         font-size: 30px;
     }
-    
+
+    #handwriting-nn-card h3 { width: 341px; }
+
+    #handwriting-nn-card p { width: 341px; }
+
+    #handwriting-nn-nn-narrow-light-mode,
+    #handwriting-nn-nn-narrow-dark-mode { display: none; }
+
+    #handwriting-nn-nn-regular-light-mode,
+    #handwriting-nn-nn-regular-dark-mode {
+        display: block;
+        position: absolute;
+        width: 339px;
+        top: 193px;
+        left: 40px;
+    }
+
 }
 
 /* iPad Pro 11" Portrait */
@@ -308,7 +364,7 @@
 
     #kenboard-debug { left: 544px; }
 
-    #kenboard-card p.paragraph-small { width: 400px; }
+    #kenboard-card p { width: 400px; }
 
     .personal-website-safari {
         width: 350px;
@@ -345,6 +401,20 @@
         top: 150px;
         width: 310px; 
         font-size: 29px;
+    }
+
+    #handwriting-nn-card p { width: 288px; }
+
+    #handwriting-nn-nn-regular-light-mode,
+    #handwriting-nn-nn-regular-dark-mode { display: none; }
+
+    #handwriting-nn-nn-narrow-light-mode,
+    #handwriting-nn-nn-narrow-dark-mode {
+        display: block;
+        position: absolute;
+        width: 298px;
+        top: 202px;
+        left: 33px;
     }
 
 }
@@ -387,6 +457,10 @@
 
     #c0vm-card .card-images p { width: 300px; }
 
+    #handwriting-nn-nn-narrow-light-mode,
+    #handwriting-nn-nn-narrow-dark-mode {
+        left: 22px;
+    }
 
 }
 
@@ -398,7 +472,7 @@
         order: 1;
     }
 
-    #kenboard-card p { width: 320px; }
+    #kenboard-card p { width: 335px; }
 
     #kenboard-demo-image {
         left: 14px;
@@ -471,6 +545,20 @@
         font-size: 28px;
     }
 
+    #handwriting-nn-card p { width: 335px; }
+
+    #handwriting-nn-nn-narrow-light-mode,
+    #handwriting-nn-nn-narrow-dark-mode { display: none; }
+
+    #handwriting-nn-nn-wide-light-mode,
+    #handwriting-nn-nn-wide-dark-mode {
+        display: block;
+        position: absolute;
+        width: 335px;
+        top: 126px;
+        left: 28px;
+    }
+
 }
 
 /* iPhone 14 */
@@ -502,6 +590,18 @@
         top: 134px;
         width: 310px;
         font-size: 26px;
+    }
+
+    #handwriting-nn-nn-wide-light-mode,
+    #handwriting-nn-nn-wide-dark-mode { display: none; }
+
+    #handwriting-nn-nn-narrow-light-mode,
+    #handwriting-nn-nn-narrow-dark-mode {
+        display: block;
+        position: absolute;
+        width: 298px;
+        top: 123px;
+        left: 28px;
     }
 
 }
