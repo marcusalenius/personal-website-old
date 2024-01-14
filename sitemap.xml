@@ -46,6 +46,11 @@
   <loc>https://alenius.io/c0vm</loc>
 </url>
 
+<!-- Handwriting Recognizer -->
+<url>
+  <loc>https://alenius.io/handwriting-nn</loc>
+</url>
+
 
 
 </urlset>
