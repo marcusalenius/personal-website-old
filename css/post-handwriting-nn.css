@@ -17,9 +17,7 @@
     gap: 80px;
 }
 
-#handwriting-nn-mnist {
-    width: 460px;
-}
+#handwriting-nn-mnist { width: 460px; }
 
 .light-mode #handwriting-nn-mnist {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -27,5 +25,21 @@
 
 .dark-mode #handwriting-nn-mnist {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* iPhone 14 Plus */
+@media (max-width: 740px) {
+
+    #handwriting-nn-post .info-items { gap: 50px; }
+
+    #handwriting-nn-mnist { width: 360px; }
+
+}
+
+/* iPhone 14 */
+@media (max-width: 424px) {
+
+    #handwriting-nn-mnist { width: 330px; }
+
 }
 
