@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus Alenius — Handwriting Recognizer</title>
+    <meta name="description" content="A feedforward neural network implemented from scratch in Python. Reimplemented in PyTorch and improved using cross-entropy loss and regularization. Can recognize handwritten digits with 98% accuracy.">
+    <meta name="author" content="Marcus Alenius">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+    <!-- Open Graph meta data -->
+    <meta property="og:url" content="https://alenius.io/handwriting-nn">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Marcus Alenius — Handwriting Recognizer">
+    <meta property="og:title" content="Marcus Alenius — Handwriting Recognizer">
+    <meta property="og:description" content="A feedforward neural network implemented from scratch in Python. Reimplemented in PyTorch and improved using cross-entropy loss and regularization. Can recognize handwritten digits with 98% accuracy.">
+    <meta property="og:image" content="https://alenius.io/url-thumbnails/handwriting-nn-thumbnail.png">
+    <!-- Twitter meta data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="alenius.io">
+    <meta property="twitter:url" content="https://alenius.io/handwriting-nn">
+    <meta name="twitter:title" content="Marcus Alenius — Handwriting Recognizer">
+    <meta name="twitter:description" content="A feedforward neural network implemented from scratch in Python. Reimplemented in PyTorch and improved using cross-entropy loss and regularization. Can recognize handwritten digits with 98% accuracy.">
+    <meta name="twitter:image" content="https://alenius.io/url-thumbnails/handwriting-nn-thumbnail.png">
+    <!-- Font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/post-handwriting-nn.css">
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body class="light-mode post-page">
+    <nav>
+      <div class="navbutton" id="navbutton-back" tabindex="0" onclick="window.location.href='https://alenius.io'">
+        <div class="card-border"></div>
+        <img src="icons/back-icon-light-mode.svg" alt="left-arrow" draggable="false" id="back-icon-light-mode">
+        <img src="icons/back-icon-dark-mode.svg" alt="left-arrow" draggable="false" id="back-icon-dark-mode">
+        <div class="button-text">Home</div>
+      </div>
+      <div class="navbutton drop-down-hidden" id="navbutton-appearance" tabindex="0" onclick="toggleAppearanceDropdown()">
+        <div class="card-border"></div>
+        <img src="icons/appearance-icon-light-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-light-mode">
+        <img src="icons/appearance-icon-dark-mode.svg" alt="moon icon to change appearance" draggable="false" class="appearance-icon" id="appearance-icon-dark-mode">
+        <img src="icons/appearance-cross-icon-light-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-light-mode">
+        <img src="icons/appearance-cross-icon-dark-mode.svg" alt="cross icon" draggable="false" class="appearance-cross-icon" id="appearance-cross-icon-dark-mode">
+      </div>
+      <div class="hidden" id="appearance-drop-down">
+        <div class="card-border"></div>
+        <div class="appearance-drop-down-item selected" id="appearance-drop-down-item-system" tabindex="0" onclick="buttonClickToSetSystemAppearance()">
+          <img src="icons/appearance-drop-down-icon-system-light-mode.svg" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-system-dark-mode.png" alt="gear icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">System</div>
+        </div>
+        <div class="appearance-drop-down-item" id="appearance-drop-down-item-light" tabindex="0" onclick="buttonClickToSetLightMode()">
+          <img src="icons/appearance-drop-down-icon-light-light-mode.svg" alt="sun icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-light-dark-mode.svg" alt="sun icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">Light</div>
+        </div>
+        <div class="appearance-drop-down-item" id="appearance-drop-down-item-dark" tabindex="0" onclick="buttonClickToSetDarkMode()">
+          <img src="icons/appearance-drop-down-icon-dark-light-mode.svg" alt="moon icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-light-mode">
+          <img src="icons/appearance-drop-down-icon-dark-dark-mode.svg" alt="moon icon" draggable="false" class="appearance-drop-down-icon appearance-drop-down-icon-dark-mode">
+          <div class="button-text">Dark</div>
+        </div>
+      </div>
+    </nav>
+    <div id="container">
+      <div class="post" id="handwriting-nn-post">
+        <div class="post-image">
+          <img src="images/handwriting-nn-post-image-light-mode.png" alt="4-layer neural network" id="handwriting-nn-post-image-light-mode">
+          <img src="images/handwriting-nn-post-image-dark-mode.png" alt="4-layer neural network" id="handwriting-nn-post-image-dark-mode">
+          <div class="image-text">Neural network diagram made using <a href="https://alexlenail.me/NN-SVG" target="_blank">alexlenail.me/NN-SVG</a></div>
+        </div>
+        <h2>Handwriting Recognizer</h2>
+        <div class="post-intro">
+          <p class="paragraph-small">
+            A feedforward neural network implemented from scratch in Python. Reimplemented in PyTorch and improved using cross-entropy loss and regularization. Can recognize handwritten digits with 98% accuracy.
+          </p>
+          <div class="info-items">
+            <div>
+              <p class="info-item-header">TIMELINE</p>
+              <p class="paragraph-small info-item-desktop">January 2024</p>
+              <p class="paragraph-small info-item-mobile">1/2024</p>
+            </div>
+            <a href="https://github.com/marcusalenius/handwriting-nn" target="_blank">
+              <p class="info-item-header">GITHUB</p>
+              <p class="paragraph-small info-item-desktop">Handwriting Recognizer</p>
+              <p class="paragraph-small info-item-mobile">Handwriting Recognizer</p>
+            </a>
+          </div>
+          <div class="post-body">
+            <h3>The Goal: An Autograder</h3>
+            <p>
+              Some of the most tedious work I do as a <a href="https://alenius.io/ta-112" target="_blank">teaching assistant</a> is grading. While it is important to take time to manually review students' work to give feedback, grading short answer questions for points always feels like a necessary evil. But it shouldn’t have to be. It should be possible to build something that can automate this.
+            </p>
+
+            <h3>Deep Learning About Deep Learning</h3>
+            <p>
+              The very first step in building something like this is to create a system that can recognize handwriting (the student work I grade is, after all, handwritten). Instead of relying on a deep learning library to accomplish this, I wanted to take this opportunity to really understand the inner workings of neural networks.
+            </p>
+            <p>
+              I hadn’t yet taken a course on deep learning, but fortunately, there are some truly excellent resources available online to learn about the beauty of neural networks. I primarily used <a href="https://michaelnielsen.org" target="_blank">Michael Nielsen</a>’s book <a href="http://neuralnetworksanddeeplearning.com" target="_blank">Neural Networks and Deep Learning</a> along with outstanding visualizations and explanations by <a href="https://www.3blue1brown.com/topics/neural-networks" target="_blank">3Blue1Brown</a>.
+            </p>
+            <p>
+              The neural network I created was a feedforward network, using stochastic gradient descent with backpropagation, all implemented using only <a href="https://numpy.org" target="_blank">Numpy</a>. Training on 60,000 handwritten digits in the <a href="http://yann.lecun.com/exdb/mnist/" target="_blank">MNIST</a> dataset, this network achieved an accuracy of 95.30%.
+            </p>
+            <div class="body-image">
+              <img src="images/handwriting-nn-mnist.png" alt="3x5 collection of handwritten digits" id="handwriting-nn-mnist">
+              <div class="image-text">A sample of the <a href="http://yann.lecun.com/exdb/mnist/" target="_blank">MNIST</a> dataset containing 28x28 pixel images of handwritten digits</div>
+            </div>
+
+            <h3>PyTorch</h3>
+            <p>
+              Knowing how to create neural networks from scratch, I could safely abstract away some of the complexities. So, I implemented the same network — using stochastic gradient descent and the quadratic cost function — in <a href="https://pytorch.org" target="_blank">PyTorch</a>. The behind-the-scenes optimizations of PyTorch improved the accuracy to 96.05%. A little better.
+            </p>
+            <p>
+              To further improve the network, I swapped the quadratic cost function with the <a href="http://neuralnetworksanddeeplearning.com/chap3.html#the_cross-entropy_cost_function" target="_blank">cross-entropy cost function</a> to mitigate neuron saturation. This bumped the accuracy up to 97.71%. Finally, I added <a href="http://neuralnetworksanddeeplearning.com/chap3.html#regularization" target="_blank">L2 regularization</a> to reduce overfitting, which further improved the accuracy. The final accuracy was 98.06%, meaning the network correctly classified 98,060 of the 10,000 test images. Not bad!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <footer>
+      <div class="footer-text">Copyright &copy; 2024 Marcus Alenius. All rights reserved.</div>
+    </footer>
+    <script src="js/navbar-and-appearance.js"></script>
+    <script src="js/card-hover-effect.js"></script>
+    <script src="js/accessibility.js"></script>
+  </body>
+</html>
